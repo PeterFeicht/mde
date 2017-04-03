@@ -37,8 +37,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link net.feichti.codingcontest.impl.ContestImpl#getId <em>Id</em>}</li>
  *   <li>{@link net.feichti.codingcontest.impl.ContestImpl#getTheme <em>Theme</em>}</li>
  *   <li>{@link net.feichti.codingcontest.impl.ContestImpl#getLocalDate <em>Local Date</em>}</li>
- *   <li>{@link net.feichti.codingcontest.impl.ContestImpl#getLocation <em>Location</em>}</li>
- *   <li>{@link net.feichti.codingcontest.impl.ContestImpl#getLevel <em>Level</em>}</li>
+ *   <li>{@link net.feichti.codingcontest.impl.ContestImpl#getLocations <em>Locations</em>}</li>
+ *   <li>{@link net.feichti.codingcontest.impl.ContestImpl#getLevels <em>Levels</em>}</li>
  *   <li>{@link net.feichti.codingcontest.impl.ContestImpl#getEntry <em>Entry</em>}</li>
  *   <li>{@link net.feichti.codingcontest.impl.ContestImpl#getOrganizer <em>Organizer</em>}</li>
  * </ul>
@@ -108,24 +108,24 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 	protected Date localDate = LOCAL_DATE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getLocation() <em>Location</em>}' containment reference list.
+	 * The cached value of the '{@link #getLocations() <em>Locations</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLocation()
+	 * @see #getLocations()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Location> location;
+	protected EList<Location> locations;
 
 	/**
-	 * The cached value of the '{@link #getLevel() <em>Level</em>}' containment reference list.
+	 * The cached value of the '{@link #getLevels() <em>Levels</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLevel()
+	 * @see #getLevels()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Level> level;
+	protected EList<Level> levels;
 
 	/**
 	 * The cached value of the '{@link #getEntry() <em>Entry</em>}' containment reference list.
@@ -242,13 +242,13 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Location> getLocation()
+	public EList<Location> getLocations()
 	{
-		if (location == null)
+		if (locations == null)
 		{
-			location = new EObjectContainmentEList<Location>(Location.class, this, CodingcontestPackage.CONTEST__LOCATION);
+			locations = new EObjectContainmentEList<Location>(Location.class, this, CodingcontestPackage.CONTEST__LOCATIONS);
 		}
-		return location;
+		return locations;
 	}
 
 	/**
@@ -256,13 +256,13 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Level> getLevel()
+	public EList<Level> getLevels()
 	{
-		if (level == null)
+		if (levels == null)
 		{
-			level = new EObjectContainmentEList<Level>(Level.class, this, CodingcontestPackage.CONTEST__LEVEL);
+			levels = new EObjectContainmentEList<Level>(Level.class, this, CodingcontestPackage.CONTEST__LEVELS);
 		}
-		return level;
+		return levels;
 	}
 
 	/**
@@ -337,10 +337,10 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 	{
 		switch (featureID)
 		{
-			case CodingcontestPackage.CONTEST__LOCATION:
-				return ((InternalEList<?>)getLocation()).basicRemove(otherEnd, msgs);
-			case CodingcontestPackage.CONTEST__LEVEL:
-				return ((InternalEList<?>)getLevel()).basicRemove(otherEnd, msgs);
+			case CodingcontestPackage.CONTEST__LOCATIONS:
+				return ((InternalEList<?>)getLocations()).basicRemove(otherEnd, msgs);
+			case CodingcontestPackage.CONTEST__LEVELS:
+				return ((InternalEList<?>)getLevels()).basicRemove(otherEnd, msgs);
 			case CodingcontestPackage.CONTEST__ENTRY:
 				return ((InternalEList<?>)getEntry()).basicRemove(otherEnd, msgs);
 			case CodingcontestPackage.CONTEST__ORGANIZER:
@@ -365,10 +365,10 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 				return getTheme();
 			case CodingcontestPackage.CONTEST__LOCAL_DATE:
 				return getLocalDate();
-			case CodingcontestPackage.CONTEST__LOCATION:
-				return getLocation();
-			case CodingcontestPackage.CONTEST__LEVEL:
-				return getLevel();
+			case CodingcontestPackage.CONTEST__LOCATIONS:
+				return getLocations();
+			case CodingcontestPackage.CONTEST__LEVELS:
+				return getLevels();
 			case CodingcontestPackage.CONTEST__ENTRY:
 				return getEntry();
 			case CodingcontestPackage.CONTEST__ORGANIZER:
@@ -397,13 +397,13 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 			case CodingcontestPackage.CONTEST__LOCAL_DATE:
 				setLocalDate((Date)newValue);
 				return;
-			case CodingcontestPackage.CONTEST__LOCATION:
-				getLocation().clear();
-				getLocation().addAll((Collection<? extends Location>)newValue);
+			case CodingcontestPackage.CONTEST__LOCATIONS:
+				getLocations().clear();
+				getLocations().addAll((Collection<? extends Location>)newValue);
 				return;
-			case CodingcontestPackage.CONTEST__LEVEL:
-				getLevel().clear();
-				getLevel().addAll((Collection<? extends Level>)newValue);
+			case CodingcontestPackage.CONTEST__LEVELS:
+				getLevels().clear();
+				getLevels().addAll((Collection<? extends Level>)newValue);
 				return;
 			case CodingcontestPackage.CONTEST__ENTRY:
 				getEntry().clear();
@@ -435,11 +435,11 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 			case CodingcontestPackage.CONTEST__LOCAL_DATE:
 				setLocalDate(LOCAL_DATE_EDEFAULT);
 				return;
-			case CodingcontestPackage.CONTEST__LOCATION:
-				getLocation().clear();
+			case CodingcontestPackage.CONTEST__LOCATIONS:
+				getLocations().clear();
 				return;
-			case CodingcontestPackage.CONTEST__LEVEL:
-				getLevel().clear();
+			case CodingcontestPackage.CONTEST__LEVELS:
+				getLevels().clear();
 				return;
 			case CodingcontestPackage.CONTEST__ENTRY:
 				getEntry().clear();
@@ -467,10 +467,10 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 				return THEME_EDEFAULT == null ? theme != null : !THEME_EDEFAULT.equals(theme);
 			case CodingcontestPackage.CONTEST__LOCAL_DATE:
 				return LOCAL_DATE_EDEFAULT == null ? localDate != null : !LOCAL_DATE_EDEFAULT.equals(localDate);
-			case CodingcontestPackage.CONTEST__LOCATION:
-				return location != null && !location.isEmpty();
-			case CodingcontestPackage.CONTEST__LEVEL:
-				return level != null && !level.isEmpty();
+			case CodingcontestPackage.CONTEST__LOCATIONS:
+				return locations != null && !locations.isEmpty();
+			case CodingcontestPackage.CONTEST__LEVELS:
+				return levels != null && !levels.isEmpty();
 			case CodingcontestPackage.CONTEST__ENTRY:
 				return entry != null && !entry.isEmpty();
 			case CodingcontestPackage.CONTEST__ORGANIZER:

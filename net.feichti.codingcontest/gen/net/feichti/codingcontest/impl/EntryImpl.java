@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link net.feichti.codingcontest.impl.EntryImpl#getCoder <em>Coder</em>}</li>
+ *   <li>{@link net.feichti.codingcontest.impl.EntryImpl#getCoders <em>Coders</em>}</li>
  *   <li>{@link net.feichti.codingcontest.impl.EntryImpl#getLocation <em>Location</em>}</li>
  *   <li>{@link net.feichti.codingcontest.impl.EntryImpl#getTeamName <em>Team Name</em>}</li>
  *   <li>{@link net.feichti.codingcontest.impl.EntryImpl#getLanguage <em>Language</em>}</li>
@@ -42,14 +42,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class EntryImpl extends MinimalEObjectImpl.Container implements Entry
 {
 	/**
-	 * The cached value of the '{@link #getCoder() <em>Coder</em>}' containment reference list.
+	 * The cached value of the '{@link #getCoders() <em>Coders</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCoder()
+	 * @see #getCoders()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Coder> coder;
+	protected EList<Coder> coders;
 
 	/**
 	 * The cached value of the '{@link #getLocation() <em>Location</em>}' reference.
@@ -127,13 +127,13 @@ public class EntryImpl extends MinimalEObjectImpl.Container implements Entry
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Coder> getCoder()
+	public EList<Coder> getCoders()
 	{
-		if (coder == null)
+		if (coders == null)
 		{
-			coder = new EObjectContainmentEList<Coder>(Coder.class, this, CodingcontestPackage.ENTRY__CODER);
+			coders = new EObjectContainmentEList<Coder>(Coder.class, this, CodingcontestPackage.ENTRY__CODERS);
 		}
-		return coder;
+		return coders;
 	}
 
 	/**
@@ -215,8 +215,8 @@ public class EntryImpl extends MinimalEObjectImpl.Container implements Entry
 	{
 		switch (featureID)
 		{
-			case CodingcontestPackage.ENTRY__CODER:
-				return ((InternalEList<?>)getCoder()).basicRemove(otherEnd, msgs);
+			case CodingcontestPackage.ENTRY__CODERS:
+				return ((InternalEList<?>)getCoders()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -231,8 +231,8 @@ public class EntryImpl extends MinimalEObjectImpl.Container implements Entry
 	{
 		switch (featureID)
 		{
-			case CodingcontestPackage.ENTRY__CODER:
-				return getCoder();
+			case CodingcontestPackage.ENTRY__CODERS:
+				return getCoders();
 			case CodingcontestPackage.ENTRY__LOCATION:
 				return getLocation();
 			case CodingcontestPackage.ENTRY__TEAM_NAME:
@@ -254,9 +254,9 @@ public class EntryImpl extends MinimalEObjectImpl.Container implements Entry
 	{
 		switch (featureID)
 		{
-			case CodingcontestPackage.ENTRY__CODER:
-				getCoder().clear();
-				getCoder().addAll((Collection<? extends Coder>)newValue);
+			case CodingcontestPackage.ENTRY__CODERS:
+				getCoders().clear();
+				getCoders().addAll((Collection<? extends Coder>)newValue);
 				return;
 			case CodingcontestPackage.ENTRY__LOCATION:
 				setLocation((Location)newValue);
@@ -281,8 +281,8 @@ public class EntryImpl extends MinimalEObjectImpl.Container implements Entry
 	{
 		switch (featureID)
 		{
-			case CodingcontestPackage.ENTRY__CODER:
-				getCoder().clear();
+			case CodingcontestPackage.ENTRY__CODERS:
+				getCoders().clear();
 				return;
 			case CodingcontestPackage.ENTRY__LOCATION:
 				setLocation((Location)null);
@@ -307,8 +307,8 @@ public class EntryImpl extends MinimalEObjectImpl.Container implements Entry
 	{
 		switch (featureID)
 		{
-			case CodingcontestPackage.ENTRY__CODER:
-				return coder != null && !coder.isEmpty();
+			case CodingcontestPackage.ENTRY__CODERS:
+				return coders != null && !coders.isEmpty();
 			case CodingcontestPackage.ENTRY__LOCATION:
 				return location != null;
 			case CodingcontestPackage.ENTRY__TEAM_NAME:

@@ -20,8 +20,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link net.feichti.codingcontest.Contest#getId <em>Id</em>}</li>
  *   <li>{@link net.feichti.codingcontest.Contest#getTheme <em>Theme</em>}</li>
  *   <li>{@link net.feichti.codingcontest.Contest#getLocalDate <em>Local Date</em>}</li>
- *   <li>{@link net.feichti.codingcontest.Contest#getLocation <em>Location</em>}</li>
- *   <li>{@link net.feichti.codingcontest.Contest#getLevel <em>Level</em>}</li>
+ *   <li>{@link net.feichti.codingcontest.Contest#getLocations <em>Locations</em>}</li>
+ *   <li>{@link net.feichti.codingcontest.Contest#getLevels <em>Levels</em>}</li>
  *   <li>{@link net.feichti.codingcontest.Contest#getEntry <em>Entry</em>}</li>
  *   <li>{@link net.feichti.codingcontest.Contest#getOrganizer <em>Organizer</em>}</li>
  * </ul>
@@ -111,36 +111,36 @@ public interface Contest extends EObject
 	void setLocalDate(Date value);
 
 	/**
-	 * Returns the value of the '<em><b>Location</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Locations</b></em>' containment reference list.
 	 * The list contents are of type {@link net.feichti.codingcontest.Location}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Location</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Locations</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Location</em>' containment reference list.
-	 * @see net.feichti.codingcontest.CodingcontestPackage#getContest_Location()
+	 * @return the value of the '<em>Locations</em>' containment reference list.
+	 * @see net.feichti.codingcontest.CodingcontestPackage#getContest_Locations()
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
-	EList<Location> getLocation();
+	EList<Location> getLocations();
 
 	/**
-	 * Returns the value of the '<em><b>Level</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Levels</b></em>' containment reference list.
 	 * The list contents are of type {@link net.feichti.codingcontest.Level}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Level</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Levels</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Level</em>' containment reference list.
-	 * @see net.feichti.codingcontest.CodingcontestPackage#getContest_Level()
+	 * @return the value of the '<em>Levels</em>' containment reference list.
+	 * @see net.feichti.codingcontest.CodingcontestPackage#getContest_Levels()
 	 * @model containment="true" lower="3" upper="8"
 	 * @generated
 	 */
-	EList<Level> getLevel();
+	EList<Level> getLevels();
 
 	/**
 	 * Returns the value of the '<em><b>Entry</b></em>' containment reference list.

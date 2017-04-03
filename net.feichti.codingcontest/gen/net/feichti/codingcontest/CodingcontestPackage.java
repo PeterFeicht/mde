@@ -141,22 +141,22 @@ public interface CodingcontestPackage extends EPackage
 	int CONTEST__LOCAL_DATE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Location</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Locations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTEST__LOCATION = 3;
+	int CONTEST__LOCATIONS = 3;
 
 	/**
-	 * The feature id for the '<em><b>Level</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Levels</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTEST__LEVEL = 4;
+	int CONTEST__LEVELS = 4;
 
 	/**
 	 * The feature id for the '<em><b>Entry</b></em>' containment reference list.
@@ -242,13 +242,13 @@ public interface CodingcontestPackage extends EPackage
 	int ENTRY = 3;
 
 	/**
-	 * The feature id for the '<em><b>Coder</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Coders</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTRY__CODER = 0;
+	int ENTRY__CODERS = 0;
 
 	/**
 	 * The feature id for the '<em><b>Location</b></em>' reference.
@@ -352,13 +352,13 @@ public interface CodingcontestPackage extends EPackage
 	int LEVEL__TITLE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Problem</b></em>' map.
+	 * The feature id for the '<em><b>Problems</b></em>' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LEVEL__PROBLEM = 2;
+	int LEVEL__PROBLEMS = 2;
 
 	/**
 	 * The number of structural features of the '<em>Level</em>' class.
@@ -550,26 +550,26 @@ public interface CodingcontestPackage extends EPackage
 	EAttribute getContest_LocalDate();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link net.feichti.codingcontest.Contest#getLocation <em>Location</em>}'.
+	 * Returns the meta object for the containment reference list '{@link net.feichti.codingcontest.Contest#getLocations <em>Locations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Location</em>'.
-	 * @see net.feichti.codingcontest.Contest#getLocation()
+	 * @return the meta object for the containment reference list '<em>Locations</em>'.
+	 * @see net.feichti.codingcontest.Contest#getLocations()
 	 * @see #getContest()
 	 * @generated
 	 */
-	EReference getContest_Location();
+	EReference getContest_Locations();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link net.feichti.codingcontest.Contest#getLevel <em>Level</em>}'.
+	 * Returns the meta object for the containment reference list '{@link net.feichti.codingcontest.Contest#getLevels <em>Levels</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Level</em>'.
-	 * @see net.feichti.codingcontest.Contest#getLevel()
+	 * @return the meta object for the containment reference list '<em>Levels</em>'.
+	 * @see net.feichti.codingcontest.Contest#getLevels()
 	 * @see #getContest()
 	 * @generated
 	 */
-	EReference getContest_Level();
+	EReference getContest_Levels();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link net.feichti.codingcontest.Contest#getEntry <em>Entry</em>}'.
@@ -647,15 +647,15 @@ public interface CodingcontestPackage extends EPackage
 	EClass getEntry();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link net.feichti.codingcontest.Entry#getCoder <em>Coder</em>}'.
+	 * Returns the meta object for the containment reference list '{@link net.feichti.codingcontest.Entry#getCoders <em>Coders</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Coder</em>'.
-	 * @see net.feichti.codingcontest.Entry#getCoder()
+	 * @return the meta object for the containment reference list '<em>Coders</em>'.
+	 * @see net.feichti.codingcontest.Entry#getCoders()
 	 * @see #getEntry()
 	 * @generated
 	 */
-	EReference getEntry_Coder();
+	EReference getEntry_Coders();
 
 	/**
 	 * Returns the meta object for the reference '{@link net.feichti.codingcontest.Entry#getLocation <em>Location</em>}'.
@@ -755,15 +755,15 @@ public interface CodingcontestPackage extends EPackage
 	EAttribute getLevel_Title();
 
 	/**
-	 * Returns the meta object for the map '{@link net.feichti.codingcontest.Level#getProblem <em>Problem</em>}'.
+	 * Returns the meta object for the map '{@link net.feichti.codingcontest.Level#getProblems <em>Problems</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the map '<em>Problem</em>'.
-	 * @see net.feichti.codingcontest.Level#getProblem()
+	 * @return the meta object for the map '<em>Problems</em>'.
+	 * @see net.feichti.codingcontest.Level#getProblems()
 	 * @see #getLevel()
 	 * @generated
 	 */
-	EReference getLevel_Problem();
+	EReference getLevel_Problems();
 
 	/**
 	 * Returns the meta object for class '{@link net.feichti.codingcontest.Problem <em>Problem</em>}'.
@@ -944,20 +944,20 @@ public interface CodingcontestPackage extends EPackage
 		EAttribute CONTEST__LOCAL_DATE = eINSTANCE.getContest_LocalDate();
 
 		/**
-		 * The meta object literal for the '<em><b>Location</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Locations</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONTEST__LOCATION = eINSTANCE.getContest_Location();
+		EReference CONTEST__LOCATIONS = eINSTANCE.getContest_Locations();
 
 		/**
-		 * The meta object literal for the '<em><b>Level</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Levels</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONTEST__LEVEL = eINSTANCE.getContest_Level();
+		EReference CONTEST__LEVELS = eINSTANCE.getContest_Levels();
 
 		/**
 		 * The meta object literal for the '<em><b>Entry</b></em>' containment reference list feature.
@@ -1020,12 +1020,12 @@ public interface CodingcontestPackage extends EPackage
 		EClass ENTRY = eINSTANCE.getEntry();
 
 		/**
-		 * The meta object literal for the '<em><b>Coder</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Coders</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ENTRY__CODER = eINSTANCE.getEntry_Coder();
+		EReference ENTRY__CODERS = eINSTANCE.getEntry_Coders();
 
 		/**
 		 * The meta object literal for the '<em><b>Location</b></em>' reference feature.
@@ -1104,12 +1104,12 @@ public interface CodingcontestPackage extends EPackage
 		EAttribute LEVEL__TITLE = eINSTANCE.getLevel_Title();
 
 		/**
-		 * The meta object literal for the '<em><b>Problem</b></em>' map feature.
+		 * The meta object literal for the '<em><b>Problems</b></em>' map feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LEVEL__PROBLEM = eINSTANCE.getLevel_Problem();
+		EReference LEVEL__PROBLEMS = eINSTANCE.getLevel_Problems();
 
 		/**
 		 * The meta object literal for the '{@link net.feichti.codingcontest.impl.ProblemImpl <em>Problem</em>}' class.

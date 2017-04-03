@@ -485,9 +485,9 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_ElwHUBbMEeetQ8ph5WUFjA" name="[1..3] coder" sourceNode="_BYwm4BbMEeetQ8ph5WUFjA" targetNode="_axkwoBbJEeetQ8ph5WUFjA">
-      <target xmi:type="ecore:EReference" href="codingcontest.ecore#//Entry/coder"/>
-      <semanticElements xmi:type="ecore:EReference" href="codingcontest.ecore#//Entry/coder"/>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_ElwHUBbMEeetQ8ph5WUFjA" name="[1..3] coders" sourceNode="_BYwm4BbMEeetQ8ph5WUFjA" targetNode="_axkwoBbJEeetQ8ph5WUFjA">
+      <target xmi:type="ecore:EReference" href="codingcontest.ecore#//Entry/coders"/>
+      <semanticElements xmi:type="ecore:EReference" href="codingcontest.ecore#//Entry/coders"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_mTM_4Be9EeeJHLtO5MKs4A" description="_rkE18Bb0EeetQ8ph5WUFjA" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_mTM_4Re9EeeJHLtO5MKs4A" showIcon="false">
           <labelFormat>bold</labelFormat>
@@ -666,9 +666,9 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_2lHxQBbjEeetQ8ph5WUFjA" name="[0..*] problem" sourceNode="_fG1nEBbREeetQ8ph5WUFjA" targetNode="_s5VBYBbjEeetQ8ph5WUFjA">
-      <target xmi:type="ecore:EReference" href="codingcontest.ecore#//Level/problem"/>
-      <semanticElements xmi:type="ecore:EReference" href="codingcontest.ecore#//Level/problem"/>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_2lHxQBbjEeetQ8ph5WUFjA" name="[0..*] problems" sourceNode="_fG1nEBbREeetQ8ph5WUFjA" targetNode="_s5VBYBbjEeetQ8ph5WUFjA">
+      <target xmi:type="ecore:EReference" href="codingcontest.ecore#//Level/problems"/>
+      <semanticElements xmi:type="ecore:EReference" href="codingcontest.ecore#//Level/problems"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_rkHSMBb0EeetQ8ph5WUFjA" description="_rkEO4Bb0EeetQ8ph5WUFjA" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_rkHSMRb0EeetQ8ph5WUFjA" showIcon="false"/>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_rkHSMhb0EeetQ8ph5WUFjA" labelSize="6" showIcon="false" labelColor="39,76,114"/>
@@ -686,9 +686,9 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Z8l1IBbkEeetQ8ph5WUFjA" name="[3..8] level" sourceNode="_0mC-0BbKEeetQ8ph5WUFjA" targetNode="_fG1nEBbREeetQ8ph5WUFjA">
-      <target xmi:type="ecore:EReference" href="codingcontest.ecore#//Contest/level"/>
-      <semanticElements xmi:type="ecore:EReference" href="codingcontest.ecore#//Contest/level"/>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Z8l1IBbkEeetQ8ph5WUFjA" name="[3..8] levels" sourceNode="_0mC-0BbKEeetQ8ph5WUFjA" targetNode="_fG1nEBbREeetQ8ph5WUFjA">
+      <target xmi:type="ecore:EReference" href="codingcontest.ecore#//Contest/levels"/>
+      <semanticElements xmi:type="ecore:EReference" href="codingcontest.ecore#//Contest/levels"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_rkE18xb0EeetQ8ph5WUFjA" description="_rkE18Bb0EeetQ8ph5WUFjA" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_rkE19Bb0EeetQ8ph5WUFjA" showIcon="false">
           <labelFormat>bold</labelFormat>
@@ -697,9 +697,9 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_ujhyABbmEeetQ8ph5WUFjA" name="[0..*] location" sourceNode="_0mC-0BbKEeetQ8ph5WUFjA" targetNode="_XXVMcBbLEeetQ8ph5WUFjA">
-      <target xmi:type="ecore:EReference" href="codingcontest.ecore#//Contest/location"/>
-      <semanticElements xmi:type="ecore:EReference" href="codingcontest.ecore#//Contest/location"/>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_ujhyABbmEeetQ8ph5WUFjA" name="[0..*] locations" sourceNode="_0mC-0BbKEeetQ8ph5WUFjA" targetNode="_XXVMcBbLEeetQ8ph5WUFjA">
+      <target xmi:type="ecore:EReference" href="codingcontest.ecore#//Contest/locations"/>
+      <semanticElements xmi:type="ecore:EReference" href="codingcontest.ecore#//Contest/locations"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_rkEO4xb0EeetQ8ph5WUFjA" description="_rkEO4Bb0EeetQ8ph5WUFjA" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_rkEO5Bb0EeetQ8ph5WUFjA" showIcon="false"/>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_rkEO5Rb0EeetQ8ph5WUFjA" labelSize="6" showIcon="false" labelColor="39,76,114"/>

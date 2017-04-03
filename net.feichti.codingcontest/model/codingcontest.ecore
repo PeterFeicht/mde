@@ -12,10 +12,10 @@
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="theme" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="localDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="location" ordered="false"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="locations" ordered="false"
         upperBound="-1" eType="#//Location" containment="true" resolveProxies="false"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="level" lowerBound="3" upperBound="8"
-        eType="#//Level" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="levels" lowerBound="3"
+        upperBound="8" eType="#//Level" containment="true" resolveProxies="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="entry" ordered="false"
         upperBound="-1" eType="#//Entry" containment="true" resolveProxies="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="organizer" ordered="false"
@@ -30,7 +30,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Entry">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="coder" ordered="false"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="coders" ordered="false"
         lowerBound="1" upperBound="3" eType="#//Coder" containment="true" resolveProxies="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="location" ordered="false"
         eType="#//Location" resolveProxies="false"/>
@@ -52,7 +52,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="number" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="problem" ordered="false"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="problems" ordered="false"
         upperBound="-1" eType="#//LanguageToProblemMap" containment="true" resolveProxies="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Problem">

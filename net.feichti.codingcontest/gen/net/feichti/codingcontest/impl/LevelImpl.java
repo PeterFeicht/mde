@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link net.feichti.codingcontest.impl.LevelImpl#getNumber <em>Number</em>}</li>
  *   <li>{@link net.feichti.codingcontest.impl.LevelImpl#getTitle <em>Title</em>}</li>
- *   <li>{@link net.feichti.codingcontest.impl.LevelImpl#getProblem <em>Problem</em>}</li>
+ *   <li>{@link net.feichti.codingcontest.impl.LevelImpl#getProblems <em>Problems</em>}</li>
  * </ul>
  *
  * @generated
@@ -79,14 +79,14 @@ public class LevelImpl extends MinimalEObjectImpl.Container implements Level
 	protected String title = TITLE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getProblem() <em>Problem</em>}' map.
+	 * The cached value of the '{@link #getProblems() <em>Problems</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getProblem()
+	 * @see #getProblems()
 	 * @generated
 	 * @ordered
 	 */
-	protected EMap<String, Problem> problem;
+	protected EMap<String, Problem> problems;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -160,13 +160,13 @@ public class LevelImpl extends MinimalEObjectImpl.Container implements Level
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EMap<String, Problem> getProblem()
+	public EMap<String, Problem> getProblems()
 	{
-		if (problem == null)
+		if (problems == null)
 		{
-			problem = new EcoreEMap<String,Problem>(CodingcontestPackage.Literals.LANGUAGE_TO_PROBLEM_MAP, LanguageToProblemMapImpl.class, this, CodingcontestPackage.LEVEL__PROBLEM);
+			problems = new EcoreEMap<String,Problem>(CodingcontestPackage.Literals.LANGUAGE_TO_PROBLEM_MAP, LanguageToProblemMapImpl.class, this, CodingcontestPackage.LEVEL__PROBLEMS);
 		}
-		return problem;
+		return problems;
 	}
 
 	/**
@@ -179,8 +179,8 @@ public class LevelImpl extends MinimalEObjectImpl.Container implements Level
 	{
 		switch (featureID)
 		{
-			case CodingcontestPackage.LEVEL__PROBLEM:
-				return ((InternalEList<?>)getProblem()).basicRemove(otherEnd, msgs);
+			case CodingcontestPackage.LEVEL__PROBLEMS:
+				return ((InternalEList<?>)getProblems()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -199,9 +199,9 @@ public class LevelImpl extends MinimalEObjectImpl.Container implements Level
 				return getNumber();
 			case CodingcontestPackage.LEVEL__TITLE:
 				return getTitle();
-			case CodingcontestPackage.LEVEL__PROBLEM:
-				if (coreType) return getProblem();
-				else return getProblem().map();
+			case CodingcontestPackage.LEVEL__PROBLEMS:
+				if (coreType) return getProblems();
+				else return getProblems().map();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -222,8 +222,8 @@ public class LevelImpl extends MinimalEObjectImpl.Container implements Level
 			case CodingcontestPackage.LEVEL__TITLE:
 				setTitle((String)newValue);
 				return;
-			case CodingcontestPackage.LEVEL__PROBLEM:
-				((EStructuralFeature.Setting)getProblem()).set(newValue);
+			case CodingcontestPackage.LEVEL__PROBLEMS:
+				((EStructuralFeature.Setting)getProblems()).set(newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -245,8 +245,8 @@ public class LevelImpl extends MinimalEObjectImpl.Container implements Level
 			case CodingcontestPackage.LEVEL__TITLE:
 				setTitle(TITLE_EDEFAULT);
 				return;
-			case CodingcontestPackage.LEVEL__PROBLEM:
-				getProblem().clear();
+			case CodingcontestPackage.LEVEL__PROBLEMS:
+				getProblems().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -266,8 +266,8 @@ public class LevelImpl extends MinimalEObjectImpl.Container implements Level
 				return number != NUMBER_EDEFAULT;
 			case CodingcontestPackage.LEVEL__TITLE:
 				return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
-			case CodingcontestPackage.LEVEL__PROBLEM:
-				return problem != null && !problem.isEmpty();
+			case CodingcontestPackage.LEVEL__PROBLEMS:
+				return problems != null && !problems.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

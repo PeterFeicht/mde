@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link net.feichti.codingcontest.Level#getNumber <em>Number</em>}</li>
  *   <li>{@link net.feichti.codingcontest.Level#getTitle <em>Title</em>}</li>
- *   <li>{@link net.feichti.codingcontest.Level#getProblem <em>Problem</em>}</li>
+ *   <li>{@link net.feichti.codingcontest.Level#getProblems <em>Problems</em>}</li>
  * </ul>
  *
  * @see net.feichti.codingcontest.CodingcontestPackage#getLevel()
@@ -79,20 +79,20 @@ public interface Level extends EObject
 	void setTitle(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Problem</b></em>' map.
+	 * Returns the value of the '<em><b>Problems</b></em>' map.
 	 * The key is of type {@link java.lang.String},
 	 * and the value is of type {@link net.feichti.codingcontest.Problem},
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Problem</em>' map isn't clear,
+	 * If the meaning of the '<em>Problems</em>' map isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Problem</em>' map.
-	 * @see net.feichti.codingcontest.CodingcontestPackage#getLevel_Problem()
+	 * @return the value of the '<em>Problems</em>' map.
+	 * @see net.feichti.codingcontest.CodingcontestPackage#getLevel_Problems()
 	 * @model mapType="net.feichti.codingcontest.LanguageToProblemMap<org.eclipse.emf.ecore.xml.type.Language, net.feichti.codingcontest.Problem>" ordered="false"
 	 * @generated
 	 */
-	EMap<String, Problem> getProblem();
+	EMap<String, Problem> getProblems();
 
 } // Level

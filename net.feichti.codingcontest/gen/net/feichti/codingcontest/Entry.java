@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link net.feichti.codingcontest.Entry#getCoder <em>Coder</em>}</li>
+ *   <li>{@link net.feichti.codingcontest.Entry#getCoders <em>Coders</em>}</li>
  *   <li>{@link net.feichti.codingcontest.Entry#getLocation <em>Location</em>}</li>
  *   <li>{@link net.feichti.codingcontest.Entry#getTeamName <em>Team Name</em>}</li>
  *   <li>{@link net.feichti.codingcontest.Entry#getLanguage <em>Language</em>}</li>
@@ -28,20 +28,20 @@ import org.eclipse.emf.ecore.EObject;
 public interface Entry extends EObject
 {
 	/**
-	 * Returns the value of the '<em><b>Coder</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Coders</b></em>' containment reference list.
 	 * The list contents are of type {@link net.feichti.codingcontest.Coder}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Coder</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Coders</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Coder</em>' containment reference list.
-	 * @see net.feichti.codingcontest.CodingcontestPackage#getEntry_Coder()
+	 * @return the value of the '<em>Coders</em>' containment reference list.
+	 * @see net.feichti.codingcontest.CodingcontestPackage#getEntry_Coders()
 	 * @model containment="true" required="true" upper="3" ordered="false"
 	 * @generated
 	 */
-	EList<Coder> getCoder();
+	EList<Coder> getCoders();
 
 	/**
 	 * Returns the value of the '<em><b>Location</b></em>' reference.
