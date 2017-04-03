@@ -16,7 +16,7 @@
         upperBound="-1" eType="#//Location" containment="true" resolveProxies="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="levels" lowerBound="3"
         upperBound="8" eType="#//Level" containment="true" resolveProxies="false"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entry" ordered="false"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entries" ordered="false"
         upperBound="-1" eType="#//Entry" containment="true" resolveProxies="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="organizer" ordered="false"
         unique="false" lowerBound="1" eType="#//Organizer" containment="true" resolveProxies="false"/>

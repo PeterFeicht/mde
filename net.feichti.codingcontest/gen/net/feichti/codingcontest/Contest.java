@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link net.feichti.codingcontest.Contest#getLocalDate <em>Local Date</em>}</li>
  *   <li>{@link net.feichti.codingcontest.Contest#getLocations <em>Locations</em>}</li>
  *   <li>{@link net.feichti.codingcontest.Contest#getLevels <em>Levels</em>}</li>
- *   <li>{@link net.feichti.codingcontest.Contest#getEntry <em>Entry</em>}</li>
+ *   <li>{@link net.feichti.codingcontest.Contest#getEntries <em>Entries</em>}</li>
  *   <li>{@link net.feichti.codingcontest.Contest#getOrganizer <em>Organizer</em>}</li>
  * </ul>
  *
@@ -143,20 +143,20 @@ public interface Contest extends EObject
 	EList<Level> getLevels();
 
 	/**
-	 * Returns the value of the '<em><b>Entry</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Entries</b></em>' containment reference list.
 	 * The list contents are of type {@link net.feichti.codingcontest.Entry}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Entry</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Entries</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Entry</em>' containment reference list.
-	 * @see net.feichti.codingcontest.CodingcontestPackage#getContest_Entry()
+	 * @return the value of the '<em>Entries</em>' containment reference list.
+	 * @see net.feichti.codingcontest.CodingcontestPackage#getContest_Entries()
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
-	EList<Entry> getEntry();
+	EList<Entry> getEntries();
 
 	/**
 	 * Returns the value of the '<em><b>Organizer</b></em>' containment reference.

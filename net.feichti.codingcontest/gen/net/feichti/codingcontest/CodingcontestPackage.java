@@ -159,13 +159,13 @@ public interface CodingcontestPackage extends EPackage
 	int CONTEST__LEVELS = 4;
 
 	/**
-	 * The feature id for the '<em><b>Entry</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Entries</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTEST__ENTRY = 5;
+	int CONTEST__ENTRIES = 5;
 
 	/**
 	 * The feature id for the '<em><b>Organizer</b></em>' containment reference.
@@ -572,15 +572,15 @@ public interface CodingcontestPackage extends EPackage
 	EReference getContest_Levels();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link net.feichti.codingcontest.Contest#getEntry <em>Entry</em>}'.
+	 * Returns the meta object for the containment reference list '{@link net.feichti.codingcontest.Contest#getEntries <em>Entries</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Entry</em>'.
-	 * @see net.feichti.codingcontest.Contest#getEntry()
+	 * @return the meta object for the containment reference list '<em>Entries</em>'.
+	 * @see net.feichti.codingcontest.Contest#getEntries()
 	 * @see #getContest()
 	 * @generated
 	 */
-	EReference getContest_Entry();
+	EReference getContest_Entries();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link net.feichti.codingcontest.Contest#getOrganizer <em>Organizer</em>}'.
@@ -960,12 +960,12 @@ public interface CodingcontestPackage extends EPackage
 		EReference CONTEST__LEVELS = eINSTANCE.getContest_Levels();
 
 		/**
-		 * The meta object literal for the '<em><b>Entry</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Entries</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONTEST__ENTRY = eINSTANCE.getContest_Entry();
+		EReference CONTEST__ENTRIES = eINSTANCE.getContest_Entries();
 
 		/**
 		 * The meta object literal for the '<em><b>Organizer</b></em>' containment reference feature.

@@ -25,7 +25,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute codingcontest.ecore#//Contest/localDate"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference codingcontest.ecore#//Contest/locations"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference codingcontest.ecore#//Contest/levels"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference codingcontest.ecore#//Contest/entry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference codingcontest.ecore#//Contest/entries"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference codingcontest.ecore#//Contest/organizer"/>
     </genClasses>
     <genClasses ecoreClass="codingcontest.ecore#//Location">

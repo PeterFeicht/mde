@@ -39,7 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link net.feichti.codingcontest.impl.ContestImpl#getLocalDate <em>Local Date</em>}</li>
  *   <li>{@link net.feichti.codingcontest.impl.ContestImpl#getLocations <em>Locations</em>}</li>
  *   <li>{@link net.feichti.codingcontest.impl.ContestImpl#getLevels <em>Levels</em>}</li>
- *   <li>{@link net.feichti.codingcontest.impl.ContestImpl#getEntry <em>Entry</em>}</li>
+ *   <li>{@link net.feichti.codingcontest.impl.ContestImpl#getEntries <em>Entries</em>}</li>
  *   <li>{@link net.feichti.codingcontest.impl.ContestImpl#getOrganizer <em>Organizer</em>}</li>
  * </ul>
  *
@@ -128,14 +128,14 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 	protected EList<Level> levels;
 
 	/**
-	 * The cached value of the '{@link #getEntry() <em>Entry</em>}' containment reference list.
+	 * The cached value of the '{@link #getEntries() <em>Entries</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEntry()
+	 * @see #getEntries()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Entry> entry;
+	protected EList<Entry> entries;
 
 	/**
 	 * The cached value of the '{@link #getOrganizer() <em>Organizer</em>}' containment reference.
@@ -270,13 +270,13 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Entry> getEntry()
+	public EList<Entry> getEntries()
 	{
-		if (entry == null)
+		if (entries == null)
 		{
-			entry = new EObjectContainmentEList<Entry>(Entry.class, this, CodingcontestPackage.CONTEST__ENTRY);
+			entries = new EObjectContainmentEList<Entry>(Entry.class, this, CodingcontestPackage.CONTEST__ENTRIES);
 		}
-		return entry;
+		return entries;
 	}
 
 	/**
@@ -341,8 +341,8 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 				return ((InternalEList<?>)getLocations()).basicRemove(otherEnd, msgs);
 			case CodingcontestPackage.CONTEST__LEVELS:
 				return ((InternalEList<?>)getLevels()).basicRemove(otherEnd, msgs);
-			case CodingcontestPackage.CONTEST__ENTRY:
-				return ((InternalEList<?>)getEntry()).basicRemove(otherEnd, msgs);
+			case CodingcontestPackage.CONTEST__ENTRIES:
+				return ((InternalEList<?>)getEntries()).basicRemove(otherEnd, msgs);
 			case CodingcontestPackage.CONTEST__ORGANIZER:
 				return basicSetOrganizer(null, msgs);
 		}
@@ -369,8 +369,8 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 				return getLocations();
 			case CodingcontestPackage.CONTEST__LEVELS:
 				return getLevels();
-			case CodingcontestPackage.CONTEST__ENTRY:
-				return getEntry();
+			case CodingcontestPackage.CONTEST__ENTRIES:
+				return getEntries();
 			case CodingcontestPackage.CONTEST__ORGANIZER:
 				return getOrganizer();
 		}
@@ -405,9 +405,9 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 				getLevels().clear();
 				getLevels().addAll((Collection<? extends Level>)newValue);
 				return;
-			case CodingcontestPackage.CONTEST__ENTRY:
-				getEntry().clear();
-				getEntry().addAll((Collection<? extends Entry>)newValue);
+			case CodingcontestPackage.CONTEST__ENTRIES:
+				getEntries().clear();
+				getEntries().addAll((Collection<? extends Entry>)newValue);
 				return;
 			case CodingcontestPackage.CONTEST__ORGANIZER:
 				setOrganizer((Organizer)newValue);
@@ -441,8 +441,8 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 			case CodingcontestPackage.CONTEST__LEVELS:
 				getLevels().clear();
 				return;
-			case CodingcontestPackage.CONTEST__ENTRY:
-				getEntry().clear();
+			case CodingcontestPackage.CONTEST__ENTRIES:
+				getEntries().clear();
 				return;
 			case CodingcontestPackage.CONTEST__ORGANIZER:
 				setOrganizer((Organizer)null);
@@ -471,8 +471,8 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 				return locations != null && !locations.isEmpty();
 			case CodingcontestPackage.CONTEST__LEVELS:
 				return levels != null && !levels.isEmpty();
-			case CodingcontestPackage.CONTEST__ENTRY:
-				return entry != null && !entry.isEmpty();
+			case CodingcontestPackage.CONTEST__ENTRIES:
+				return entries != null && !entries.isEmpty();
 			case CodingcontestPackage.CONTEST__ORGANIZER:
 				return organizer != null;
 		}

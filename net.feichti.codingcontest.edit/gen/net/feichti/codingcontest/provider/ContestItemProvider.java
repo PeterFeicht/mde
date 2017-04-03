@@ -159,7 +159,7 @@ public class ContestItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(CodingcontestPackage.Literals.CONTEST__LOCATIONS);
 			childrenFeatures.add(CodingcontestPackage.Literals.CONTEST__LEVELS);
-			childrenFeatures.add(CodingcontestPackage.Literals.CONTEST__ENTRY);
+			childrenFeatures.add(CodingcontestPackage.Literals.CONTEST__ENTRIES);
 			childrenFeatures.add(CodingcontestPackage.Literals.CONTEST__ORGANIZER);
 		}
 		return childrenFeatures;
@@ -228,7 +228,7 @@ public class ContestItemProvider
 				return;
 			case CodingcontestPackage.CONTEST__LOCATIONS:
 			case CodingcontestPackage.CONTEST__LEVELS:
-			case CodingcontestPackage.CONTEST__ENTRY:
+			case CodingcontestPackage.CONTEST__ENTRIES:
 			case CodingcontestPackage.CONTEST__ORGANIZER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -260,7 +260,7 @@ public class ContestItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CodingcontestPackage.Literals.CONTEST__ENTRY,
+				(CodingcontestPackage.Literals.CONTEST__ENTRIES,
 				 CodingcontestFactory.eINSTANCE.createEntry()));
 
 		newChildDescriptors.add
