@@ -3,26 +3,27 @@ import 'codingcontest.ecore'
 package codingcontest
 
 context Contest
-
--- XXX Should this be modeled instead of being a constraint?
-inv HasTheme: theme <> null and theme.size() > 0
+	
+	-- XXX Should this be modeled instead of being a constraint?
+	inv HasTheme: theme <> null and theme.size() > 0
+	
+	-- TODO consecutive level numbers
+	
+	-- TODO every problem in all required languages
 
 context Coder
-
-inv HasName('Coder "' + self.toString() + '" must have a name'):
-	name <> null and name.size() > 0
-inv PositiveAge('Age must be positive'):
-	age > 0
-inv StillAlive('I don\'t believe you are ' + age.toString() + ' years old'):
-	age < 150
+	
+	inv HasName('Coder "' + self.toString() + '" must have a name'):
+		name <> null and name.size() > 0
+		
+	inv PositiveAge('Age must be positive'):
+		age > 0
+	inv StillAlive('I don\'t believe you are ' + age.toString() + ' years old'):
+		age < 150
 
 context Organizer
-
-inv HasName('Organizer "' + self.toString() + '" must have a name'):
-	name <> null and name.size() > 0
-
--- TODO consecutive level numbers
-
--- TODO every problem in all required languages
+	
+	inv HasName('Organizer "' + self.toString() + '" must have a name'):
+		name <> null and name.size() > 0
 
 endpackage
