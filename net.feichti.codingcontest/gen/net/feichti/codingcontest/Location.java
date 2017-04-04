@@ -35,7 +35,7 @@ public interface Location extends EObject
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see net.feichti.codingcontest.CodingcontestPackage#getLocation_Name()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.Name"
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.Name" required="true"
 	 * @generated
 	 */
 	String getName();
@@ -61,7 +61,7 @@ public interface Location extends EObject
 	 * @return the value of the '<em>Address</em>' attribute.
 	 * @see #setAddress(String)
 	 * @see net.feichti.codingcontest.CodingcontestPackage#getLocation_Address()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	String getAddress();
@@ -87,7 +87,7 @@ public interface Location extends EObject
 	 * @return the value of the '<em>Country</em>' attribute.
 	 * @see #setCountry(String)
 	 * @see net.feichti.codingcontest.CodingcontestPackage#getLocation_Country()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	String getCountry();

@@ -814,7 +814,7 @@ public interface CodingcontestPackage extends EPackage
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Language To Problem Map</em>'.
 	 * @see java.util.Map.Entry
-	 * @model keyId="true" keyDataType="org.eclipse.emf.ecore.xml.type.Language"
+	 * @model keyId="true" keyDataType="org.eclipse.emf.ecore.xml.type.Language" keyRequired="true"
 	 *        valueType="net.feichti.codingcontest.Problem" valueContainment="true" valueRequired="true" valueOrdered="false"
 	 * @generated
 	 */

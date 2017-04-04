@@ -4,8 +4,7 @@ package codingcontest
 
 context Contest
 	
-	-- XXX Should this be modeled instead of being a constraint?
-	inv HasTheme: theme <> null and theme.size() > 0
+	inv HasTheme: theme.size() > 0
 	
 	-- There should be unique, consecutive levels starting at 0 or 1
 	inv NoDuplicateLevels: levels->isUnique(it: Level | it.number)
@@ -21,10 +20,20 @@ context Contest
 		let needed = entries->collect(it: Entry | it.language)->asSet() in
 		levels->forAll(level: Level | (needed - level.problems->collect(it: LanguageToProblemMap | it.key)->asSet())->isEmpty())
 
+context Location
+	
+	inv HasName: name.size() > 0
+	inv HasAddress: address.size() > 0
+	inv HasCountry: country.size() > 0
+
+context Entry
+	
+	inv HasTeamName: teamName.size() > 0
+
 context Coder
 	
 	inv HasName('Coder "' + self.toString() + '" must have a name'):
-		name <> null and name.size() > 0
+		name.size() > 0
 		
 	inv PositiveAge('Age must be positive'):
 		age > 0
@@ -34,6 +43,10 @@ context Coder
 context Organizer
 	
 	inv HasName('Organizer "' + self.toString() + '" must have a name'):
-		name <> null and name.size() > 0
+		name.size() > 0
+
+context Problem
+	
+	inv HasDescription: description.size() > 0
 
 endpackage

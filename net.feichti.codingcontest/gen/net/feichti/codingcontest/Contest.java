@@ -69,7 +69,7 @@ public interface Contest extends EObject
 	 * @return the value of the '<em>Theme</em>' attribute.
 	 * @see #setTheme(String)
 	 * @see net.feichti.codingcontest.CodingcontestPackage#getContest_Theme()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	String getTheme();
@@ -95,7 +95,7 @@ public interface Contest extends EObject
 	 * @return the value of the '<em>Local Date</em>' attribute.
 	 * @see #setLocalDate(Date)
 	 * @see net.feichti.codingcontest.CodingcontestPackage#getContest_LocalDate()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	Date getLocalDate();

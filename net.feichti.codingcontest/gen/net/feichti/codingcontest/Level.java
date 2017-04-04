@@ -37,7 +37,7 @@ public interface Level extends EObject
 	 * @return the value of the '<em>Number</em>' attribute.
 	 * @see #setNumber(int)
 	 * @see net.feichti.codingcontest.CodingcontestPackage#getLevel_Number()
-	 * @model id="true"
+	 * @model id="true" required="true"
 	 * @generated
 	 */
 	int getNumber();

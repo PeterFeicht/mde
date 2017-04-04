@@ -34,7 +34,7 @@ public interface Organizer extends EObject
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see net.feichti.codingcontest.CodingcontestPackage#getOrganizer_Name()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.Name"
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.Name" required="true"
 	 * @generated
 	 */
 	String getName();

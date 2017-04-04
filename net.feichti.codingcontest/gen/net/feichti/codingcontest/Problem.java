@@ -61,7 +61,7 @@ public interface Problem extends EObject
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
 	 * @see net.feichti.codingcontest.CodingcontestPackage#getProblem_Description()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	String getDescription();

@@ -35,7 +35,7 @@ public interface Coder extends EObject
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see net.feichti.codingcontest.CodingcontestPackage#getCoder_Name()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.Name"
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.Name" required="true"
 	 * @generated
 	 */
 	String getName();
@@ -61,7 +61,7 @@ public interface Coder extends EObject
 	 * @return the value of the '<em>Age</em>' attribute.
 	 * @see #setAge(int)
 	 * @see net.feichti.codingcontest.CodingcontestPackage#getCoder_Age()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	int getAge();
@@ -78,6 +78,7 @@ public interface Coder extends EObject
 
 	/**
 	 * Returns the value of the '<em><b>Category</b></em>' attribute.
+	 * The default value is <code>"OTHER"</code>.
 	 * The literals are from the enumeration {@link net.feichti.codingcontest.Category}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -89,7 +90,7 @@ public interface Coder extends EObject
 	 * @see net.feichti.codingcontest.Category
 	 * @see #setCategory(Category)
 	 * @see net.feichti.codingcontest.CodingcontestPackage#getCoder_Category()
-	 * @model
+	 * @model default="OTHER"
 	 * @generated
 	 */
 	Category getCategory();
