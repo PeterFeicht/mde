@@ -7,9 +7,19 @@ context Contest
 	-- XXX Should this be modeled instead of being a constraint?
 	inv HasTheme: theme <> null and theme.size() > 0
 	
-	-- TODO consecutive level numbers
+	-- There should be unique, consecutive levels starting at 0 or 1
+	inv NoDuplicateLevels: levels->isUnique(it: Level | it.number)
+	inv ConsecutiveLevels:
+		let numbers = levels->collect(it: Level | it.number) in
+		(numbers->max() - numbers->min() + 1) = levels->size()
+	inv MinLevel('The first level should have number 0 or 1'):
+		let first = levels->sortedBy(it: Level | it.number)->first()?.number in
+		first = 0 or first = 1
 	
-	-- TODO every problem in all required languages
+	-- Each problem must be available in every team's language
+	inv NoMissingLang:
+		let needed = entries->collect(it: Entry | it.language)->asSet() in
+		levels->forAll(level: Level | (needed - level.problems->collect(it: LanguageToProblemMap | it.key)->asSet())->isEmpty())
 
 context Coder
 	
