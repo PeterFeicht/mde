@@ -177,13 +177,22 @@ public interface CodingcontestPackage extends EPackage
 	int CONTEST__ORGANIZER = 6;
 
 	/**
+	 * The feature id for the '<em><b>Problems</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTEST__PROBLEMS = 7;
+
+	/**
 	 * The number of structural features of the '<em>Contest</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTEST_FEATURE_COUNT = 7;
+	int CONTEST_FEATURE_COUNT = 8;
 
 	/**
 	 * The meta object id for the '{@link net.feichti.codingcontest.impl.LocationImpl <em>Location</em>}' class.
@@ -435,7 +444,7 @@ public interface CodingcontestPackage extends EPackage
 	int LANGUAGE_TO_PROBLEM_MAP__KEY = 0;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' containment reference.
+	 * The feature id for the '<em><b>Value</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -592,6 +601,17 @@ public interface CodingcontestPackage extends EPackage
 	 * @generated
 	 */
 	EReference getContest_Organizer();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link net.feichti.codingcontest.Contest#getProblems <em>Problems</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Problems</em>'.
+	 * @see net.feichti.codingcontest.Contest#getProblems()
+	 * @see #getContest()
+	 * @generated
+	 */
+	EReference getContest_Problems();
 
 	/**
 	 * Returns the meta object for class '{@link net.feichti.codingcontest.Location <em>Location</em>}'.
@@ -815,7 +835,7 @@ public interface CodingcontestPackage extends EPackage
 	 * @return the meta object for class '<em>Language To Problem Map</em>'.
 	 * @see java.util.Map.Entry
 	 * @model keyId="true" keyDataType="org.eclipse.emf.ecore.xml.type.Language" keyRequired="true"
-	 *        valueType="net.feichti.codingcontest.Problem" valueContainment="true" valueRequired="true" valueOrdered="false"
+	 *        valueType="net.feichti.codingcontest.Problem" valueResolveProxies="false" valueRequired="true" valueOrdered="false"
 	 * @generated
 	 */
 	EClass getLanguageToProblemMap();
@@ -832,10 +852,10 @@ public interface CodingcontestPackage extends EPackage
 	EAttribute getLanguageToProblemMap_Key();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link java.util.Map.Entry <em>Value</em>}'.
+	 * Returns the meta object for the reference '{@link java.util.Map.Entry <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Value</em>'.
+	 * @return the meta object for the reference '<em>Value</em>'.
 	 * @see java.util.Map.Entry
 	 * @see #getLanguageToProblemMap()
 	 * @generated
@@ -974,6 +994,14 @@ public interface CodingcontestPackage extends EPackage
 		 * @generated
 		 */
 		EReference CONTEST__ORGANIZER = eINSTANCE.getContest_Organizer();
+
+		/**
+		 * The meta object literal for the '<em><b>Problems</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTEST__PROBLEMS = eINSTANCE.getContest_Problems();
 
 		/**
 		 * The meta object literal for the '{@link net.feichti.codingcontest.impl.LocationImpl <em>Location</em>}' class.
@@ -1164,7 +1192,7 @@ public interface CodingcontestPackage extends EPackage
 		EAttribute LANGUAGE_TO_PROBLEM_MAP__KEY = eINSTANCE.getLanguageToProblemMap_Key();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Value</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

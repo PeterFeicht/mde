@@ -107,6 +107,26 @@
       </children>
     </ownedChild>
   </nodes>
+  <nodes>
+    <containmentFeature
+        href="codingcontest.ecore#//Contest/problems"/>
+    <ownedChild>
+      <domainMetaElement
+          href="codingcontest.ecore#//Problem"/>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="codingcontest.gmfgraph#ProblemTitle"/>
+        <features
+            href="codingcontest.ecore#//Problem/title"/>
+      </labelMappings>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="codingcontest.gmftool#//@palette/@tools.0/@tools.6"/>
+      <diagramNode
+          href="codingcontest.gmfgraph#Problem"/>
+    </ownedChild>
+  </nodes>
   <links>
     <domainMetaElement
         href="codingcontest.ecore#//LanguageToProblemMap"/>

@@ -12,6 +12,7 @@ import net.feichti.codingcontest.Level;
 import net.feichti.codingcontest.Location;
 import net.feichti.codingcontest.Organizer;
 
+import net.feichti.codingcontest.Problem;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -41,6 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link net.feichti.codingcontest.impl.ContestImpl#getLevels <em>Levels</em>}</li>
  *   <li>{@link net.feichti.codingcontest.impl.ContestImpl#getEntries <em>Entries</em>}</li>
  *   <li>{@link net.feichti.codingcontest.impl.ContestImpl#getOrganizer <em>Organizer</em>}</li>
+ *   <li>{@link net.feichti.codingcontest.impl.ContestImpl#getProblems <em>Problems</em>}</li>
  * </ul>
  *
  * @generated
@@ -146,6 +148,16 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 	 * @ordered
 	 */
 	protected Organizer organizer;
+
+	/**
+	 * The cached value of the '{@link #getProblems() <em>Problems</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProblems()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Problem> problems;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -332,6 +344,20 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Problem> getProblems()
+	{
+		if (problems == null)
+		{
+			problems = new EObjectContainmentEList<Problem>(Problem.class, this, CodingcontestPackage.CONTEST__PROBLEMS);
+		}
+		return problems;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
@@ -345,6 +371,8 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 				return ((InternalEList<?>)getEntries()).basicRemove(otherEnd, msgs);
 			case CodingcontestPackage.CONTEST__ORGANIZER:
 				return basicSetOrganizer(null, msgs);
+			case CodingcontestPackage.CONTEST__PROBLEMS:
+				return ((InternalEList<?>)getProblems()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -373,6 +401,8 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 				return getEntries();
 			case CodingcontestPackage.CONTEST__ORGANIZER:
 				return getOrganizer();
+			case CodingcontestPackage.CONTEST__PROBLEMS:
+				return getProblems();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -412,6 +442,10 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 			case CodingcontestPackage.CONTEST__ORGANIZER:
 				setOrganizer((Organizer)newValue);
 				return;
+			case CodingcontestPackage.CONTEST__PROBLEMS:
+				getProblems().clear();
+				getProblems().addAll((Collection<? extends Problem>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -447,6 +481,9 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 			case CodingcontestPackage.CONTEST__ORGANIZER:
 				setOrganizer((Organizer)null);
 				return;
+			case CodingcontestPackage.CONTEST__PROBLEMS:
+				getProblems().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -475,6 +512,8 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 				return entries != null && !entries.isEmpty();
 			case CodingcontestPackage.CONTEST__ORGANIZER:
 				return organizer != null;
+			case CodingcontestPackage.CONTEST__PROBLEMS:
+				return problems != null && !problems.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
