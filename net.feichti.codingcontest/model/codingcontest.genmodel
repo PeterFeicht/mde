@@ -7,7 +7,7 @@
     complianceLevel="6.0" copyrightFields="false" classNamePattern="" importOrganizing="true">
   <foreignModel>codingcontest.ecore</foreignModel>
   <genPackages prefix="Codingcontest" basePackage="net.feichti" disposableProviderFactory="true"
-      ecorePackage="codingcontest.ecore#/">
+      fileExtensions="fcc" ecorePackage="codingcontest.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="codingcontest.ecore#//Category">
       <genEnumLiterals ecoreEnumLiteral="codingcontest.ecore#//Category/Other"/>
       <genEnumLiterals ecoreEnumLiteral="codingcontest.ecore#//Category/Pupil"/>
