@@ -161,6 +161,7 @@ public class ContestItemProvider
 			childrenFeatures.add(CodingcontestPackage.Literals.CONTEST__LEVELS);
 			childrenFeatures.add(CodingcontestPackage.Literals.CONTEST__ENTRIES);
 			childrenFeatures.add(CodingcontestPackage.Literals.CONTEST__ORGANIZER);
+			childrenFeatures.add(CodingcontestPackage.Literals.CONTEST__PROBLEMS);
 		}
 		return childrenFeatures;
 	}
@@ -230,6 +231,7 @@ public class ContestItemProvider
 			case CodingcontestPackage.CONTEST__LEVELS:
 			case CodingcontestPackage.CONTEST__ENTRIES:
 			case CodingcontestPackage.CONTEST__ORGANIZER:
+			case CodingcontestPackage.CONTEST__PROBLEMS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -267,6 +269,11 @@ public class ContestItemProvider
 			(createChildParameter
 				(CodingcontestPackage.Literals.CONTEST__ORGANIZER,
 				 CodingcontestFactory.eINSTANCE.createOrganizer()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CodingcontestPackage.Literals.CONTEST__PROBLEMS,
+				 CodingcontestFactory.eINSTANCE.createProblem()));
 	}
 
 	/**

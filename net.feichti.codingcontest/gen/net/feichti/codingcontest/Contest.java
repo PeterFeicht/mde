@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link net.feichti.codingcontest.Contest#getLevels <em>Levels</em>}</li>
  *   <li>{@link net.feichti.codingcontest.Contest#getEntries <em>Entries</em>}</li>
  *   <li>{@link net.feichti.codingcontest.Contest#getOrganizer <em>Organizer</em>}</li>
+ *   <li>{@link net.feichti.codingcontest.Contest#getProblems <em>Problems</em>}</li>
  * </ul>
  *
  * @see net.feichti.codingcontest.CodingcontestPackage#getContest()
@@ -183,5 +184,21 @@ public interface Contest extends EObject
 	 * @generated
 	 */
 	void setOrganizer(Organizer value);
+
+	/**
+	 * Returns the value of the '<em><b>Problems</b></em>' containment reference list.
+	 * The list contents are of type {@link net.feichti.codingcontest.Problem}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Problems</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Problems</em>' containment reference list.
+	 * @see net.feichti.codingcontest.CodingcontestPackage#getContest_Problems()
+	 * @model containment="true" ordered="false"
+	 * @generated
+	 */
+	EList<Problem> getProblems();
 
 } // Contest

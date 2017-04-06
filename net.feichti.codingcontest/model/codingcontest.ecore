@@ -22,6 +22,8 @@
         upperBound="-1" eType="#//Entry" containment="true" resolveProxies="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="organizer" ordered="false"
         unique="false" lowerBound="1" eType="#//Organizer" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="problems" ordered="false"
+        upperBound="-1" eType="#//Problem" containment="true" resolveProxies="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Location">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore"/>
@@ -68,6 +70,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Language"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" ordered="false"
-        unique="false" lowerBound="1" eType="#//Problem" containment="true" resolveProxies="false"/>
+        unique="false" lowerBound="1" eType="#//Problem" resolveProxies="false"/>
   </eClassifiers>
 </ecore:EPackage>
