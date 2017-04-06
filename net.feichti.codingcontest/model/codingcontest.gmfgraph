@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="codingcontest">
+  <figures name="Default">
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="EntryCodersTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="EntryLocationTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="LevelProblemsTargetDecoration"/>
+    <descriptors name="CoderFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="CoderFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="CoderNameFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="LocationFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="LocationFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="LocationNameFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="EntryFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="EntryFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="EntryTeamNameFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="EntryCodersFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="EntryCodersFigure" targetDecoration="//@figures.0/@figures.0"/>
+    </descriptors>
+    <descriptors name="EntryLocationFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="EntryLocationFigure" targetDecoration="//@figures.0/@figures.1"/>
+    </descriptors>
+    <descriptors name="OrganizerFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="OrganizerFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="OrganizerNameFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="LevelFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="LevelFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="LevelNumberFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.6/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="LevelProblemsFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="LevelProblemsFigure" targetDecoration="//@figures.0/@figures.2"/>
+      <accessors accessor="getFigureLevelProblemsFigure" figure="//@figures.0/@descriptors.7/@actualFigure"/>
+    </descriptors>
+    <descriptors name="ProblemFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="ProblemFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="ProblemTitleFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.8/@actualFigure/@children.0"/>
+    </descriptors>
+  </figures>
+  <nodes name="Coder" figure="CoderFigure"/>
+  <nodes name="Location" figure="LocationFigure"/>
+  <nodes name="Entry" figure="EntryFigure"/>
+  <nodes name="Organizer" figure="OrganizerFigure"/>
+  <nodes name="Level" figure="LevelFigure"/>
+  <nodes name="Problem" figure="ProblemFigure"/>
+  <connections name="EntryCoders" figure="EntryCodersFigure"/>
+  <connections name="EntryLocation" figure="EntryLocationFigure"/>
+  <connections name="LevelProblems" figure="LevelProblemsFigure"/>
+  <labels name="CoderName" figure="CoderFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels name="LocationName" figure="LocationFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels name="EntryTeamName" figure="EntryFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+  <labels name="OrganizerName" figure="OrganizerFigure" accessor="//@figures.0/@descriptors.5/@accessors.0"/>
+  <labels name="LevelNumber" figure="LevelFigure" accessor="//@figures.0/@descriptors.6/@accessors.0"/>
+  <labels name="ProblemTitle" figure="ProblemFigure" accessor="//@figures.0/@descriptors.8/@accessors.0"/>
+  <labels name="ProblemLanguage" figure="LevelProblemsFigure" accessor="//@figures.0/@descriptors.7/@accessors.0"/>
+</gmfgraph:Canvas>
