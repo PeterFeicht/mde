@@ -13,6 +13,8 @@
     <semanticResources>codingcontest.gmfgraph</semanticResources>
     <semanticResources>codingcontest.gmftool</semanticResources>
     <semanticResources>codingcontest.gmfmap</semanticResources>
+    <semanticResources>codingcontest.gmfgen</semanticResources>
+    <semanticResources>codingcontest.trace</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="__4fOUBbIEeetQ8ph5WUFjA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="__4ywUBbIEeetQ8ph5WUFjA" name="codingcontest" representation="__4ywURbIEeetQ8ph5WUFjA">

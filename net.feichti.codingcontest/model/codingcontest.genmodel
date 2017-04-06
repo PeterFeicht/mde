@@ -4,7 +4,8 @@
     editorDirectory="/net.feichti.codingcontest.editor/gen" modelPluginID="net.feichti.codingcontest"
     modelName="Codingcontest" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     testsDirectory="/net.feichti.codingcontest.tests/gen" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="6.0" copyrightFields="false" classNamePattern="" importOrganizing="true">
+    complianceLevel="6.0" copyrightFields="false" classNamePattern="" importOrganizing="true"
+    decoration="Live">
   <foreignModel>codingcontest.ecore</foreignModel>
   <genPackages prefix="Codingcontest" basePackage="net.feichti" disposableProviderFactory="true"
       ecorePackage="codingcontest.ecore#/">
