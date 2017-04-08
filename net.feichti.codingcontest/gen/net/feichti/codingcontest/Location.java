@@ -35,7 +35,7 @@ public interface Location extends EObject
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see net.feichti.codingcontest.CodingcontestPackage#getLocation_Name()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.Name" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
 	String getName();

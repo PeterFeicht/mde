@@ -141,14 +141,10 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
 import net.feichti.codingcontest.provider.CodingcontestItemProviderAdapterFactory;
-
 import org.eclipse.emf.common.command.AbstractCommand;
-
 import org.eclipse.emf.common.ui.viewer.ColumnViewerInformationControlToolTipSupport;
-
 import org.eclipse.emf.edit.ui.provider.DecoratingColumLabelProvider;
 import org.eclipse.emf.edit.ui.provider.DiagnosticDecorator;
-
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
 

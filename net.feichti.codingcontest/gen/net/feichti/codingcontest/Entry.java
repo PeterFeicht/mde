@@ -80,7 +80,7 @@ public interface Entry extends EObject
 	 * @return the value of the '<em>Team Name</em>' attribute.
 	 * @see #setTeamName(String)
 	 * @see net.feichti.codingcontest.CodingcontestPackage#getEntry_TeamName()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.Name" required="true" ordered="false"
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
 	String getTeamName();
