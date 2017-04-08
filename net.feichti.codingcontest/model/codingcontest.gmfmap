@@ -21,7 +21,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="codingcontest.gmftool#//@palette/@tools.0/@tools.6"/>
+          href="codingcontest.gmftool#//@palette/@tools.0/@tools.5"/>
       <diagramNode
           href="codingcontest.gmfgraph#Level"/>
     </ownedChild>
@@ -42,7 +42,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="codingcontest.gmftool#//@palette/@tools.0/@tools.5"/>
+          href="codingcontest.gmftool#//@palette/@tools.0/@tools.4"/>
       <diagramNode
           href="codingcontest.gmfgraph#Organizer"/>
     </ownedChild>
@@ -151,7 +151,7 @@
   <links>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="codingcontest.gmftool#//@palette/@tools.0/@tools.4"/>
+        href="codingcontest.gmftool#//@palette/@tools.0/@tools.3"/>
     <diagramLink
         href="codingcontest.gmfgraph#EntryLocation"/>
     <linkMetaFeature
