@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated codingcontest -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="net.feichti.codingcontest.presentation.CodingcontestModelWizardID"
+            name="%_UI_CodingcontestModelWizard_label"
+            class="net.feichti.codingcontest.presentation.CodingcontestModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/CodingcontestModelFile.gif">
+         <description>%_UI_CodingcontestModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated codingcontest -->
+      <editor
+            id="net.feichti.codingcontest.presentation.CodingcontestEditorID"
+            name="%_UI_CodingcontestEditor_label"
+            icon="icons/full/obj16/CodingcontestModelFile.gif"
+            extensions="fcc"
+            class="net.feichti.codingcontest.presentation.CodingcontestEditor"
+            contributorClass="net.feichti.codingcontest.presentation.CodingcontestActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
