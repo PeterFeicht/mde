@@ -13,6 +13,10 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Contest</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * This is the root element of the coding contest model, it represents a single contest held at a particular date at zero or more locations.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>
@@ -36,11 +40,10 @@ public interface Contest extends EObject
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The ID of this contest, just for fun.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
 	 * @see net.feichti.codingcontest.CodingcontestPackage#getContest_Id()
@@ -62,11 +65,10 @@ public interface Contest extends EObject
 	/**
 	 * Returns the value of the '<em><b>Theme</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Theme</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The overall theme of the problems in this contest.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Theme</em>' attribute.
 	 * @see #setTheme(String)
 	 * @see net.feichti.codingcontest.CodingcontestPackage#getContest_Theme()
@@ -88,11 +90,10 @@ public interface Contest extends EObject
 	/**
 	 * Returns the value of the '<em><b>Local Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Local Date</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The date and time at which the contest is held. For online entries, this is UTC.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Local Date</em>' attribute.
 	 * @see #setLocalDate(Date)
 	 * @see net.feichti.codingcontest.CodingcontestPackage#getContest_LocalDate()
@@ -115,11 +116,10 @@ public interface Contest extends EObject
 	 * Returns the value of the '<em><b>Locations</b></em>' containment reference list.
 	 * The list contents are of type {@link net.feichti.codingcontest.Location}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Locations</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The locations at which this contest is held. If there are no locations this indicates the contest is held online only.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Locations</em>' containment reference list.
 	 * @see net.feichti.codingcontest.CodingcontestPackage#getContest_Locations()
 	 * @model containment="true" ordered="false"
@@ -131,11 +131,10 @@ public interface Contest extends EObject
 	 * Returns the value of the '<em><b>Levels</b></em>' containment reference list.
 	 * The list contents are of type {@link net.feichti.codingcontest.Level}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Levels</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * There may be between 3 and 8 levels, which must have consecutive numbers starting at 0 or 1.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Levels</em>' containment reference list.
 	 * @see net.feichti.codingcontest.CodingcontestPackage#getContest_Levels()
 	 * @model containment="true" lower="3" upper="8"
@@ -152,6 +151,9 @@ public interface Contest extends EObject
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Teams competing in this contest.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Entries</em>' containment reference list.
 	 * @see net.feichti.codingcontest.CodingcontestPackage#getContest_Entries()
 	 * @model containment="true" ordered="false"
@@ -189,11 +191,10 @@ public interface Contest extends EObject
 	 * Returns the value of the '<em><b>Problems</b></em>' containment reference list.
 	 * The list contents are of type {@link net.feichti.codingcontest.Problem}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Problems</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Contains all problem descriptions. Levels will map several languages to problems.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Problems</em>' containment reference list.
 	 * @see net.feichti.codingcontest.CodingcontestPackage#getContest_Problems()
 	 * @model containment="true" ordered="false"

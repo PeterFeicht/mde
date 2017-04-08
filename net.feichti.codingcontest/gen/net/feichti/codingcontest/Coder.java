@@ -53,11 +53,10 @@ public interface Coder extends EObject
 	/**
 	 * Returns the value of the '<em><b>Age</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Age</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The age must be between 1 and 150.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Age</em>' attribute.
 	 * @see #setAge(int)
 	 * @see net.feichti.codingcontest.CodingcontestPackage#getCoder_Age()
@@ -81,11 +80,10 @@ public interface Coder extends EObject
 	 * The default value is <code>"OTHER"</code>.
 	 * The literals are from the enumeration {@link net.feichti.codingcontest.Category}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Category</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The category may be used for statistical purposes.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Category</em>' attribute.
 	 * @see net.feichti.codingcontest.Category
 	 * @see #setCategory(Category)

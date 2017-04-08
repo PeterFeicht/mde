@@ -11,8 +11,8 @@ import net.feichti.codingcontest.Entry;
 import net.feichti.codingcontest.Level;
 import net.feichti.codingcontest.Location;
 import net.feichti.codingcontest.Organizer;
-
 import net.feichti.codingcontest.Problem;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
