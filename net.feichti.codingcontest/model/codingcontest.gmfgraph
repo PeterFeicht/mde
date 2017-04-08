@@ -46,8 +46,10 @@
       <accessors figure="//@figures.0/@descriptors.6/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="LevelProblemsFigure">
-      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="LevelProblemsFigure" targetDecoration="//@figures.0/@figures.2"/>
-      <accessors accessor="getFigureLevelProblemsFigure" figure="//@figures.0/@descriptors.7/@actualFigure"/>
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="LevelProblemsFigure" targetDecoration="//@figures.0/@figures.2">
+        <children xsi:type="gmfgraph:Label" name="ProblemLanguageFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors accessor="getFigureLevelProblemsFigure" figure="//@figures.0/@descriptors.7/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="ProblemFigure">
       <actualFigure xsi:type="gmfgraph:Rectangle" name="ProblemFigure">
