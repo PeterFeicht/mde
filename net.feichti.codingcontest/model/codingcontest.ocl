@@ -9,16 +9,16 @@ context Contest
 	-- There should be unique, consecutive levels starting at 0 or 1
 	inv NoDuplicateLevels: levels->isUnique(it: Level | it.number)
 	inv ConsecutiveLevels:
-		let numbers = levels->collect(it: Level | it.number) in
+		let numbers = levels->collect(it | it.number) in
 		(numbers->max() - numbers->min() + 1) = levels->size()
 	inv MinLevel('The first level should have number 0 or 1'):
-		let first = levels->sortedBy(it: Level | it.number)->first()?.number in
+		let first = levels->sortedBy(it | it.number)->first()?.number in
 		first = 0 or first = 1
 	
 	-- Each problem must be available in every team's language
 	inv NoMissingLang:
-		let needed = entries->collect(it: Entry | it.language)->asSet() in
-		levels->forAll(level: Level | (needed - level.problems->collect(it: LanguageToProblemMap | it.key)->asSet())->isEmpty())
+		let needed = entries->collect(it | it.language)->asSet() in
+		levels->forAll(level | (needed - level.problems->collect(it | it.key)->asSet())->isEmpty())
 
 context Location
 	
