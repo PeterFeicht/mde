@@ -8,11 +8,13 @@
       title="codingcontestPalette">
     <tools
         xsi:type="gmftool:ToolGroup"
-        title="codingcontest">
+        title="Nodes"
+        description=""
+        collapsible="true">
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Coder"
-          description="Create new Coder">
+          title="Organizer"
+          description="Create new Organizer">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -22,33 +24,6 @@
           xsi:type="gmftool:CreationTool"
           title="Location"
           description="Create new Location">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="Entry"
-          description="Create new Entry">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="EntryLocation"
-          description="Create new EntryLocation">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="Organizer"
-          description="Create new Organizer">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -74,8 +49,40 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
+          title="Entry"
+          description="Create new Entry">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Coder"
+          description="Create new Coder">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+    </tools>
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="Links"
+        collapsible="true">
+      <tools
+          xsi:type="gmftool:CreationTool"
           title="LanguageToProblemMap"
-          description="Create new LanguageToProblemMap">
+          description="Create new mapping from a language to a problem">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Entry Location"
+          description="Create new reference from an entry to its location">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon

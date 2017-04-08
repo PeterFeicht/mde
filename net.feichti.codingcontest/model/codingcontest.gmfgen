@@ -365,32 +365,19 @@
     </links>
     <palette>
       <groups
-          title="codingcontest">
-        <entries
-            xsi:type="gmfgen:ToolEntry"
-            title="Coder"
-            description="Create new Coder"
-            genNodes="//@diagram/@childNodes.0"/>
-        <entries
-            xsi:type="gmfgen:ToolEntry"
-            title="Location"
-            description="Create new Location"
-            genNodes="//@diagram/@topLevelNodes.2"/>
-        <entries
-            xsi:type="gmfgen:ToolEntry"
-            title="Entry"
-            description="Create new Entry"
-            genNodes="//@diagram/@topLevelNodes.3"/>
-        <entries
-            xsi:type="gmfgen:ToolEntry"
-            title="EntryLocation"
-            description="Create new EntryLocation"
-            genLinks="//@diagram/@links.1"/>
+          title="Nodes"
+          description=""
+          collapse="true">
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Organizer"
             description="Create new Organizer"
             genNodes="//@diagram/@topLevelNodes.1"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Location"
+            description="Create new Location"
+            genNodes="//@diagram/@topLevelNodes.2"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Level"
@@ -403,9 +390,28 @@
             genNodes="//@diagram/@topLevelNodes.4"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
+            title="Entry"
+            description="Create new Entry"
+            genNodes="//@diagram/@topLevelNodes.3"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Coder"
+            description="Create new Coder"
+            genNodes="//@diagram/@childNodes.0"/>
+      </groups>
+      <groups
+          title="Links"
+          collapse="true">
+        <entries
+            xsi:type="gmfgen:ToolEntry"
             title="LanguageToProblemMap"
-            description="Create new LanguageToProblemMap"
+            description="Create new mapping from a language to a problem"
             genLinks="//@diagram/@links.0"/>
+        <entries
+            xsi:type="gmfgen:ToolEntry"
+            title="Entry Location"
+            description="Create new reference from an entry to its location"
+            genLinks="//@diagram/@links.1"/>
       </groups>
     </palette>
     <preferencePages

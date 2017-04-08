@@ -244,17 +244,27 @@ public class Messages extends NLS
 	/**
 	* @generated
 	*/
-	public static String Codingcontest1Group_title;
+	public static String Nodes1Group_title;
 	
 	/**
 	* @generated
 	*/
-	public static String Coder1CreationTool_title;
+	public static String Nodes1Group_desc;
 	
 	/**
 	* @generated
 	*/
-	public static String Coder1CreationTool_desc;
+	public static String Links2Group_title;
+	
+	/**
+	* @generated
+	*/
+	public static String Organizer1CreationTool_title;
+	
+	/**
+	* @generated
+	*/
+	public static String Organizer1CreationTool_desc;
 	
 	/**
 	* @generated
@@ -269,62 +279,62 @@ public class Messages extends NLS
 	/**
 	* @generated
 	*/
-	public static String Entry3CreationTool_title;
+	public static String Level3CreationTool_title;
 	
 	/**
 	* @generated
 	*/
-	public static String Entry3CreationTool_desc;
+	public static String Level3CreationTool_desc;
 	
 	/**
 	* @generated
 	*/
-	public static String EntryLocation4CreationTool_title;
+	public static String Problem4CreationTool_title;
 	
 	/**
 	* @generated
 	*/
-	public static String EntryLocation4CreationTool_desc;
+	public static String Problem4CreationTool_desc;
 	
 	/**
 	* @generated
 	*/
-	public static String Organizer5CreationTool_title;
+	public static String Entry5CreationTool_title;
 	
 	/**
 	* @generated
 	*/
-	public static String Organizer5CreationTool_desc;
+	public static String Entry5CreationTool_desc;
 	
 	/**
 	* @generated
 	*/
-	public static String Level6CreationTool_title;
+	public static String Coder6CreationTool_title;
 	
 	/**
 	* @generated
 	*/
-	public static String Level6CreationTool_desc;
+	public static String Coder6CreationTool_desc;
 	
 	/**
 	* @generated
 	*/
-	public static String Problem7CreationTool_title;
+	public static String LanguageToProblemMap1CreationTool_title;
 	
 	/**
 	* @generated
 	*/
-	public static String Problem7CreationTool_desc;
+	public static String LanguageToProblemMap1CreationTool_desc;
 	
 	/**
 	* @generated
 	*/
-	public static String LanguageToProblemMap8CreationTool_title;
+	public static String EntryLocation2CreationTool_title;
 	
 	/**
 	* @generated
 	*/
-	public static String LanguageToProblemMap8CreationTool_desc;
+	public static String EntryLocation2CreationTool_desc;
 	
 	/**
 	* @generated

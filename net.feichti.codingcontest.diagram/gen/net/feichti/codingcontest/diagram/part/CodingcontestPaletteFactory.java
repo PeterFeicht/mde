@@ -4,7 +4,7 @@ package net.feichti.codingcontest.diagram.part;
 import java.util.Collections;
 
 import org.eclipse.gef.palette.PaletteContainer;
-import org.eclipse.gef.palette.PaletteGroup;
+import org.eclipse.gef.palette.PaletteDrawer;
 import org.eclipse.gef.palette.PaletteRoot;
 import org.eclipse.gef.palette.ToolEntry;
 import org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry;
@@ -22,35 +22,48 @@ public class CodingcontestPaletteFactory
 	* @generated
 	*/
 	public void fillPalette(PaletteRoot paletteRoot) {
-		paletteRoot.add(createCodingcontest1Group());
+		paletteRoot.add(createNodes1Group());
+		paletteRoot.add(createLinks2Group());
 	}
 	
 	/**
-	* Creates "codingcontest" palette tool group
+	* Creates "Nodes" palette tool group
 	* @generated
 	*/
-	private PaletteContainer createCodingcontest1Group() {
-		PaletteGroup paletteContainer = new PaletteGroup(Messages.Codingcontest1Group_title);
-		paletteContainer.setId("createCodingcontest1Group"); //$NON-NLS-1$
-		paletteContainer.add(createCoder1CreationTool());
+	private PaletteContainer createNodes1Group() {
+		PaletteDrawer paletteContainer = new PaletteDrawer(Messages.Nodes1Group_title);
+		paletteContainer.setId("createNodes1Group"); //$NON-NLS-1$
+		paletteContainer.setDescription(Messages.Nodes1Group_desc);
+		paletteContainer.add(createOrganizer1CreationTool());
 		paletteContainer.add(createLocation2CreationTool());
-		paletteContainer.add(createEntry3CreationTool());
-		paletteContainer.add(createEntryLocation4CreationTool());
-		paletteContainer.add(createOrganizer5CreationTool());
-		paletteContainer.add(createLevel6CreationTool());
-		paletteContainer.add(createProblem7CreationTool());
-		paletteContainer.add(createLanguageToProblemMap8CreationTool());
+		paletteContainer.add(createLevel3CreationTool());
+		paletteContainer.add(createProblem4CreationTool());
+		paletteContainer.add(createEntry5CreationTool());
+		paletteContainer.add(createCoder6CreationTool());
+		return paletteContainer;
+	}
+	
+	/**
+	* Creates "Links" palette tool group
+	* @generated
+	*/
+	private PaletteContainer createLinks2Group() {
+		PaletteDrawer paletteContainer = new PaletteDrawer(Messages.Links2Group_title);
+		paletteContainer.setId("createLinks2Group"); //$NON-NLS-1$
+		paletteContainer.add(createLanguageToProblemMap1CreationTool());
+		paletteContainer.add(createEntryLocation2CreationTool());
 		return paletteContainer;
 	}
 	
 	/**
 	* @generated
 	*/
-	private ToolEntry createCoder1CreationTool() {
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Coder1CreationTool_title,
-				Messages.Coder1CreationTool_desc, Collections.singletonList(CodingcontestElementTypes.Coder_3001));
-		entry.setId("createCoder1CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(CodingcontestElementTypes.getImageDescriptor(CodingcontestElementTypes.Coder_3001));
+	private ToolEntry createOrganizer1CreationTool() {
+		DefaultNodeToolEntry entry =
+				new DefaultNodeToolEntry(Messages.Organizer1CreationTool_title, Messages.Organizer1CreationTool_desc,
+						Collections.singletonList(CodingcontestElementTypes.Organizer_2002));
+		entry.setId("createOrganizer1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CodingcontestElementTypes.getImageDescriptor(CodingcontestElementTypes.Organizer_2002));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -71,48 +84,10 @@ public class CodingcontestPaletteFactory
 	/**
 	* @generated
 	*/
-	private ToolEntry createEntry3CreationTool() {
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Entry3CreationTool_title,
-				Messages.Entry3CreationTool_desc, Collections.singletonList(CodingcontestElementTypes.Entry_2004));
-		entry.setId("createEntry3CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(CodingcontestElementTypes.getImageDescriptor(CodingcontestElementTypes.Entry_2004));
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-	
-	/**
-	* @generated
-	*/
-	private ToolEntry createEntryLocation4CreationTool() {
-		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.EntryLocation4CreationTool_title,
-				Messages.EntryLocation4CreationTool_desc,
-				Collections.singletonList(CodingcontestElementTypes.EntryLocation_4002));
-		entry.setId("createEntryLocation4CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(CodingcontestElementTypes.getImageDescriptor(CodingcontestElementTypes.EntryLocation_4002));
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-	
-	/**
-	* @generated
-	*/
-	private ToolEntry createOrganizer5CreationTool() {
-		DefaultNodeToolEntry entry =
-				new DefaultNodeToolEntry(Messages.Organizer5CreationTool_title, Messages.Organizer5CreationTool_desc,
-						Collections.singletonList(CodingcontestElementTypes.Organizer_2002));
-		entry.setId("createOrganizer5CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(CodingcontestElementTypes.getImageDescriptor(CodingcontestElementTypes.Organizer_2002));
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-	
-	/**
-	* @generated
-	*/
-	private ToolEntry createLevel6CreationTool() {
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Level6CreationTool_title,
-				Messages.Level6CreationTool_desc, Collections.singletonList(CodingcontestElementTypes.Level_2001));
-		entry.setId("createLevel6CreationTool"); //$NON-NLS-1$
+	private ToolEntry createLevel3CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Level3CreationTool_title,
+				Messages.Level3CreationTool_desc, Collections.singletonList(CodingcontestElementTypes.Level_2001));
+		entry.setId("createLevel3CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(CodingcontestElementTypes.getImageDescriptor(CodingcontestElementTypes.Level_2001));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
@@ -121,10 +96,10 @@ public class CodingcontestPaletteFactory
 	/**
 	* @generated
 	*/
-	private ToolEntry createProblem7CreationTool() {
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Problem7CreationTool_title,
-				Messages.Problem7CreationTool_desc, Collections.singletonList(CodingcontestElementTypes.Problem_2005));
-		entry.setId("createProblem7CreationTool"); //$NON-NLS-1$
+	private ToolEntry createProblem4CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Problem4CreationTool_title,
+				Messages.Problem4CreationTool_desc, Collections.singletonList(CodingcontestElementTypes.Problem_2005));
+		entry.setId("createProblem4CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(CodingcontestElementTypes.getImageDescriptor(CodingcontestElementTypes.Problem_2005));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
@@ -133,13 +108,50 @@ public class CodingcontestPaletteFactory
 	/**
 	* @generated
 	*/
-	private ToolEntry createLanguageToProblemMap8CreationTool() {
-		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.LanguageToProblemMap8CreationTool_title,
-				Messages.LanguageToProblemMap8CreationTool_desc,
+	private ToolEntry createEntry5CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Entry5CreationTool_title,
+				Messages.Entry5CreationTool_desc, Collections.singletonList(CodingcontestElementTypes.Entry_2004));
+		entry.setId("createEntry5CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CodingcontestElementTypes.getImageDescriptor(CodingcontestElementTypes.Entry_2004));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+	
+	/**
+	* @generated
+	*/
+	private ToolEntry createCoder6CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Coder6CreationTool_title,
+				Messages.Coder6CreationTool_desc, Collections.singletonList(CodingcontestElementTypes.Coder_3001));
+		entry.setId("createCoder6CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CodingcontestElementTypes.getImageDescriptor(CodingcontestElementTypes.Coder_3001));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+	
+	/**
+	* @generated
+	*/
+	private ToolEntry createLanguageToProblemMap1CreationTool() {
+		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.LanguageToProblemMap1CreationTool_title,
+				Messages.LanguageToProblemMap1CreationTool_desc,
 				Collections.singletonList(CodingcontestElementTypes.LanguageToProblemMap_4001));
-		entry.setId("createLanguageToProblemMap8CreationTool"); //$NON-NLS-1$
+		entry.setId("createLanguageToProblemMap1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(
 				CodingcontestElementTypes.getImageDescriptor(CodingcontestElementTypes.LanguageToProblemMap_4001));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+	
+	/**
+	* @generated
+	*/
+	private ToolEntry createEntryLocation2CreationTool() {
+		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.EntryLocation2CreationTool_title,
+				Messages.EntryLocation2CreationTool_desc,
+				Collections.singletonList(CodingcontestElementTypes.EntryLocation_4002));
+		entry.setId("createEntryLocation2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CodingcontestElementTypes.getImageDescriptor(CodingcontestElementTypes.EntryLocation_4002));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
