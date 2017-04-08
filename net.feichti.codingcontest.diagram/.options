@@ -1,0 +1,7 @@
+# Tracing options for the net.feichti.codingcontest.diagram plug-in
+
+# Common issues
+net.feichti.codingcontest.diagram/debug=false
+
+# Visual IDs
+net.feichti.codingcontest.diagram/debug/visualID=false
