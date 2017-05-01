@@ -110,7 +110,7 @@ public class LocationItemProvider
 				 getString("_UI_PropertyDescriptor_description", "_UI_Location_address_feature", "_UI_Location_type"),
 				 CodingcontestPackage.Literals.LOCATION__ADDRESS,
 				 true,
-				 false,
+				 true,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
