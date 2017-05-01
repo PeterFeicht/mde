@@ -13,6 +13,9 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Category</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
+ * <!-- begin-model-doc -->
+ * Categories of programmers, may be used for statistical purposes.
+ * <!-- end-model-doc -->
  * @see net.feichti.codingcontest.CodingcontestPackage#getCategory()
  * @model
  * @generated

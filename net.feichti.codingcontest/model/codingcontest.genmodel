@@ -32,7 +32,7 @@
     </genClasses>
     <genClasses ecoreClass="codingcontest.ecore#//Location">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute codingcontest.ecore#//Location/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute codingcontest.ecore#//Location/address"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute codingcontest.ecore#//Location/address"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute codingcontest.ecore#//Location/country"/>
     </genClasses>
     <genClasses ecoreClass="codingcontest.ecore#//Entry">
@@ -52,8 +52,8 @@
     </genClasses>
     <genClasses ecoreClass="codingcontest.ecore#//Problem">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute codingcontest.ecore#//Problem/title"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute codingcontest.ecore#//Problem/description"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute codingcontest.ecore#//Problem/result"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute codingcontest.ecore#//Problem/description"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute codingcontest.ecore#//Problem/result"/>
     </genClasses>
     <genClasses ecoreClass="codingcontest.ecore#//LanguageToProblemMap">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute codingcontest.ecore#//LanguageToProblemMap/key"/>

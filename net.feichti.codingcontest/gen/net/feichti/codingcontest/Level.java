@@ -11,6 +11,10 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Level</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * Represents a numbered level which has languages mapped to problem descriptions.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>
@@ -60,6 +64,9 @@ public interface Level extends EObject
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * This may be a title that need not be localized. For localized titles use the title attribute of Problem instead.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Title</em>' attribute.
 	 * @see #setTitle(String)
 	 * @see net.feichti.codingcontest.CodingcontestPackage#getLevel_Title()
@@ -83,11 +90,10 @@ public interface Level extends EObject
 	 * The key is of type {@link java.lang.String},
 	 * and the value is of type {@link net.feichti.codingcontest.Problem},
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Problems</em>' map isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Contains problem descriptions mapped to their language. A problem description may be used for more than one language in case it has not been translated yet (or needs not be).
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Problems</em>' map.
 	 * @see net.feichti.codingcontest.CodingcontestPackage#getLevel_Problems()
 	 * @model mapType="net.feichti.codingcontest.LanguageToProblemMap<org.eclipse.emf.ecore.xml.type.Language, net.feichti.codingcontest.Problem>" ordered="false"

@@ -11,6 +11,10 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Entry</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * Represents a team competing in a coding contest.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>
@@ -46,11 +50,10 @@ public interface Entry extends EObject
 	/**
 	 * Returns the value of the '<em><b>Location</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Location</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The location this team is competing at, {@code null} indicates an online entry.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Location</em>' reference.
 	 * @see #setLocation(Location)
 	 * @see net.feichti.codingcontest.CodingcontestPackage#getEntry_Location()
@@ -98,11 +101,10 @@ public interface Entry extends EObject
 	/**
 	 * Returns the value of the '<em><b>Language</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Language</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The preferred language for problem descriptions.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Language</em>' attribute.
 	 * @see #setLanguage(String)
 	 * @see net.feichti.codingcontest.CodingcontestPackage#getEntry_Language()
