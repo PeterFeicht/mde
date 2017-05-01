@@ -44,6 +44,9 @@ public class CodingcontestParserProvider extends AbstractProvider implements IPa
 					CodingcontestPackage.eINSTANCE.getLevel_Number()
 			};
 			MessageFormatParser parser = new MessageFormatParser(features);
+			parser.setViewPattern("Level {0}"); //$NON-NLS-1$
+			parser.setEditorPattern("{0}"); //$NON-NLS-1$
+			parser.setEditPattern("{0}"); //$NON-NLS-1$
 			levelNumber_5001Parser = parser;
 		}
 		return levelNumber_5001Parser;

@@ -13,7 +13,10 @@
       <domainMetaElement
           href="codingcontest.ecore#//Level"/>
       <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
+          xsi:type="gmfmap:FeatureLabelMapping"
+          viewPattern="Level {0}"
+          editorPattern="{0}"
+          editPattern="{0}">
         <diagramLabel
             href="codingcontest.gmfgraph#LevelNumber"/>
         <features

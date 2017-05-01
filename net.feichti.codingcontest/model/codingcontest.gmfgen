@@ -110,7 +110,10 @@
             figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
         <modelFacet
             xsi:type="gmfgen:FeatureLabelModelFacet"
-            parser="//@labelParsers/@implementations.0">
+            parser="//@labelParsers/@implementations.0"
+            viewPattern="Level {0}"
+            editorPattern="{0}"
+            editPattern="{0}">
           <metaFeatures
               href="codingcontest.genmodel#//codingcontest/Level/number"/>
         </modelFacet>
