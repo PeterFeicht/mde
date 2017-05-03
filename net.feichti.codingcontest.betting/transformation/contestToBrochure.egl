@@ -1,0 +1,151 @@
+[%
+	// Since I want to create a single file from a Contest instance, I don't use an EGX program.
+	// In case multiple files should be created, one would define an EGX program which would have one rule for each
+	// model element that should be transformed to a file.
+	
+	import "util.eol";
+	var cc = Contest.all.first;
+%]
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[american]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[babel]{csquotes}
+\usepackage{lmodern}
+
+% Some geometry customization
+\usepackage[margin=2cm]{geometry}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em plus 1.5pt minus 1.5pt}
+\setlength{\headheight}{15pt}
+\setlength{\tabcolsep}{8pt}
+
+% Make enumerations a little more compact
+\usepackage{enumitem}
+\setlist{topsep=0pt, itemsep=2pt}
+\setlist[1]{labelindent=6pt}
+
+\usepackage[
+  pdflang=en,
+  colorlinks=true,
+  unicode=true,
+  pdfstartview=,
+  linkcolor=black,
+  filecolor=black,
+  menucolor=black,
+  urlcolor=black
+]{hyperref}
+\hypersetup{
+  pdftitle={Coding Contest: [%=cc.theme%]},
+  pdfauthor={Organized by [%=cc.organizer.name%]}
+}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+
+\begin{document}
+
+\title{[%=cc.theme%]}
+\author{Organized by \href{[%=cc.organizer.website%]}{[%=cc.organizer.name%]}}
+\date{Local date: [%=cc.localDate%]}
+\maketitle
+\vspace{1em}
+
+
+\section{Locations}
+
+This is a list of all physical locations the contest will be held at. In addition to that, online entries will be
+accepted also.
+
+\begin{description}
+[% for(loc in cc.locations.asSequence().sortBy(it | it.name)) { %]
+  \item[[%=loc.name%], [%=loc.country%]] [%=loc.address%]
+[% } %]
+\end{description}
+
+
+\section{Levels}
+
+The following sections will describe each level in detail.
+
+[% for(lvl in cc.levels) { %]
+\subsection{[%=lvl.sectionTitle()%]}
+
+\begin{description} % TODO Parse lists in the description to generate LaTeX lists
+[% for(entry in lvl.problems) { %]
+  \item[[%=entry.key%]] [%=entry.value.printTitle()%]
+    [%=entry.value.description%]
+  
+[% } %]
+\end{description}
+
+[% } %]
+
+\section{Teams}
+
+The following section lists all registered teams and their participants, grouped by their entry location.
+
+\subsection{Online Entries}
+
+\begin{description}
+[% for(team in cc.entries.select(it | it.location = null)) { %]
+  [%=team.toItem()%]
+[% } %]
+\end{description}
+
+[% for(loc in cc.locations) { %]
+\subsection{[%=loc.name%]}
+
+[%	var entries = cc.entries.select(it | it.location = loc);
+	if(entries.isEmpty()) {
+		"No entries at this location.".println();
+	} else { %]
+\begin{description}
+		[% for(team in entries) { %]
+  [%=team.toItem()%]
+		[% } %]
+\end{description}
+	[% } %]
+
+[% } %]
+
+\end{document}
+[%
+	operation Level sectionTitle() : String {
+		var result = "Level " + self.number;
+		if(self.title.ifUndefined("").length() <> 0) {
+			result += " - " + self.title;
+		}
+		return result;
+	}
+	
+	operation Problem printTitle() : String {
+		if(self.title.ifUndefined("").length <> 0) {
+			return "\\emph{" + self.title + "} --- ";
+		}
+		return "";
+	}
+	
+	operation Coder printAge() : String {
+		if(self.age > 0) {
+			return "(" + self.age + " years old)";
+		}
+		return "";
+	}
+%]
+[% @template
+operation Entry toItem() { %]
+\item[[%=self.teamName.escape()%]]
+[% if(self.coders.size() > 1 or self.coders.first.name <> self.teamName) { %]
+  Team:
+  \begin{itemize}
+  [% for(coder in self.coders) { %]
+    \item \textbf{[%=coder.name.escape()%]} [%=coder.printAge()%]
+  [% } %]
+  \end{itemize}
+[% } else { %]
+  Single entry [%=self.coders.first.printAge()%]
+[% } %]
+[% } %]
