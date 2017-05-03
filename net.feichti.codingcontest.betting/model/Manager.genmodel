@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/net.feichti.codingcontest.betting/gen" editDirectory="/net.feichti.codingcontest.betting.edit/gen"
+    editorDirectory="/net.feichti.codingcontest.betting.editor/gen" modelPluginID="net.feichti.codingcontest.betting"
+    modelName="Manager" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    testsDirectory="/net.feichti.codingcontest.betting.tests/gen" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>Manager.ecore</foreignModel>
+  <genPackages prefix="Manager" basePackage="at.jku.isse.mde.betting" disposableProviderFactory="true"
+      ecorePackage="Manager.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Manager.ecore#//ResultType">
+      <genEnumLiterals ecoreEnumLiteral="Manager.ecore#//ResultType/Single"/>
+      <genEnumLiterals ecoreEnumLiteral="Manager.ecore#//ResultType/Position"/>
+    </genEnums>
+    <genClasses ecoreClass="Manager.ecore#//Manager">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Manager.ecore#//Manager/categories"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Manager.ecore#//Manager/bets"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Manager.ecore#//Manager/users"/>
+    </genClasses>
+    <genClasses ecoreClass="Manager.ecore#//IdElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Manager.ecore#//IdElement/id"/>
+    </genClasses>
+    <genClasses ecoreClass="Manager.ecore#//Category">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Manager.ecore#//Category/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Manager.ecore#//Category/sortRank"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Manager.ecore#//Category/groups"/>
+    </genClasses>
+    <genClasses ecoreClass="Manager.ecore#//Group">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Manager.ecore#//Group/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Manager.ecore#//Group/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Manager.ecore#//Group/startDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Manager.ecore#//Group/endDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Manager.ecore#//Group/resolved"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Manager.ecore#//Group/category"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Manager.ecore#//Group/matches"/>
+    </genClasses>
+    <genClasses ecoreClass="Manager.ecore#//Match">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Manager.ecore#//Match/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Manager.ecore#//Match/sortRank"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Manager.ecore#//Match/resultType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Manager.ecore#//Match/resolved"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Manager.ecore#//Match/date"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Manager.ecore#//Match/group"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Manager.ecore#//Match/opponents"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Manager.ecore#//Match/result"/>
+    </genClasses>
+    <genClasses ecoreClass="Manager.ecore#//Opponent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Manager.ecore#//Opponent/reference"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Manager.ecore#//Result"/>
+    <genClasses ecoreClass="Manager.ecore#//WinLooseResult">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Manager.ecore#//WinLooseResult/isDraw"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Manager.ecore#//WinLooseResult/winner"/>
+    </genClasses>
+    <genClasses ecoreClass="Manager.ecore#//PositionResult">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Manager.ecore#//PositionResult/order"/>
+    </genClasses>
+    <genClasses ecoreClass="Manager.ecore#//Bet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Manager.ecore#//Bet/amount"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Manager.ecore#//Bet/betOn"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Manager.ecore#//Bet/expectedResult"/>
+    </genClasses>
+    <genClasses ecoreClass="Manager.ecore#//User">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Manager.ecore#//User/email"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Manager.ecore#//User/password"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Manager.ecore#//User/balance"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

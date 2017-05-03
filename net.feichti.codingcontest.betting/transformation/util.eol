@@ -1,0 +1,11 @@
+operation String escape() {
+	var clean;
+	var badChars = Sequence{ '_', '%', '\\', '{', '}' };
+	for (c in self.toCharSequence()) {
+		if (badChars.includes(c)) {
+			clean += '\\';
+		}	
+		clean += c;
+	}
+	return clean;
+}
