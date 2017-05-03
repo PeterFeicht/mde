@@ -1,0 +1,54 @@
+pre {
+	var mgr : new manager!Manager;
+	
+	// I don't have any use for categories, they're not modeled in my metamodel
+	var cat : new manager!Category;
+	cat.name = "Coding Contests";
+	cat.sortRank = 1;
+	mgr.categories.add(cat);
+}
+
+rule ContestToGroup
+	transform cc : codingcontest!Contest
+	to grp : manager!Group {
+		if(cc.id.isUndefined()) {
+			grp.id = cat.groups.size();
+		} else {
+			grp.id = cc.id;
+		}
+		grp.title = cc.theme;
+		grp.description = "Organized by " + cc.organizer.name;
+		grp.startDate = cc.localDate;
+		grp.endDate = cc.localDate;
+		
+		grp.category = cat;
+		
+		var online : new manager!Match;
+		online.id = "Online";
+		online.title = "Online Entries";
+		online.resultType = manager!ResultType#Position;
+		online.date = cc.localDate;
+		grp.matches.add(online);
+	}
+
+rule LocationToMatch
+	transform loc : codingcontest!Location
+	to match : manager!Match {
+		match.id = loc.name;
+		match.title = loc.name;
+		match.resultType = manager!ResultType#Position;
+		
+		match.date = loc.eContainer().localDate;
+		match.group ::= loc.eContainer();
+	}
+
+rule EntryToOpponent
+	transform team : codingcontest!Entry
+	to opp : manager!Opponent {
+		opp.reference = team.teamName;
+		if(team.location.isUndefined()) {
+			team.eContainer().equivalent().matches.first().opponents.add(opp);
+		} else {
+			team.location.equivalent().opponents.add(opp);
+		}
+	}
