@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="ASCII"?>
+<mgr:Manager
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:mgr="http://www.jku.at/isse/mde/betting/Manager.ecore"
+    id="268e6841-971b-4a6e-b7c9-ad9c1f653b5b">
+  <categories
+      name="F1">
+    <groups
+        id="630ad98c-b854-4394-bf88-dc756becea20"
+        title="2016"
+        startDate="2016-03-20T05:00:00.000+0100"
+        endDate="2016-11-27T00:00:00.000+0100">
+      <matches
+          id="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+          title="Australian Grand Prix-2016"
+          resultType="Position"
+          resolved="true"
+          date="2016-03-20T05:00:00.000+0100">
+        <opponents
+            reference="3-922-04-3941"/>
+        <opponents
+            reference="3-695-77-3483"/>
+        <opponents
+            reference="3-489-47-8560"/>
+        <opponents
+            reference="3-698-60-0553"/>
+        <opponents
+            reference="3-599-98-0110"/>
+        <opponents
+            reference="3-929-27-5925"/>
+        <opponents
+            reference="3-709-74-5421"/>
+        <opponents
+            reference="3-139-52-0205"/>
+        <opponents
+            reference="3-245-84-0769"/>
+        <opponents
+            reference="3-139-52-0205"/>
+        <opponents
+            reference="3-187-00-0510"/>
+        <opponents
+            reference="3-675-99-8225"/>
+        <opponents
+            reference="3-634-15-2507"/>
+        <opponents
+            reference="3-892-07-4027"/>
+        <opponents
+            reference="3-407-25-3688"/>
+        <opponents
+            reference="3-775-51-6757"/>
+        <opponents
+            reference="3-112-77-1018"/>
+        <opponents
+            reference="3-948-59-9710"/>
+        <opponents
+            reference="3-248-44-5102"/>
+        <opponents
+            reference="3-551-24-5471"/>
+        <opponents
+            reference="3-741-85-7255"/>
+        <opponents
+            reference="3-765-44-8887"/>
+        <result
+            xsi:type="mgr:PositionResult"
+            order="//@categories.0/@groups.0/@matches.0/@opponents.4 //@categories.0/@groups.0/@matches.0/@opponents.5 //@categories.0/@groups.0/@matches.0/@opponents.6 //@categories.0/@groups.0/@matches.0/@opponents.7 //@categories.0/@groups.0/@matches.0/@opponents.8 //@categories.0/@groups.0/@matches.0/@opponents.9 //@categories.0/@groups.0/@matches.0/@opponents.10 //@categories.0/@groups.0/@matches.0/@opponents.11 //@categories.0/@groups.0/@matches.0/@opponents.12 //@categories.0/@groups.0/@matches.0/@opponents.13 //@categories.0/@groups.0/@matches.0/@opponents.15 //@categories.0/@groups.0/@matches.0/@opponents.16 //@categories.0/@groups.0/@matches.0/@opponents.17 //@categories.0/@groups.0/@matches.0/@opponents.14 //@categories.0/@groups.0/@matches.0/@opponents.0 //@categories.0/@groups.0/@matches.0/@opponents.1 //@categories.0/@groups.0/@matches.0/@opponents.2 //@categories.0/@groups.0/@matches.0/@opponents.3 //@categories.0/@groups.0/@matches.0/@opponents.18 //@categories.0/@groups.0/@matches.0/@opponents.19 //@categories.0/@groups.0/@matches.0/@opponents.20 //@categories.0/@groups.0/@matches.0/@opponents.21"/>
+      </matches>
+      <matches
+          id="b22850cf-cc24-4ba3-ae56-af5292af768f"
+          title="Bahrain Grand Prix-2016"
+          resultType="Position"
+          date="2016-04-03T15:00:00.000+0200">
+        <opponents
+            reference="922-04-3941"/>
+        <opponents
+            reference="695-77-3483"/>
+        <opponents
+            reference="489-47-8560"/>
+        <opponents
+            reference="709-74-5421"/>
+        <opponents
+            reference="139-52-0205"/>
+        <opponents
+            reference="599-98-0110"/>
+        <opponents
+            reference="245-84-0769"/>
+        <opponents
+            reference="948-59-9710"/>
+        <opponents
+            reference="698-60-0553"/>
+        <opponents
+            reference="929-27-5925"/>
+        <opponents
+            reference="217-49-2545"/>
+        <opponents
+            reference="248-44-5102"/>
+        <opponents
+            reference="675-99-8225"/>
+        <opponents
+            reference="112-77-1018"/>
+        <opponents
+            reference="741-85-7255"/>
+        <opponents
+            reference="407-25-3688"/>
+        <opponents
+            reference="139-52-0205"/>
+        <opponents
+            reference="634-15-2507"/>
+        <opponents
+            reference="551-24-5471"/>
+        <opponents
+            reference="775-51-6757"/>
+        <opponents
+            reference="765-44-8887"/>
+        <result
+            xsi:type="mgr:PositionResult"
+            order="//@categories.0/@groups.0/@matches.1/@opponents.2 //@categories.0/@groups.0/@matches.1/@opponents.3 //@categories.0/@groups.0/@matches.1/@opponents.4 //@categories.0/@groups.0/@matches.1/@opponents.5 //@categories.0/@groups.0/@matches.1/@opponents.6 //@categories.0/@groups.0/@matches.1/@opponents.7 //@categories.0/@groups.0/@matches.1/@opponents.8 //@categories.0/@groups.0/@matches.1/@opponents.9 //@categories.0/@groups.0/@matches.1/@opponents.10 //@categories.0/@groups.0/@matches.1/@opponents.11 //@categories.0/@groups.0/@matches.1/@opponents.12 //@categories.0/@groups.0/@matches.1/@opponents.13 //@categories.0/@groups.0/@matches.1/@opponents.14 //@categories.0/@groups.0/@matches.1/@opponents.15 //@categories.0/@groups.0/@matches.1/@opponents.16 //@categories.0/@groups.0/@matches.1/@opponents.17 //@categories.0/@groups.0/@matches.1/@opponents.0 //@categories.0/@groups.0/@matches.1/@opponents.1 //@categories.0/@groups.0/@matches.1/@opponents.18 //@categories.0/@groups.0/@matches.1/@opponents.19 //@categories.0/@groups.0/@matches.1/@opponents.20"/>
+      </matches>
+    </groups>
+  </categories>
+  <bets id="1d0a0d2f-c297-4d1b-bd99-4f83c32b8720"
+      amount="96.85131738472873"
+      date="2016-04-03T15:00:00.000+0200"
+      positionBetType="Show"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="909-89-3336">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.19"/>
+  </bets>
+  <bets id="a7cf12f5-b0c3-44a7-8829-e6404eef7ddc"
+      amount="53.095387609767194"
+      date="2016-04-01T15:00:00.000+0200"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="909-89-3336">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.14"/>
+  </bets>
+  <bets id="10fe6fa7-eacb-471a-8ad5-bbd332ffa145"
+      amount="125.39340374566304"
+      date="2016-03-31T15:00:00.000+0200"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="909-89-3336">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.19"/>
+  </bets>
+  <bets id="b49d46d8-89de-46e1-b964-335a2c1d34d9"
+      amount="131.61542856051503"
+      date="2016-04-03T15:00:00.000+0200"
+      positionBetType="Place"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="909-89-3336">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.14"/>
+  </bets>
+  <bets id="ab7b8b2f-a529-40c4-9770-61674964d352"
+      amount="20.174010837876626"
+      date="2016-03-21T05:00:00.000+0100"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="789-18-9429">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.10"/>
+  </bets>
+  <bets id="e237f69f-e3fe-4550-a2be-f76de84a7316"
+      amount="20.521414770423405"
+      date="2016-03-31T15:00:00.000+0200"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="789-18-9429">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.8"/>
+  </bets>
+  <bets id="814dcaf6-0631-45ae-9595-d4a680ce9820"
+      amount="5.654805589332687"
+      date="2016-04-01T15:00:00.000+0200"
+      positionBetType="Show"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="789-18-9429">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.3"/>
+  </bets>
+  <bets id="19f2b9af-ee7a-4388-b480-1eba4b036ddb"
+      amount="9.792799861642665"
+      date="2016-03-19T05:00:00.000+0100"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="789-18-9429">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.4"/>
+  </bets>
+  <bets id="0e023c80-18f9-4175-b735-0356eef0ccae"
+      amount="12.420259521560544"
+      date="2016-03-19T05:00:00.000+0100"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="789-18-9429">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.0"/>
+  </bets>
+  <bets id="2500a87f-515e-4974-a506-2afad9f787ef"
+      amount="25.59117565986604"
+      date="2016-03-21T05:00:00.000+0100"
+      positionBetType="Show"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="789-18-9429">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.6"/>
+  </bets>
+  <bets id="f1e0f417-554a-4973-a437-b09b4a17cab5"
+      amount="21.162487437976143"
+      date="2016-03-30T15:00:00.000+0200"
+      positionBetType="Place"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="789-18-9429">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.21"/>
+  </bets>
+  <bets id="3e529f2b-c82c-431f-8ca8-dfc816bd71ab"
+      amount="6.985810169269575"
+      date="2016-03-21T05:00:00.000+0100"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="789-18-9429">
+    <expectedResult
+        xsi:type="mgr:WinLooseResult"
+		winner="/0/@categories.0/@groups.0/@matches.1/@opponents.5"/>
+  </bets>
+  <bets id="627f3506-b296-4b55-b613-6a2afe5fe7be"
+      amount="10.05712123299788"
+      date="2016-04-02T15:00:00.000+0200"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="789-18-9429">
+    <expectedResult
+        xsi:type="mgr:WinLooseResult"
+		winner="/0/@categories.0/@groups.0/@matches.1/@opponents.9"/>
+  </bets>
+  <bets id="72479c71-e5b8-48f4-b499-e6ac6f309110"
+      amount="13.94908833822789"
+      date="2016-03-15T05:00:00.000+0100"
+      positionBetType="Show"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="789-18-9429">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.12"/>
+  </bets>
+  <bets id="13fcafb9-c4ad-4280-b41d-cbc4ee8d2073"
+      amount="21.36121801295764"
+      date="2016-04-04T15:00:00.000+0200"
+      positionBetType="Place"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="789-18-9429">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.17"/>
+  </bets>
+  <bets id="c4452779-2745-4c32-a97b-91d5e9534301"
+      amount="11.065594376343158"
+      date="2016-03-30T15:00:00.000+0200"
+      positionBetType="Show"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="789-18-9429">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.3"/>
+  </bets>
+  <bets id="bab9da81-ab98-419d-8487-93859d62f3db"
+      amount="17.01121703804405"
+      date="2016-03-30T15:00:00.000+0200"
+      positionBetType="Place"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="789-18-9429">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.6"/>
+  </bets>
+  <bets id="1dfcfadf-b94b-432b-bc56-d7e3c8710436"
+      amount="41.54221169253449"
+      date="2016-03-30T15:00:00.000+0200"
+      positionBetType="Place"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="482-49-1979">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.13"/>
+  </bets>
+  <bets id="f41a56ff-426c-44cf-9344-13ff6f135139"
+      amount="15.76501111690296"
+      date="2016-03-19T05:00:00.000+0100"
+      positionBetType="Show"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="482-49-1979">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.1"/>
+  </bets>
+  <bets id="8e49fd08-c3c2-4dda-bdac-8b32b5581f31"
+      amount="105.22868189046748"
+      date="2016-03-20T05:00:00.000+0100"
+      positionBetType="Show"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="482-49-1979">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.4"/>
+  </bets>
+  <bets id="52842373-230d-4aeb-a957-95af3446e2f1"
+      amount="135.51889405745598"
+      date="2016-04-04T15:00:00.000+0200"
+      positionBetType="Place"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="482-49-1979">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.8"/>
+  </bets>
+  <bets id="556d121f-2757-4e87-9904-cb6117729c4f"
+      amount="110.57404023758042"
+      date="2016-03-18T05:00:00.000+0100"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="482-49-1979">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.16"/>
+  </bets>
+  <bets id="7fc74c93-2f44-49e5-a072-ccd0ae6e43a1"
+      amount="7.028037336507696"
+      date="2016-03-17T05:00:00.000+0100"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="482-49-1979">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.1"/>
+  </bets>
+  <bets id="0830507d-12fb-4a38-8e40-06f77381466c"
+      amount="5.039699117632106"
+      date="2016-04-01T15:00:00.000+0200"
+      positionBetType="Show"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="482-49-1979">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.18"/>
+  </bets>
+  <bets id="7c264442-27c0-4c83-95a0-e13ae5919bfc"
+      amount="3.7016227527450933"
+      date="2016-03-19T05:00:00.000+0100"
+      positionBetType="Show"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="158-28-3639">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.15"/>
+  </bets>
+  <bets id="d1fb6c4d-60ed-4ed3-8aab-ce0c0f5bc4b1"
+      amount="45.91644424208815"
+      date="2016-03-16T05:00:00.000+0100"
+      positionBetType="Place"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="158-28-3639">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.6"/>
+  </bets>
+  <bets id="d7b0d8c1-9222-418a-8ae3-e2f1edac8eb9"
+      amount="16.542244024380103"
+      date="2016-03-18T05:00:00.000+0100"
+      positionBetType="Show"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="158-28-3639">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.16"/>
+  </bets>
+  <bets id="403a7580-8652-4c63-87bb-2532200de719"
+      amount="96.7467440526488"
+      date="2016-03-17T05:00:00.000+0100"
+      positionBetType="Show"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="158-28-3639">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.6"/>
+  </bets>
+  <bets id="b8657a18-91fc-4acd-a6c0-78d02eb1a37d"
+      amount="119.47574835117202"
+      date="2016-03-19T05:00:00.000+0100"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="158-28-3639">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.11"/>
+  </bets>
+  <bets id="dba74158-d440-4cb4-a1f0-e298ba6b0a2a"
+      amount="77.7961365762486"
+      date="2016-03-30T15:00:00.000+0200"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="158-28-3639">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.20"/>
+  </bets>
+  <bets id="49e1dd96-f90e-4b08-bf8d-772cc900bb29"
+      amount="172.19600964018738"
+      date="2016-03-16T05:00:00.000+0100"
+      positionBetType="Place"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="158-28-3639">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.4"/>
+  </bets>
+  <bets id="d4c8bd59-1354-4767-a484-83e5337f4342"
+      amount="116.1714118976964"
+      date="2016-03-20T05:00:00.000+0100"
+      positionBetType="Show"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="158-28-3639">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.17"/>
+  </bets>
+  <bets id="7f9c0f63-135d-4121-8cbe-aed00fff2095"
+      amount="39.418427692747315"
+      date="2016-03-16T05:00:00.000+0100"
+      positionBetType="Show"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="158-28-3639">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.20"/>
+  </bets>
+  <bets id="98448a60-2ad7-48a7-a0f3-c227922f10d2"
+      amount="44.28799339472081"
+      date="2016-03-17T05:00:00.000+0100"
+      positionBetType="Show"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="158-28-3639">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.8"/>
+  </bets>
+  <bets id="8467b28c-8bb3-4624-9f55-53cad07474fb"
+      amount="117.14305460903122"
+      date="2016-04-04T15:00:00.000+0200"
+      positionBetType="Place"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="215-49-5097">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.7"/>
+  </bets>
+  <bets id="a14de055-8be1-472c-877a-9222d8fed65a"
+      amount="57.23565651132901"
+      date="2016-03-21T05:00:00.000+0100"
+      positionBetType="Place"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="215-49-5097">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.1"/>
+  </bets>
+  <bets id="54b280a1-5964-4bd7-baf3-5928c2e527e5"
+      amount="104.38303248054574"
+      date="2016-03-16T05:00:00.000+0100"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="215-49-5097">
+    <expectedResult
+        xsi:type="mgr:WinLooseResult"
+		winner="/0/@categories.0/@groups.0/@matches.0/@opponents.5"/>
+  </bets>
+  <bets id="61663c2d-c4bb-414f-b92e-e91f3d0a2fca"
+      amount="102.12524501241874"
+      date="2016-03-16T05:00:00.000+0100"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="215-49-5097">
+    <expectedResult
+        xsi:type="mgr:WinLooseResult"
+		winner="/0/@categories.0/@groups.0/@matches.0/@opponents.5"/>
+  </bets>
+  <bets id="64c64587-ab70-4ec8-b207-2af3a8a25508"
+      amount="28.590803853681734"
+      date="2016-04-03T15:00:00.000+0200"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="215-49-5097">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.6"/>
+  </bets>
+  <bets id="8cf96940-04e1-4b20-943c-e0b50b325821"
+      amount="121.53979211987385"
+      date="2016-04-02T15:00:00.000+0200"
+      positionBetType="Show"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="189-99-6705">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.0"/>
+  </bets>
+  <bets id="e42e99fb-5091-4332-86fb-93a6fa472828"
+      amount="24.371620670231106"
+      date="2016-03-15T05:00:00.000+0100"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="189-99-6705">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.1"/>
+  </bets>
+  <bets id="7e0cfb51-d94f-4aa3-a315-8c8e659ef82c"
+      amount="130.85959401806065"
+      date="2016-03-31T15:00:00.000+0200"
+      positionBetType="Show"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="189-99-6705">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.7"/>
+  </bets>
+  <bets id="4cea687e-0d19-4c17-a1ed-2973dfe341c3"
+      amount="99.0468289953911"
+      date="2016-03-31T15:00:00.000+0200"
+      positionBetType="Place"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="189-99-6705">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.7"/>
+  </bets>
+  <bets id="7c62e718-a13d-4467-9c96-e3d806132f9d"
+      amount="165.8286309401728"
+      date="2016-03-21T05:00:00.000+0100"
+      positionBetType="Place"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="189-99-6705">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.8"/>
+  </bets>
+  <bets id="7f8d4d4d-8293-40de-9a88-574515200846"
+      amount="127.14556949143616"
+      date="2016-03-31T15:00:00.000+0200"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="189-99-6705">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.18"/>
+  </bets>
+  <bets id="99877d56-d48f-4743-9767-575b18ed587f"
+      amount="45.24914468280219"
+      date="2016-03-15T05:00:00.000+0100"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="566-49-2276">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.3"/>
+  </bets>
+  <bets id="8d098177-db18-48b4-b44d-16b64e280808"
+      amount="84.71470122458835"
+      date="2016-03-29T15:00:00.000+0200"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="566-49-2276">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.7"/>
+  </bets>
+  <bets id="68f14e35-ce69-4a13-8235-16cab0613c96"
+      amount="60.95380260143882"
+      date="2016-04-02T15:00:00.000+0200"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="566-49-2276">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.18"/>
+  </bets>
+  <bets id="0658a52f-1a9b-470c-853c-be752ad8e8a4"
+      amount="35.44405869965062"
+      date="2016-04-04T15:00:00.000+0200"
+      positionBetType="Place"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="566-49-2276">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.9"/>
+  </bets>
+  <bets id="a9d3ce23-800a-4ef8-9a50-12fc192c832a"
+      amount="46.279936243483256"
+      date="2016-03-16T05:00:00.000+0100"
+      positionBetType="Show"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="566-49-2276">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.9"/>
+  </bets>
+  <bets id="ec173348-39e7-4088-b881-f62d65eb4497"
+      amount="72.9252631402082"
+      date="2016-03-20T05:00:00.000+0100"
+      positionBetType="Place"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="566-49-2276">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.12"/>
+  </bets>
+  <bets id="643e0e7f-c600-4c2a-a462-53aee95e8325"
+      amount="56.170327226265776"
+      date="2016-03-29T15:00:00.000+0200"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="566-49-2276">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.4"/>
+  </bets>
+  <bets id="8b672466-f6fd-4741-b326-2b9f32169843"
+      amount="36.37510317584596"
+      date="2016-03-18T05:00:00.000+0100"
+      positionBetType="Place"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="566-49-2276">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.12"/>
+  </bets>
+  <bets id="b6439197-fca8-4ee9-ae76-8cf43f3c517f"
+      amount="51.08888163873823"
+      date="2016-03-16T05:00:00.000+0100"
+      positionBetType="Place"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="566-49-2276">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.1"/>
+  </bets>
+  <bets id="27823846-fe5f-4b3a-bb21-eb8e09c1851b"
+      amount="6.446563778770639"
+      date="2016-04-04T15:00:00.000+0200"
+      positionBetType="Place"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="566-49-2276">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.9"/>
+  </bets>
+  <bets id="d6293af1-0574-4320-8ac2-1eef33b34818"
+      amount="42.09315685096639"
+      date="2016-04-04T15:00:00.000+0200"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="566-49-2276">
+    <expectedResult
+        xsi:type="mgr:WinLooseResult"
+		isDraw="true"/>
+  </bets>
+  <bets id="06b69ac5-8fe3-4a78-8d94-4f4b3fdca001"
+      amount="95.13762190508305"
+      date="2016-04-02T15:00:00.000+0200"
+      positionBetType="Show"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.10"/>
+  </bets>
+  <bets id="30a3a02d-a975-4f15-9287-0fc08f61c7ac"
+      amount="44.03373617148899"
+      date="2016-03-21T05:00:00.000+0100"
+      positionBetType="Show"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="100-84-5798">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.20"/>
+  </bets>
+  <bets id="a0e3c9ee-85da-424e-9500-6036389a3df6"
+      amount="25.016268271640016"
+      date="2016-03-16T05:00:00.000+0100"
+      positionBetType="Show"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="100-84-5798">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.8"/>
+  </bets>
+  <bets id="a3d89994-8a6d-477e-abe0-87e32fecf9fd"
+      amount="42.42334077851258"
+      date="2016-03-31T15:00:00.000+0200"
+      positionBetType="Show"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="100-84-5798">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.14"/>
+  </bets>
+  <bets id="ba59c7e5-f113-459c-a710-87011e1c4ab0"
+      amount="31.053107810247322"
+      date="2016-03-18T05:00:00.000+0100"
+      positionBetType="Place"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="100-84-5798">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.6"/>
+  </bets>
+  <bets id="51653284-4429-4cd4-bc27-fd3d44d91ffa"
+      amount="104.9758179267483"
+      date="2016-04-02T15:00:00.000+0200"
+      positionBetType="Show"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="428-71-1976">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.5"/>
+  </bets>
+  <bets id="4c45f5b5-946c-4f19-83e5-da0ed5882bdf"
+      amount="20.464398534173558"
+      date="2016-03-29T15:00:00.000+0200"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="428-71-1976">
+    <expectedResult
+        xsi:type="mgr:WinLooseResult"/>
+  </bets>
+  <bets id="de35a591-ce03-4cbb-9482-03fd419dedbd"
+      amount="105.7461822151243"
+      date="2016-03-16T05:00:00.000+0100"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="428-71-1976">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.17"/>
+  </bets>
+  <bets id="5b34b448-8752-4251-8949-f9702e4b6645"
+      amount="2.322372822444968"
+      date="2016-03-29T15:00:00.000+0200"
+      positionBetType="Place"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="428-71-1976">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.8"/>
+  </bets>
+  <bets id="d05c1d3e-4ff7-4a1c-99cd-b5df1fb72957"
+      amount="156.5462666654778"
+      date="2016-03-30T15:00:00.000+0200"
+      positionBetType="Place"
+      betOn="b22850cf-cc24-4ba3-ae56-af5292af768f"
+      user="428-71-1976">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.1/@opponents.10"/>
+  </bets>
+  <bets id="b11bd113-2a77-4bc3-b9d2-862cd7be0f43"
+      amount="143.47086646176822"
+      date="2016-03-15T05:00:00.000+0100"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c"
+      user="428-71-1976">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.19"/>
+  </bets>
+  <bets id="ada9c30e-5590-4ff5-a8ff-e0b6f23091df"
+      amount="159.5685752470422"
+      date="2016-03-21T05:00:00.000+0100"
+      positionBetType="Show"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.13"/>
+  </bets>
+  <bets id="a897d5cf-1238-420a-a7d7-b8f622d0f8c2"
+      amount="11.078237715531467"
+      date="2016-03-18T05:00:00.000+0100"
+      positionBetType="Place"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.12"/>
+  </bets>
+  <bets id="2c8e0e00-37db-4f82-b268-d4fc49e44029"
+      amount="56.63187089730348"
+      date="2016-03-21T05:00:00.000+0100"
+      positionBetType="Show"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.14"/>
+  </bets>
+  <bets id="4f1a57ca-e46c-4e18-af13-68d941108773"
+      amount="65.71665777842334"
+      date="2016-03-17T05:00:00.000+0100"
+      betOn="e70b42ba-5b9a-49f7-89a0-90a0869bf70c">
+    <expectedResult
+        xsi:type="mgr:PositionResult"
+        order="//@categories.0/@groups.0/@matches.0/@opponents.10"/>
+  </bets>
+  <users id="909-89-3336"
+      email="isaiah_renwick@mayoclinic.com"
+      password="4BManBpfhpq"
+      balance="72.03"
+      bets="1d0a0d2f-c297-4d1b-bd99-4f83c32b8720 a7cf12f5-b0c3-44a7-8829-e6404eef7ddc 10fe6fa7-eacb-471a-8ad5-bbd332ffa145 b49d46d8-89de-46e1-b964-335a2c1d34d9"/>
+  <users id="789-18-9429"
+      email="ansley_sparrow@pbs.org"
+      password="x0AYa6"
+      balance="12.9"
+      bets="ab7b8b2f-a529-40c4-9770-61674964d352 e237f69f-e3fe-4550-a2be-f76de84a7316 814dcaf6-0631-45ae-9595-d4a680ce9820 19f2b9af-ee7a-4388-b480-1eba4b036ddb 0e023c80-18f9-4175-b735-0356eef0ccae 2500a87f-515e-4974-a506-2afad9f787ef f1e0f417-554a-4973-a437-b09b4a17cab5 3e529f2b-c82c-431f-8ca8-dfc816bd71ab 627f3506-b296-4b55-b613-6a2afe5fe7be 72479c71-e5b8-48f4-b499-e6ac6f309110 13fcafb9-c4ad-4280-b41d-cbc4ee8d2073 c4452779-2745-4c32-a97b-91d5e9534301 bab9da81-ab98-419d-8487-93859d62f3db"/>
+  <users id="482-49-1979"
+      email="libby_coale@businessweek.com"
+      password="NXFhW96"
+      balance="86.33"
+      bets="1dfcfadf-b94b-432b-bc56-d7e3c8710436 f41a56ff-426c-44cf-9344-13ff6f135139 8e49fd08-c3c2-4dda-bdac-8b32b5581f31 52842373-230d-4aeb-a957-95af3446e2f1 556d121f-2757-4e87-9904-cb6117729c4f 7fc74c93-2f44-49e5-a072-ccd0ae6e43a1 0830507d-12fb-4a38-8e40-06f77381466c"/>
+  <users id="158-28-3639"
+      email="matias_shere@parallels.com"
+      password="1rqckGqwa"
+      balance="86.86"
+      bets="7c264442-27c0-4c83-95a0-e13ae5919bfc d1fb6c4d-60ed-4ed3-8aab-ce0c0f5bc4b1 d7b0d8c1-9222-418a-8ae3-e2f1edac8eb9 403a7580-8652-4c63-87bb-2532200de719 b8657a18-91fc-4acd-a6c0-78d02eb1a37d dba74158-d440-4cb4-a1f0-e298ba6b0a2a 49e1dd96-f90e-4b08-bf8d-772cc900bb29 d4c8bd59-1354-4767-a484-83e5337f4342 7f9c0f63-135d-4121-8cbe-aed00fff2095 98448a60-2ad7-48a7-a0f3-c227922f10d2"/>
+  <users id="215-49-5097"
+      email="gavra_mcilriach@plala.or.jp"
+      password="KP8uie2sZ8"
+      balance="64.61"
+      bets="8467b28c-8bb3-4624-9f55-53cad07474fb a14de055-8be1-472c-877a-9222d8fed65a 54b280a1-5964-4bd7-baf3-5928c2e527e5 61663c2d-c4bb-414f-b92e-e91f3d0a2fca 64c64587-ab70-4ec8-b207-2af3a8a25508"/>
+  <users id="189-99-6705"
+      email="obadiah_corroyer@admin.ch"
+      password="L5gxHsVY2V"
+      balance="92.5"
+      bets="8cf96940-04e1-4b20-943c-e0b50b325821 e42e99fb-5091-4332-86fb-93a6fa472828 7e0cfb51-d94f-4aa3-a315-8c8e659ef82c 4cea687e-0d19-4c17-a1ed-2973dfe341c3 7c62e718-a13d-4467-9c96-e3d806132f9d 7f8d4d4d-8293-40de-9a88-574515200846"/>
+  <users id="566-49-2276"
+      email="brodie_le_feaver@marketwatch.com"
+      password="e6Cf9q"
+      balance="49.81"
+      bets="99877d56-d48f-4743-9767-575b18ed587f 8d098177-db18-48b4-b44d-16b64e280808 68f14e35-ce69-4a13-8235-16cab0613c96 0658a52f-1a9b-470c-853c-be752ad8e8a4 a9d3ce23-800a-4ef8-9a50-12fc192c832a ec173348-39e7-4088-b881-f62d65eb4497 643e0e7f-c600-4c2a-a462-53aee95e8325 8b672466-f6fd-4741-b326-2b9f32169843 b6439197-fca8-4ee9-ae76-8cf43f3c517f 27823846-fe5f-4b3a-bb21-eb8e09c1851b d6293af1-0574-4320-8ac2-1eef33b34818"/>
+  <users id="100-84-5798"
+      email="shannon_halden@globo.com"
+      password="0FECpxTi9tLp"
+      balance="36.54"
+      bets="30a3a02d-a975-4f15-9287-0fc08f61c7ac a0e3c9ee-85da-424e-9500-6036389a3df6 a3d89994-8a6d-477e-abe0-87e32fecf9fd ba59c7e5-f113-459c-a710-87011e1c4ab0"/>
+  <users id="428-71-1976"
+      email="alina_probate@g.co"
+      password="GcAIdm"
+      balance="79.38"
+      bets="51653284-4429-4cd4-bc27-fd3d44d91ffa 4c45f5b5-946c-4f19-83e5-da0ed5882bdf de35a591-ce03-4cbb-9482-03fd419dedbd 5b34b448-8752-4251-8949-f9702e4b6645 d05c1d3e-4ff7-4a1c-99cd-b5df1fb72957 b11bd113-2a77-4bc3-b9d2-862cd7be0f43"/>
+</mgr:Manager>

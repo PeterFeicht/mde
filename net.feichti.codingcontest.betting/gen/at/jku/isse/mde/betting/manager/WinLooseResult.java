@@ -17,7 +17,7 @@ package at.jku.isse.mde.betting.manager;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link at.jku.isse.mde.betting.manager.WinLooseResult#getIsDraw <em>Is Draw</em>}</li>
+ *   <li>{@link at.jku.isse.mde.betting.manager.WinLooseResult#isIsDraw <em>Is Draw</em>}</li>
  *   <li>{@link at.jku.isse.mde.betting.manager.WinLooseResult#getWinner <em>Winner</em>}</li>
  * </ul>
  *
@@ -35,22 +35,22 @@ public interface WinLooseResult extends Result
 	 * Indicates that the event's result was a draw.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Is Draw</em>' attribute.
-	 * @see #setIsDraw(Boolean)
+	 * @see #setIsDraw(boolean)
 	 * @see at.jku.isse.mde.betting.manager.ManagerPackage#getWinLooseResult_IsDraw()
 	 * @model
 	 * @generated
 	 */
-	Boolean getIsDraw();
+	boolean isIsDraw();
 
 	/**
-	 * Sets the value of the '{@link at.jku.isse.mde.betting.manager.WinLooseResult#getIsDraw <em>Is Draw</em>}' attribute.
+	 * Sets the value of the '{@link at.jku.isse.mde.betting.manager.WinLooseResult#isIsDraw <em>Is Draw</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Is Draw</em>' attribute.
-	 * @see #getIsDraw()
+	 * @see #isIsDraw()
 	 * @generated
 	 */
-	void setIsDraw(Boolean value);
+	void setIsDraw(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Winner</b></em>' reference.

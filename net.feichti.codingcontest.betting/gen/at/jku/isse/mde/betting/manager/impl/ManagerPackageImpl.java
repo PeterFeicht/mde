@@ -11,6 +11,7 @@ import at.jku.isse.mde.betting.manager.ManagerFactory;
 import at.jku.isse.mde.betting.manager.ManagerPackage;
 import at.jku.isse.mde.betting.manager.Match;
 import at.jku.isse.mde.betting.manager.Opponent;
+import at.jku.isse.mde.betting.manager.PositionBetType;
 import at.jku.isse.mde.betting.manager.PositionResult;
 import at.jku.isse.mde.betting.manager.Result;
 import at.jku.isse.mde.betting.manager.ResultType;
@@ -116,6 +117,13 @@ public class ManagerPackageImpl extends EPackageImpl implements ManagerPackage
 	 * @generated
 	 */
 	private EEnum resultTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum positionBetTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -555,9 +563,39 @@ public class ManagerPackageImpl extends EPackageImpl implements ManagerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getBet_Date()
+	{
+		return (EAttribute)betEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBet_Payed()
+	{
+		return (EAttribute)betEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBet_PositionBetType()
+	{
+		return (EAttribute)betEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getBet_BetOn()
 	{
-		return (EReference)betEClass.getEStructuralFeatures().get(1);
+		return (EReference)betEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -567,7 +605,17 @@ public class ManagerPackageImpl extends EPackageImpl implements ManagerPackage
 	 */
 	public EReference getBet_ExpectedResult()
 	{
-		return (EReference)betEClass.getEStructuralFeatures().get(2);
+		return (EReference)betEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBet_User()
+	{
+		return (EReference)betEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -615,9 +663,29 @@ public class ManagerPackageImpl extends EPackageImpl implements ManagerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getUser_Bets()
+	{
+		return (EReference)userEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getResultType()
 	{
 		return resultTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getPositionBetType()
+	{
+		return positionBetTypeEEnum;
 	}
 
 	/**
@@ -650,13 +718,13 @@ public class ManagerPackageImpl extends EPackageImpl implements ManagerPackage
 		isCreated = true;
 
 		// Create classes and their features
+		idElementEClass = createEClass(ID_ELEMENT);
+		createEAttribute(idElementEClass, ID_ELEMENT__ID);
+
 		managerEClass = createEClass(MANAGER);
 		createEReference(managerEClass, MANAGER__CATEGORIES);
 		createEReference(managerEClass, MANAGER__BETS);
 		createEReference(managerEClass, MANAGER__USERS);
-
-		idElementEClass = createEClass(ID_ELEMENT);
-		createEAttribute(idElementEClass, ID_ELEMENT__ID);
 
 		categoryEClass = createEClass(CATEGORY);
 		createEAttribute(categoryEClass, CATEGORY__NAME);
@@ -696,16 +764,22 @@ public class ManagerPackageImpl extends EPackageImpl implements ManagerPackage
 
 		betEClass = createEClass(BET);
 		createEAttribute(betEClass, BET__AMOUNT);
+		createEAttribute(betEClass, BET__DATE);
+		createEAttribute(betEClass, BET__PAYED);
+		createEAttribute(betEClass, BET__POSITION_BET_TYPE);
 		createEReference(betEClass, BET__BET_ON);
 		createEReference(betEClass, BET__EXPECTED_RESULT);
+		createEReference(betEClass, BET__USER);
 
 		userEClass = createEClass(USER);
 		createEAttribute(userEClass, USER__EMAIL);
 		createEAttribute(userEClass, USER__PASSWORD);
 		createEAttribute(userEClass, USER__BALANCE);
+		createEReference(userEClass, USER__BETS);
 
 		// Create enums
 		resultTypeEEnum = createEEnum(RESULT_TYPE);
+		positionBetTypeEEnum = createEEnum(POSITION_BET_TYPE);
 	}
 
 	/**
@@ -737,6 +811,7 @@ public class ManagerPackageImpl extends EPackageImpl implements ManagerPackage
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		managerEClass.getESuperTypes().add(this.getIdElement());
 		categoryEClass.getESuperTypes().add(this.getIdElement());
 		groupEClass.getESuperTypes().add(this.getIdElement());
 		matchEClass.getESuperTypes().add(this.getIdElement());
@@ -746,13 +821,13 @@ public class ManagerPackageImpl extends EPackageImpl implements ManagerPackage
 		userEClass.getESuperTypes().add(this.getIdElement());
 
 		// Initialize classes, features, and operations; add parameters
+		initEClass(idElementEClass, IdElement.class, "IdElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getIdElement_Id(), ecorePackage.getEString(), "id", "0", 1, 1, IdElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(managerEClass, Manager.class, "Manager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getManager_Categories(), this.getCategory(), null, "categories", null, 0, -1, Manager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getManager_Bets(), this.getBet(), null, "bets", null, 0, -1, Manager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getManager_Users(), this.getUser(), null, "users", null, 0, -1, Manager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(idElementEClass, IdElement.class, "IdElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getIdElement_Id(), ecorePackage.getEString(), "id", "0", 1, 1, IdElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(categoryEClass, Category.class, "Category", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCategory_Name(), ecorePackage.getEString(), "name", null, 0, 1, Category.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -784,70 +859,193 @@ public class ManagerPackageImpl extends EPackageImpl implements ManagerPackage
 		initEClass(resultEClass, Result.class, "Result", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(winLooseResultEClass, WinLooseResult.class, "WinLooseResult", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getWinLooseResult_IsDraw(), ecorePackage.getEBooleanObject(), "isDraw", null, 0, 1, WinLooseResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWinLooseResult_IsDraw(), ecorePackage.getEBoolean(), "isDraw", null, 0, 1, WinLooseResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWinLooseResult_Winner(), this.getOpponent(), null, "winner", null, 0, 1, WinLooseResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(positionResultEClass, PositionResult.class, "PositionResult", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPositionResult_Order(), this.getOpponent(), null, "order", null, 1, -1, PositionResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(betEClass, Bet.class, "Bet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getBet_Amount(), ecorePackage.getEInt(), "amount", null, 1, 1, Bet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBet_Amount(), ecorePackage.getEDouble(), "amount", null, 1, 1, Bet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBet_Date(), ecorePackage.getEDate(), "date", null, 1, 1, Bet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBet_Payed(), ecorePackage.getEBoolean(), "payed", null, 1, 1, Bet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBet_PositionBetType(), this.getPositionBetType(), "positionBetType", null, 0, 1, Bet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBet_BetOn(), this.getMatch(), null, "betOn", null, 1, 1, Bet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBet_ExpectedResult(), this.getResult(), null, "expectedResult", null, 1, 1, Bet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBet_User(), this.getUser(), this.getUser_Bets(), "user", null, 1, 1, Bet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(userEClass, User.class, "User", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUser_Email(), ecorePackage.getEString(), "email", null, 0, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUser_Password(), ecorePackage.getEString(), "password", null, 0, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUser_Balance(), ecorePackage.getEInt(), "balance", null, 0, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUser_Balance(), ecorePackage.getEDouble(), "balance", null, 0, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUser_Bets(), this.getBet(), this.getBet_User(), "bets", null, 0, -1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(resultTypeEEnum, ResultType.class, "ResultType");
 		addEEnumLiteral(resultTypeEEnum, ResultType.SINGLE);
 		addEEnumLiteral(resultTypeEEnum, ResultType.POSITION);
 
+		initEEnum(positionBetTypeEEnum, PositionBetType.class, "PositionBetType");
+		addEEnumLiteral(positionBetTypeEEnum, PositionBetType.WIN);
+		addEEnumLiteral(positionBetTypeEEnum, PositionBetType.SHOW);
+		addEEnumLiteral(positionBetTypeEEnum, PositionBetType.PLACE);
+
 		// Create resource
 		createResource(eNS_URI);
 
 		// Create annotations
-		// http://www.eclipse.org/emf/2004/EmfaticAnnotationMap
-		createEmfaticAnnotationMapAnnotations();
-		// http://oracle.com/javax/persistence/Table
+		// Id
+		createIdAnnotations();
+		// GeneratedValue
+		createGeneratedValueAnnotations();
+		// Entity
+		createEntityAnnotations();
+		// XmlRootElement
+		createXmlRootElementAnnotations();
+		// Table
 		createTableAnnotations();
+		// NotNull
+		createNotNullAnnotations();
+		// NotEmpty
+		createNotEmptyAnnotations();
+		// Email
+		createEmailAnnotations();
 	}
 
 	/**
-	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2004/EmfaticAnnotationMap</b>.
+	 * Initializes the annotations for <b>Id</b>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void createEmfaticAnnotationMapAnnotations()
+	protected void createIdAnnotations()
 	{
-		String source = "http://www.eclipse.org/emf/2004/EmfaticAnnotationMap";	
+		String source = "Id";	
 		addAnnotation
-		  (this, 
+		  (getIdElement_Id(), 
 		   source, 
 		   new String[] 
 		   {
-			 "table", "http://oracle.com/javax/persistence/Table"
 		   });
 	}
 
 	/**
-	 * Initializes the annotations for <b>http://oracle.com/javax/persistence/Table</b>.
+	 * Initializes the annotations for <b>GeneratedValue</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGeneratedValueAnnotations()
+	{
+		String source = "GeneratedValue";	
+		addAnnotation
+		  (getIdElement_Id(), 
+		   source, 
+		   new String[] 
+		   {
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>Entity</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createEntityAnnotations()
+	{
+		String source = "Entity";	
+		addAnnotation
+		  (userEClass, 
+		   source, 
+		   new String[] 
+		   {
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>XmlRootElement</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createXmlRootElementAnnotations()
+	{
+		String source = "XmlRootElement";	
+		addAnnotation
+		  (userEClass, 
+		   source, 
+		   new String[] 
+		   {
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>Table</b>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	protected void createTableAnnotations()
 	{
-		String source = "http://oracle.com/javax/persistence/Table";	
+		String source = "Table";	
 		addAnnotation
 		  (userEClass, 
 		   source, 
 		   new String[] 
 		   {
 			 "uniqueConstraints", "@UniqueConstraint(columnNames = \'email\')"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>NotNull</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createNotNullAnnotations()
+	{
+		String source = "NotNull";	
+		addAnnotation
+		  (getUser_Email(), 
+		   source, 
+		   new String[] 
+		   {
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>NotEmpty</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createNotEmptyAnnotations()
+	{
+		String source = "NotEmpty";	
+		addAnnotation
+		  (getUser_Email(), 
+		   source, 
+		   new String[] 
+		   {
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>Email</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createEmailAnnotations()
+	{
+		String source = "Email";	
+		addAnnotation
+		  (getUser_Email(), 
+		   source, 
+		   new String[] 
+		   {
 		   });
 	}
 

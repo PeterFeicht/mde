@@ -4,8 +4,6 @@ package at.jku.isse.mde.betting.manager;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Manager</b></em>'.
@@ -29,7 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Manager extends EObject
+public interface Manager extends IdElement
 {
 	/**
 	 * Returns the value of the '<em><b>Categories</b></em>' containment reference list.
