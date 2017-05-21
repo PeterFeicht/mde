@@ -75,14 +75,14 @@ public class ManagerAdapterFactory extends AdapterFactoryImpl
 		new ManagerSwitch<Adapter>()
 		{
 			@Override
-			public Adapter caseManager(Manager object)
-			{
-				return createManagerAdapter();
-			}
-			@Override
 			public Adapter caseIdElement(IdElement object)
 			{
 				return createIdElementAdapter();
+			}
+			@Override
+			public Adapter caseManager(Manager object)
+			{
+				return createManagerAdapter();
 			}
 			@Override
 			public Adapter caseCategory(Category object)

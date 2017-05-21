@@ -5,8 +5,11 @@ package at.jku.isse.mde.betting.manager.impl;
 import at.jku.isse.mde.betting.manager.Bet;
 import at.jku.isse.mde.betting.manager.ManagerPackage;
 import at.jku.isse.mde.betting.manager.Match;
+import at.jku.isse.mde.betting.manager.PositionBetType;
 import at.jku.isse.mde.betting.manager.Result;
 
+import at.jku.isse.mde.betting.manager.User;
+import java.util.Date;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -24,8 +27,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link at.jku.isse.mde.betting.manager.impl.BetImpl#getAmount <em>Amount</em>}</li>
+ *   <li>{@link at.jku.isse.mde.betting.manager.impl.BetImpl#getDate <em>Date</em>}</li>
+ *   <li>{@link at.jku.isse.mde.betting.manager.impl.BetImpl#isPayed <em>Payed</em>}</li>
+ *   <li>{@link at.jku.isse.mde.betting.manager.impl.BetImpl#getPositionBetType <em>Position Bet Type</em>}</li>
  *   <li>{@link at.jku.isse.mde.betting.manager.impl.BetImpl#getBetOn <em>Bet On</em>}</li>
  *   <li>{@link at.jku.isse.mde.betting.manager.impl.BetImpl#getExpectedResult <em>Expected Result</em>}</li>
+ *   <li>{@link at.jku.isse.mde.betting.manager.impl.BetImpl#getUser <em>User</em>}</li>
  * </ul>
  *
  * @generated
@@ -40,7 +47,7 @@ public class BetImpl extends IdElementImpl implements Bet
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int AMOUNT_EDEFAULT = 0;
+	protected static final double AMOUNT_EDEFAULT = 0.0;
 
 	/**
 	 * The cached value of the '{@link #getAmount() <em>Amount</em>}' attribute.
@@ -50,7 +57,67 @@ public class BetImpl extends IdElementImpl implements Bet
 	 * @generated
 	 * @ordered
 	 */
-	protected int amount = AMOUNT_EDEFAULT;
+	protected double amount = AMOUNT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDate() <em>Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date DATE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDate() <em>Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected Date date = DATE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isPayed() <em>Payed</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isPayed()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean PAYED_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isPayed() <em>Payed</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isPayed()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean payed = PAYED_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPositionBetType() <em>Position Bet Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPositionBetType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final PositionBetType POSITION_BET_TYPE_EDEFAULT = PositionBetType.WIN;
+
+	/**
+	 * The cached value of the '{@link #getPositionBetType() <em>Position Bet Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPositionBetType()
+	 * @generated
+	 * @ordered
+	 */
+	protected PositionBetType positionBetType = POSITION_BET_TYPE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getBetOn() <em>Bet On</em>}' reference.
@@ -71,6 +138,16 @@ public class BetImpl extends IdElementImpl implements Bet
 	 * @ordered
 	 */
 	protected Result expectedResult;
+
+	/**
+	 * The cached value of the '{@link #getUser() <em>User</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUser()
+	 * @generated
+	 * @ordered
+	 */
+	protected User user;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -98,7 +175,7 @@ public class BetImpl extends IdElementImpl implements Bet
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getAmount()
+	public double getAmount()
 	{
 		return amount;
 	}
@@ -108,12 +185,81 @@ public class BetImpl extends IdElementImpl implements Bet
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAmount(int newAmount)
+	public void setAmount(double newAmount)
 	{
-		int oldAmount = amount;
+		double oldAmount = amount;
 		amount = newAmount;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ManagerPackage.BET__AMOUNT, oldAmount, amount));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Date getDate()
+	{
+		return date;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDate(Date newDate)
+	{
+		Date oldDate = date;
+		date = newDate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ManagerPackage.BET__DATE, oldDate, date));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isPayed()
+	{
+		return payed;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPayed(boolean newPayed)
+	{
+		boolean oldPayed = payed;
+		payed = newPayed;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ManagerPackage.BET__PAYED, oldPayed, payed));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PositionBetType getPositionBetType()
+	{
+		return positionBetType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPositionBetType(PositionBetType newPositionBetType)
+	{
+		PositionBetType oldPositionBetType = positionBetType;
+		positionBetType = newPositionBetType == null ? POSITION_BET_TYPE_EDEFAULT : newPositionBetType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ManagerPackage.BET__POSITION_BET_TYPE, oldPositionBetType, positionBetType));
 	}
 
 	/**
@@ -212,6 +358,92 @@ public class BetImpl extends IdElementImpl implements Bet
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public User getUser()
+	{
+		if (user != null && user.eIsProxy())
+		{
+			InternalEObject oldUser = (InternalEObject)user;
+			user = (User)eResolveProxy(oldUser);
+			if (user != oldUser)
+			{
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ManagerPackage.BET__USER, oldUser, user));
+			}
+		}
+		return user;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public User basicGetUser()
+	{
+		return user;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUser(User newUser, NotificationChain msgs)
+	{
+		User oldUser = user;
+		user = newUser;
+		if (eNotificationRequired())
+		{
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ManagerPackage.BET__USER, oldUser, newUser);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUser(User newUser)
+	{
+		if (newUser != user)
+		{
+			NotificationChain msgs = null;
+			if (user != null)
+				msgs = ((InternalEObject)user).eInverseRemove(this, ManagerPackage.USER__BETS, User.class, msgs);
+			if (newUser != null)
+				msgs = ((InternalEObject)newUser).eInverseAdd(this, ManagerPackage.USER__BETS, User.class, msgs);
+			msgs = basicSetUser(newUser, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ManagerPackage.BET__USER, newUser, newUser));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
+			case ManagerPackage.BET__USER:
+				if (user != null)
+					msgs = ((InternalEObject)user).eInverseRemove(this, ManagerPackage.USER__BETS, User.class, msgs);
+				return basicSetUser((User)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
@@ -219,6 +451,8 @@ public class BetImpl extends IdElementImpl implements Bet
 		{
 			case ManagerPackage.BET__EXPECTED_RESULT:
 				return basicSetExpectedResult(null, msgs);
+			case ManagerPackage.BET__USER:
+				return basicSetUser(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -235,11 +469,20 @@ public class BetImpl extends IdElementImpl implements Bet
 		{
 			case ManagerPackage.BET__AMOUNT:
 				return getAmount();
+			case ManagerPackage.BET__DATE:
+				return getDate();
+			case ManagerPackage.BET__PAYED:
+				return isPayed();
+			case ManagerPackage.BET__POSITION_BET_TYPE:
+				return getPositionBetType();
 			case ManagerPackage.BET__BET_ON:
 				if (resolve) return getBetOn();
 				return basicGetBetOn();
 			case ManagerPackage.BET__EXPECTED_RESULT:
 				return getExpectedResult();
+			case ManagerPackage.BET__USER:
+				if (resolve) return getUser();
+				return basicGetUser();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -255,13 +498,25 @@ public class BetImpl extends IdElementImpl implements Bet
 		switch (featureID)
 		{
 			case ManagerPackage.BET__AMOUNT:
-				setAmount((Integer)newValue);
+				setAmount((Double)newValue);
+				return;
+			case ManagerPackage.BET__DATE:
+				setDate((Date)newValue);
+				return;
+			case ManagerPackage.BET__PAYED:
+				setPayed((Boolean)newValue);
+				return;
+			case ManagerPackage.BET__POSITION_BET_TYPE:
+				setPositionBetType((PositionBetType)newValue);
 				return;
 			case ManagerPackage.BET__BET_ON:
 				setBetOn((Match)newValue);
 				return;
 			case ManagerPackage.BET__EXPECTED_RESULT:
 				setExpectedResult((Result)newValue);
+				return;
+			case ManagerPackage.BET__USER:
+				setUser((User)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -280,11 +535,23 @@ public class BetImpl extends IdElementImpl implements Bet
 			case ManagerPackage.BET__AMOUNT:
 				setAmount(AMOUNT_EDEFAULT);
 				return;
+			case ManagerPackage.BET__DATE:
+				setDate(DATE_EDEFAULT);
+				return;
+			case ManagerPackage.BET__PAYED:
+				setPayed(PAYED_EDEFAULT);
+				return;
+			case ManagerPackage.BET__POSITION_BET_TYPE:
+				setPositionBetType(POSITION_BET_TYPE_EDEFAULT);
+				return;
 			case ManagerPackage.BET__BET_ON:
 				setBetOn((Match)null);
 				return;
 			case ManagerPackage.BET__EXPECTED_RESULT:
 				setExpectedResult((Result)null);
+				return;
+			case ManagerPackage.BET__USER:
+				setUser((User)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -302,10 +569,18 @@ public class BetImpl extends IdElementImpl implements Bet
 		{
 			case ManagerPackage.BET__AMOUNT:
 				return amount != AMOUNT_EDEFAULT;
+			case ManagerPackage.BET__DATE:
+				return DATE_EDEFAULT == null ? date != null : !DATE_EDEFAULT.equals(date);
+			case ManagerPackage.BET__PAYED:
+				return payed != PAYED_EDEFAULT;
+			case ManagerPackage.BET__POSITION_BET_TYPE:
+				return positionBetType != POSITION_BET_TYPE_EDEFAULT;
 			case ManagerPackage.BET__BET_ON:
 				return betOn != null;
 			case ManagerPackage.BET__EXPECTED_RESULT:
 				return expectedResult != null;
+			case ManagerPackage.BET__USER:
+				return user != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -323,6 +598,12 @@ public class BetImpl extends IdElementImpl implements Bet
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (amount: ");
 		result.append(amount);
+		result.append(", date: ");
+		result.append(date);
+		result.append(", payed: ");
+		result.append(payed);
+		result.append(", positionBetType: ");
+		result.append(positionBetType);
 		result.append(')');
 		return result.toString();
 	}
