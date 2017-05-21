@@ -1,0 +1,242 @@
+/*
+ * Constraints on instances of the betting manager model.
+ */
+ 
+context Bet {
+	constraint HasMatch {
+		check: self.betOn.isDefined()
+		message: "The Bet " + self.id + " must have a match."
+	}
+	
+	constraint HasExpectedResult {
+		check: self.expectedResult.isDefined()
+		message: "The Bet " + self.id + " must have an expected result."
+	}
+	
+	// 1. A bet cannot be put on a match that has already been played (i.e., is resolved).
+	constraint MatchNotResolved {
+		guard: self.satisfies("HasMatch")
+		check: not self.betOn.resolved
+		message: "The Bet " + self.id + " cannot be put on the resolved match '" + self.betOn.`title` + "'."
+	}
+	
+	// 2. A bet on a match must be put before the match starts (i.e., before it takes place).
+	constraint MatchNotStarted {
+		guard: self.satisfies("HasMatch")
+		check: self.betOn.date.after(self.date)
+		message: "The Bet " + self.id + " cannot be put on already started match '" + self.betOn.`title` + "'."
+	}
+	
+	// 3. The type of expected result for a bet must be the same as the result type of its match.
+	constraint SameResultTypes {
+		guard: self.satisfies("HasMatch", "HasExpectedResult")
+		check: self.expectedResult.matches(self.betOn.resultType)
+		message: "The expected result of Bet " + self.id + " must be compatible with the match result type."
+	}
+	
+	// 4. The opponent(s) on which a bet is put must be present in the match opponents.
+	critique HasKnownResultType {
+		guard: self.satisfies("HasExpectedResult")
+		check {
+			var knownTypes = Sequence{PositionResult, WinLooseResult};
+			return knownTypes->one(it | self.expectedResult.isKindOf(it));
+		}
+		message: "The Bet " + self.id + " has an unknown result type, opponents will not be checked."
+	}
+	
+	constraint PositionResultOpponentsMatch {
+		guard: self.satisfies("HasMatch", "HasExpectedResult") and
+				self.expectedResult.isKindOf(PositionResult)
+		check {
+			var expected : PositionResult = self.expectedResult;
+			return expected.order.notEmpty() and
+					expected.order->forAll(it | self.betOn.opponents.includes(it));
+		}
+		message: "The Bet " + self.id + " contains opponents not in the match."
+		
+		fix {
+			title: "Remove opponents which are not in match " + self.betOn.`title`
+			do {
+				var expected : PositionResult = self.expectedResult;
+				var toRemove = expected.order->select(it | self.betOn.opponents.excludes(it));
+				expected.order.removeAll(toRemove);
+			}
+		}
+	}
+	
+	constraint WinResultOpponentsMatch {
+		guard: self.satisfies("HasMatch", "HasExpectedResult") and
+				self.expectedResult.isKindOf(WinLooseResult)
+		check {
+			var expected : WinLooseResult = self.expectedResult;
+			return expected.winner.isDefined() and
+					self.betOn.opponents.includes(expected.winner);
+		}
+		message: "The opponent of Bet " + self.id + " is not in the match."
+	}
+	
+	// 7. A user must be in the system to be able to bet, i.e., there is no bet without a user.
+	constraint HasUser {
+		check: self.user.isDefined()
+		message: "The Bet " + self.id + " has no user."
+	}
+	
+	// 5. The amount put in a bet must not exceed the user's balance.
+	constraint UserHasCredit {
+		guard: self.satisfies("HasUser")
+		check: self.user.balance >= self.amount
+		message: "The amount of Bet " + self.id + " (" + self.amount + ") exceeds the user's balance (" +
+				self.user.balance + ")."
+		
+		fix {
+			guard: self.maximumAmount() > 0
+			title: "Set amount of Bet " + self.id + " to " + self.maximumAmount() + "."
+			do {
+				self.amount = self.maximumAmount();
+			}
+		}
+	}
+	
+	// A positional result must currently have exactly one opponent (from forum post)
+	constraint SinglePositionResult {
+		guard: self.satisfies("HasExpectedResult") and
+				self.expectedResult.isKindOf(PositionResult)
+		check {
+			var expected : PositionResult = self.expectedResult;
+			return expected.order.size() = 1;
+		}
+		message: "Positional result of Bet " + self.id + " must currently have exactly one opponent."
+		
+		fix {
+			guard: self.expectedResult.order.size() > 1
+			title: "Remove all opponents but " + self.expectedResult.order.first().reference + " from expected result."
+			do {
+				var expected : PositionResult = self.expectedResult;
+				var first = expected.order.first();
+				expected.clear();
+				expected.add(first);
+			}
+		}
+	}
+}
+
+context User {
+	// 6. A user must not bet on multiple matches with an amount that exceeds the user's balance.
+	constraint CanPay {
+		check: self.balance >= self.bets->collect(it | it.amount).sum()
+		message: "User " + self.id + " exceeded their balance (have=" + self.balance + ", need=" +
+				self.bets->collect(it | it.amount).sum() + ")."
+	}
+}
+
+context Match {
+	// The result type must match the declared one.
+	constraint ResultTypesMatch {
+		guard: self.resolved
+		check: self.result.matches(self.resultType)
+		message: "Result type of Match " + self.id + " doesn't match declared type."
+	}
+}
+
+context Manager {
+	// 8. The number of bets to pay must not exceed 20% of all bets.
+	constraint TooManyWinningBets {
+		check: self.bets->select(it | it.isWon()).size() <= 0.2 * self.bets.size()
+		message: "There are too many winning bets."
+	}
+	
+	// 9. The amount of payed bets must represent less than 10% of the amount that was originally put in all bets.
+	constraint ImpendingBankrupcy {
+		check {
+			var totalAmount = self.bets->collect(it | it.amount).sum();
+			return self.bets->select(it | it.isWon())->collect(it | it.amount).sum() <= 0.1 * totalAmount;
+		}
+		message: "The amount to be paid exceeds 10% of all bets."
+	}
+}
+
+// Operations
+
+/**
+ * Determine whether this Result matches the specified ResultType.
+ */
+operation Result matches(type: EEnumLiteral) : Boolean {
+	switch(type) {
+		case ResultType#Single:
+			return self.isKindOf(WinLooseResult);
+		case ResultType#Position:
+			return self.isKindOf(PositionResult);
+		default:
+			return false;
+	}
+}
+
+/**
+ * Calculate the maximum amount of this Bet so the user's credit is not exceeded. Other bets of the user are
+ * taken into account when calculating this value.
+ */
+operation Bet maximumAmount() : Real {
+	return self.user.balance - self.user.bets.excluding(self)->collect(it | it.amount).sum();
+}
+
+/**
+ * Determine whether this Bet is won.
+ * 
+ * A bet is invalid if its match or expected result are undefined, or if the expected result doesn't match
+ * the result type of the match, or if the match is resolved but has no result, or if the result of the match
+ * does not match its result type. An invalid bet is not won.
+ * A valid bet is won, iff the match is resolved and the expected result matches the actual result.
+ */
+operation Bet isWon() : Boolean {
+	// Check for a valid bet
+	if(self.betOn.isUndefined() or self.expectedResult.isUndefined()) {
+		return false;
+	}
+	if(not self.expectedResult.matches(self.betOn.resultType)) {
+		return false;
+	}
+	
+	// Check for resolved match with valid result
+	var match = self.betOn;
+	if(not match.resolved) {
+		return false;
+	}
+	if(match.result.isUndefined() or not match.result.matches(match.resultType)) {
+		return false;
+	}
+	
+	switch(match.resultType) {
+		case ResultType#Single:
+			var expected : WinLooseResult = self.expectedResult;
+			var actual : WinLooseResult = match.result;
+			if(expected.isDraw) {
+				return actual.isDraw;
+			}
+			return expected.winner.reference = actual.winner.reference;
+			
+		case ResultType#Position:
+			var expected : PositionResult = self.expectedResult;
+			var winner = expected.order.first().reference;
+			var actual : PositionResult = match.result;
+			switch(self.positionBetType) {
+				case PositionBetType#Place:
+					if(winner = actual.order.third().reference) {
+						return true;
+					}
+					continue;
+				case PositionBetType#Show:
+					if(winner = actual.order.second().reference) {
+						return true;
+					}
+					continue;
+				case PositionBetType#Win:
+					return winner = actual.order.first().reference;
+					
+				default:
+					return false;
+			}
+			
+		default:
+			throw "Unhandled ResultType in operation Bet.isWon()";
+	}
+}
