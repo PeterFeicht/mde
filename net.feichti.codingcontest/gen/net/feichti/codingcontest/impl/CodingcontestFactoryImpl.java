@@ -70,7 +70,7 @@ public class CodingcontestFactoryImpl extends EFactoryImpl implements Codingcont
 			case CodingcontestPackage.CODER: return createCoder();
 			case CodingcontestPackage.CONTEST: return createContest();
 			case CodingcontestPackage.LOCATION: return createLocation();
-			case CodingcontestPackage.ENTRY: return createEntry();
+			case CodingcontestPackage.TEAM: return createTeam();
 			case CodingcontestPackage.ORGANIZER: return createOrganizer();
 			case CodingcontestPackage.LEVEL: return createLevel();
 			case CodingcontestPackage.PROBLEM: return createProblem();
@@ -152,10 +152,10 @@ public class CodingcontestFactoryImpl extends EFactoryImpl implements Codingcont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entry createEntry()
+	public Team createTeam()
 	{
-		EntryImpl entry = new EntryImpl();
-		return entry;
+		TeamImpl team = new TeamImpl();
+		return team;
 	}
 
 	/**

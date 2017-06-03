@@ -16,20 +16,20 @@ import org.eclipse.gmf.tooling.runtime.update.DiagramUpdater;
 import net.feichti.codingcontest.Coder;
 import net.feichti.codingcontest.CodingcontestPackage;
 import net.feichti.codingcontest.Contest;
-import net.feichti.codingcontest.Entry;
 import net.feichti.codingcontest.Level;
 import net.feichti.codingcontest.Location;
 import net.feichti.codingcontest.Organizer;
 import net.feichti.codingcontest.Problem;
+import net.feichti.codingcontest.Team;
 import net.feichti.codingcontest.diagram.edit.parts.CoderEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.ContestEditPart;
-import net.feichti.codingcontest.diagram.edit.parts.EntryEditPart;
-import net.feichti.codingcontest.diagram.edit.parts.EntryLocationEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.LanguageToProblemMapEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.LevelEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.LocationEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.OrganizerEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.ProblemEditPart;
+import net.feichti.codingcontest.diagram.edit.parts.TeamEditPart;
+import net.feichti.codingcontest.diagram.edit.parts.TeamLocationEditPart;
 import net.feichti.codingcontest.diagram.providers.CodingcontestElementTypes;
 
 /**
@@ -45,8 +45,8 @@ public class CodingcontestDiagramUpdater
 		switch(CodingcontestVisualIDRegistry.getVisualID(view)) {
 			case ContestEditPart.VISUAL_ID:
 				return getContest_1000SemanticChildren(view);
-			case EntryEditPart.VISUAL_ID:
-				return getEntry_2004SemanticChildren(view);
+			case TeamEditPart.VISUAL_ID:
+				return getTeam_2006SemanticChildren(view);
 		}
 		return Collections.emptyList();
 	}
@@ -84,9 +84,9 @@ public class CodingcontestDiagramUpdater
 			}
 		}
 		for(Iterator<?> it = modelElement.getEntries().iterator(); it.hasNext();) {
-			Entry childElement = (Entry) it.next();
+			Team childElement = (Team) it.next();
 			int visualID = CodingcontestVisualIDRegistry.getNodeVisualID(view, childElement);
-			if(visualID == EntryEditPart.VISUAL_ID) {
+			if(visualID == TeamEditPart.VISUAL_ID) {
 				result.add(new CodingcontestNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -105,11 +105,11 @@ public class CodingcontestDiagramUpdater
 	/**
 	* @generated
 	*/
-	public static List<CodingcontestNodeDescriptor> getEntry_2004SemanticChildren(View view) {
+	public static List<CodingcontestNodeDescriptor> getTeam_2006SemanticChildren(View view) {
 		if(!view.isSetElement()) {
 			return Collections.emptyList();
 		}
-		Entry modelElement = (Entry) view.getElement();
+		Team modelElement = (Team) view.getElement();
 		LinkedList<CodingcontestNodeDescriptor> result = new LinkedList<CodingcontestNodeDescriptor>();
 		for(Iterator<?> it = modelElement.getCoders().iterator(); it.hasNext();) {
 			Coder childElement = (Coder) it.next();
@@ -135,12 +135,12 @@ public class CodingcontestDiagramUpdater
 				return getOrganizer_2002ContainedLinks(view);
 			case LocationEditPart.VISUAL_ID:
 				return getLocation_2003ContainedLinks(view);
-			case EntryEditPart.VISUAL_ID:
-				return getEntry_2004ContainedLinks(view);
+			case TeamEditPart.VISUAL_ID:
+				return getTeam_2006ContainedLinks(view);
 			case ProblemEditPart.VISUAL_ID:
 				return getProblem_2005ContainedLinks(view);
 			case CoderEditPart.VISUAL_ID:
-				return getCoder_3001ContainedLinks(view);
+				return getCoder_3002ContainedLinks(view);
 			case LanguageToProblemMapEditPart.VISUAL_ID:
 				return getLanguageToProblemMap_4001ContainedLinks(view);
 		}
@@ -158,12 +158,12 @@ public class CodingcontestDiagramUpdater
 				return getOrganizer_2002IncomingLinks(view);
 			case LocationEditPart.VISUAL_ID:
 				return getLocation_2003IncomingLinks(view);
-			case EntryEditPart.VISUAL_ID:
-				return getEntry_2004IncomingLinks(view);
+			case TeamEditPart.VISUAL_ID:
+				return getTeam_2006IncomingLinks(view);
 			case ProblemEditPart.VISUAL_ID:
 				return getProblem_2005IncomingLinks(view);
 			case CoderEditPart.VISUAL_ID:
-				return getCoder_3001IncomingLinks(view);
+				return getCoder_3002IncomingLinks(view);
 			case LanguageToProblemMapEditPart.VISUAL_ID:
 				return getLanguageToProblemMap_4001IncomingLinks(view);
 		}
@@ -181,12 +181,12 @@ public class CodingcontestDiagramUpdater
 				return getOrganizer_2002OutgoingLinks(view);
 			case LocationEditPart.VISUAL_ID:
 				return getLocation_2003OutgoingLinks(view);
-			case EntryEditPart.VISUAL_ID:
-				return getEntry_2004OutgoingLinks(view);
+			case TeamEditPart.VISUAL_ID:
+				return getTeam_2006OutgoingLinks(view);
 			case ProblemEditPart.VISUAL_ID:
 				return getProblem_2005OutgoingLinks(view);
 			case CoderEditPart.VISUAL_ID:
-				return getCoder_3001OutgoingLinks(view);
+				return getCoder_3002OutgoingLinks(view);
 			case LanguageToProblemMapEditPart.VISUAL_ID:
 				return getLanguageToProblemMap_4001OutgoingLinks(view);
 		}
@@ -225,12 +225,12 @@ public class CodingcontestDiagramUpdater
 	}
 	
 	/**
-	 * @generated
-	 */
-	public static List<CodingcontestLinkDescriptor> getEntry_2004ContainedLinks(View view) {
-		Entry modelElement = (Entry) view.getElement();
+	* @generated
+	*/
+	public static List<CodingcontestLinkDescriptor> getTeam_2006ContainedLinks(View view) {
+		Team modelElement = (Team) view.getElement();
 		LinkedList<CodingcontestLinkDescriptor> result = new LinkedList<CodingcontestLinkDescriptor>();
-		result.addAll(getOutgoingFeatureModelFacetLinks_Entry_Location_4002(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_Team_Location_4003(modelElement));
 		return result;
 	}
 	
@@ -242,9 +242,9 @@ public class CodingcontestDiagramUpdater
 	}
 	
 	/**
-	 * @generated
-	 */
-	public static List<CodingcontestLinkDescriptor> getCoder_3001ContainedLinks(View view) {
+	* @generated
+	*/
+	public static List<CodingcontestLinkDescriptor> getCoder_3002ContainedLinks(View view) {
 		return Collections.emptyList();
 	}
 	
@@ -277,14 +277,14 @@ public class CodingcontestDiagramUpdater
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences =
 				EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
 		LinkedList<CodingcontestLinkDescriptor> result = new LinkedList<CodingcontestLinkDescriptor>();
-		result.addAll(getIncomingFeatureModelFacetLinks_Entry_Location_4002(modelElement, crossReferences));
+		result.addAll(getIncomingFeatureModelFacetLinks_Team_Location_4003(modelElement, crossReferences));
 		return result;
 	}
 	
 	/**
-	 * @generated
-	 */
-	public static List<CodingcontestLinkDescriptor> getEntry_2004IncomingLinks(View view) {
+	* @generated
+	*/
+	public static List<CodingcontestLinkDescriptor> getTeam_2006IncomingLinks(View view) {
 		return Collections.emptyList();
 	}
 	
@@ -301,9 +301,9 @@ public class CodingcontestDiagramUpdater
 	}
 	
 	/**
-	 * @generated
-	 */
-	public static List<CodingcontestLinkDescriptor> getCoder_3001IncomingLinks(View view) {
+	* @generated
+	*/
+	public static List<CodingcontestLinkDescriptor> getCoder_3002IncomingLinks(View view) {
 		return Collections.emptyList();
 	}
 	
@@ -339,12 +339,12 @@ public class CodingcontestDiagramUpdater
 	}
 	
 	/**
-	 * @generated
-	 */
-	public static List<CodingcontestLinkDescriptor> getEntry_2004OutgoingLinks(View view) {
-		Entry modelElement = (Entry) view.getElement();
+	* @generated
+	*/
+	public static List<CodingcontestLinkDescriptor> getTeam_2006OutgoingLinks(View view) {
+		Team modelElement = (Team) view.getElement();
 		LinkedList<CodingcontestLinkDescriptor> result = new LinkedList<CodingcontestLinkDescriptor>();
-		result.addAll(getOutgoingFeatureModelFacetLinks_Entry_Location_4002(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_Team_Location_4003(modelElement));
 		return result;
 	}
 	
@@ -356,9 +356,9 @@ public class CodingcontestDiagramUpdater
 	}
 	
 	/**
-	 * @generated
-	 */
-	public static List<CodingcontestLinkDescriptor> getCoder_3001OutgoingLinks(View view) {
+	* @generated
+	*/
+	public static List<CodingcontestLinkDescriptor> getCoder_3002OutgoingLinks(View view) {
 		return Collections.emptyList();
 	}
 	
@@ -422,16 +422,16 @@ public class CodingcontestDiagramUpdater
 	}
 	
 	/**
-	 * @generated
-	 */
-	private static Collection<CodingcontestLinkDescriptor> getIncomingFeatureModelFacetLinks_Entry_Location_4002(
+	* @generated
+	*/
+	private static Collection<CodingcontestLinkDescriptor> getIncomingFeatureModelFacetLinks_Team_Location_4003(
 			Location target, Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
 		LinkedList<CodingcontestLinkDescriptor> result = new LinkedList<CodingcontestLinkDescriptor>();
 		Collection<EStructuralFeature.Setting> settings = crossReferences.get(target);
 		for(EStructuralFeature.Setting setting : settings) {
-			if(setting.getEStructuralFeature() == CodingcontestPackage.eINSTANCE.getEntry_Location()) {
+			if(setting.getEStructuralFeature() == CodingcontestPackage.eINSTANCE.getTeam_Location()) {
 				result.add(new CodingcontestLinkDescriptor(setting.getEObject(), target,
-						CodingcontestElementTypes.EntryLocation_4002, EntryLocationEditPart.VISUAL_ID));
+						CodingcontestElementTypes.TeamLocation_4003, TeamLocationEditPart.VISUAL_ID));
 			}
 		}
 		return result;
@@ -440,15 +440,15 @@ public class CodingcontestDiagramUpdater
 	/**
 	* @generated
 	*/
-	private static Collection<CodingcontestLinkDescriptor> getOutgoingFeatureModelFacetLinks_Entry_Location_4002(
-			Entry source) {
+	private static Collection<CodingcontestLinkDescriptor> getOutgoingFeatureModelFacetLinks_Team_Location_4003(
+			Team source) {
 		LinkedList<CodingcontestLinkDescriptor> result = new LinkedList<CodingcontestLinkDescriptor>();
 		Location destination = source.getLocation();
 		if(destination == null) {
 			return result;
 		}
-		result.add(new CodingcontestLinkDescriptor(source, destination, CodingcontestElementTypes.EntryLocation_4002,
-				EntryLocationEditPart.VISUAL_ID));
+		result.add(new CodingcontestLinkDescriptor(source, destination, CodingcontestElementTypes.TeamLocation_4003,
+				TeamLocationEditPart.VISUAL_ID));
 		return result;
 	}
 	

@@ -50,13 +50,13 @@ public interface CodingcontestFactory extends EFactory
 	Location createLocation();
 
 	/**
-	 * Returns a new object of class '<em>Entry</em>'.
+	 * Returns a new object of class '<em>Team</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Entry</em>'.
+	 * @return a new object of class '<em>Team</em>'.
 	 * @generated
 	 */
-	Entry createEntry();
+	Team createTeam();
 
 	/**
 	 * Returns a new object of class '<em>Organizer</em>'.

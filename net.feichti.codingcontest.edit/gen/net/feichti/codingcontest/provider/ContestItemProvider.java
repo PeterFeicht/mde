@@ -263,7 +263,7 @@ public class ContestItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(CodingcontestPackage.Literals.CONTEST__ENTRIES,
-				 CodingcontestFactory.eINSTANCE.createEntry()));
+				 CodingcontestFactory.eINSTANCE.createTeam()));
 
 		newChildDescriptors.add
 			(createChildParameter

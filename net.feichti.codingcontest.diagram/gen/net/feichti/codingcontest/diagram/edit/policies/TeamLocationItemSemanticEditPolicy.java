@@ -9,14 +9,14 @@ import net.feichti.codingcontest.diagram.providers.CodingcontestElementTypes;
 /**
  * @generated
  */
-public class EntryLocationItemSemanticEditPolicy extends CodingcontestBaseItemSemanticEditPolicy
+public class TeamLocationItemSemanticEditPolicy extends CodingcontestBaseItemSemanticEditPolicy
 {
 	
 	/**
 	* @generated
 	*/
-	public EntryLocationItemSemanticEditPolicy() {
-		super(CodingcontestElementTypes.EntryLocation_4002);
+	public TeamLocationItemSemanticEditPolicy() {
+		super(CodingcontestElementTypes.TeamLocation_4003);
 	}
 	
 	/**

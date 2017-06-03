@@ -9,23 +9,23 @@ import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx;
 import org.eclipse.gmf.runtime.notation.View;
 
-import net.feichti.codingcontest.diagram.edit.policies.EntryLocationItemSemanticEditPolicy;
+import net.feichti.codingcontest.diagram.edit.policies.TeamLocationItemSemanticEditPolicy;
 
 /**
  * @generated
  */
-public class EntryLocationEditPart extends ConnectionNodeEditPart implements ITreeBranchEditPart
+public class TeamLocationEditPart extends ConnectionNodeEditPart implements ITreeBranchEditPart
 {
 	
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 4002;
+	public static final int VISUAL_ID = 4003;
 	
 	/**
 	* @generated
 	*/
-	public EntryLocationEditPart(View view) {
+	public TeamLocationEditPart(View view) {
 		super(view);
 	}
 	
@@ -34,7 +34,7 @@ public class EntryLocationEditPart extends ConnectionNodeEditPart implements ITr
 	*/
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
-		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new EntryLocationItemSemanticEditPolicy());
+		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new TeamLocationItemSemanticEditPolicy());
 	}
 	
 	/**
@@ -47,26 +47,26 @@ public class EntryLocationEditPart extends ConnectionNodeEditPart implements ITr
 	*/
 	
 	protected Connection createConnectionFigure() {
-		return new EntryLocationFigure();
+		return new TeamLocationFigure();
 	}
 	
 	/**
 	* @generated
 	*/
-	public EntryLocationFigure getPrimaryShape() {
-		return (EntryLocationFigure) getFigure();
+	public TeamLocationFigure getPrimaryShape() {
+		return (TeamLocationFigure) getFigure();
 	}
 	
 	/**
 	 * @generated
 	 */
-	public class EntryLocationFigure extends PolylineConnectionEx
+	public class TeamLocationFigure extends PolylineConnectionEx
 	{
 		
 		/**
 		 * @generated
 		 */
-		public EntryLocationFigure() {
+		public TeamLocationFigure() {
 			
 			setTargetDecoration(createTargetDecoration());
 		}

@@ -25,13 +25,13 @@ import org.eclipse.ui.navigator.ICommonContentProvider;
 
 import net.feichti.codingcontest.diagram.edit.parts.CoderEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.ContestEditPart;
-import net.feichti.codingcontest.diagram.edit.parts.EntryEditPart;
-import net.feichti.codingcontest.diagram.edit.parts.EntryLocationEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.LanguageToProblemMapEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.LevelEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.LocationEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.OrganizerEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.ProblemEditPart;
+import net.feichti.codingcontest.diagram.edit.parts.TeamEditPart;
+import net.feichti.codingcontest.diagram.edit.parts.TeamLocationEditPart;
 import net.feichti.codingcontest.diagram.part.CodingcontestVisualIDRegistry;
 import net.feichti.codingcontest.diagram.part.Messages;
 
@@ -234,7 +234,7 @@ public class CodingcontestNavigatorContentProvider implements ICommonContentProv
 						CodingcontestVisualIDRegistry.getType(LocationEditPart.VISUAL_ID));
 				result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 				connectedViews = getChildrenByType(Collections.singleton(sv),
-						CodingcontestVisualIDRegistry.getType(EntryEditPart.VISUAL_ID));
+						CodingcontestVisualIDRegistry.getType(TeamEditPart.VISUAL_ID));
 				result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 				connectedViews = getChildrenByType(Collections.singleton(sv),
 						CodingcontestVisualIDRegistry.getType(ProblemEditPart.VISUAL_ID));
@@ -243,7 +243,7 @@ public class CodingcontestNavigatorContentProvider implements ICommonContentProv
 						CodingcontestVisualIDRegistry.getType(LanguageToProblemMapEditPart.VISUAL_ID));
 				links.addChildren(createNavigatorItems(connectedViews, links, false));
 				connectedViews = getDiagramLinksByType(Collections.singleton(sv),
-						CodingcontestVisualIDRegistry.getType(EntryLocationEditPart.VISUAL_ID));
+						CodingcontestVisualIDRegistry.getType(TeamLocationEditPart.VISUAL_ID));
 				links.addChildren(createNavigatorItems(connectedViews, links, false));
 				if(!links.isEmpty()) {
 					result.add(links);
@@ -277,30 +277,10 @@ public class CodingcontestNavigatorContentProvider implements ICommonContentProv
 						"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
 				Collection<View> connectedViews;
 				connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-						CodingcontestVisualIDRegistry.getType(EntryLocationEditPart.VISUAL_ID));
+						CodingcontestVisualIDRegistry.getType(TeamLocationEditPart.VISUAL_ID));
 				incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
 				if(!incominglinks.isEmpty()) {
 					result.add(incominglinks);
-				}
-				return result.toArray();
-			}
-			
-			case EntryEditPart.VISUAL_ID: {
-				LinkedList<CodingcontestAbstractNavigatorItem> result =
-						new LinkedList<CodingcontestAbstractNavigatorItem>();
-				Node sv = (Node) view;
-				CodingcontestNavigatorGroup outgoinglinks = new CodingcontestNavigatorGroup(
-						Messages.NavigatorGroupName_Entry_2004_outgoinglinks,
-						"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
-				Collection<View> connectedViews;
-				connectedViews = getChildrenByType(Collections.singleton(sv),
-						CodingcontestVisualIDRegistry.getType(CoderEditPart.VISUAL_ID));
-				result.addAll(createNavigatorItems(connectedViews, parentElement, false));
-				connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-						CodingcontestVisualIDRegistry.getType(EntryLocationEditPart.VISUAL_ID));
-				outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
-				if(!outgoinglinks.isEmpty()) {
-					result.add(outgoinglinks);
 				}
 				return result.toArray();
 			}
@@ -318,6 +298,26 @@ public class CodingcontestNavigatorContentProvider implements ICommonContentProv
 				incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
 				if(!incominglinks.isEmpty()) {
 					result.add(incominglinks);
+				}
+				return result.toArray();
+			}
+			
+			case TeamEditPart.VISUAL_ID: {
+				LinkedList<CodingcontestAbstractNavigatorItem> result =
+						new LinkedList<CodingcontestAbstractNavigatorItem>();
+				Node sv = (Node) view;
+				CodingcontestNavigatorGroup outgoinglinks = new CodingcontestNavigatorGroup(
+						Messages.NavigatorGroupName_Team_2006_outgoinglinks,
+						"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				Collection<View> connectedViews;
+				connectedViews = getChildrenByType(Collections.singleton(sv),
+						CodingcontestVisualIDRegistry.getType(CoderEditPart.VISUAL_ID));
+				result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+				connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+						CodingcontestVisualIDRegistry.getType(TeamLocationEditPart.VISUAL_ID));
+				outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+				if(!outgoinglinks.isEmpty()) {
+					result.add(outgoinglinks);
 				}
 				return result.toArray();
 			}
@@ -348,22 +348,22 @@ public class CodingcontestNavigatorContentProvider implements ICommonContentProv
 				return result.toArray();
 			}
 			
-			case EntryLocationEditPart.VISUAL_ID: {
+			case TeamLocationEditPart.VISUAL_ID: {
 				LinkedList<CodingcontestAbstractNavigatorItem> result =
 						new LinkedList<CodingcontestAbstractNavigatorItem>();
 				Edge sv = (Edge) view;
 				CodingcontestNavigatorGroup target = new CodingcontestNavigatorGroup(
-						Messages.NavigatorGroupName_EntryLocation_4002_target,
+						Messages.NavigatorGroupName_TeamLocation_4003_target,
 						"icons/linkTargetNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
 				CodingcontestNavigatorGroup source = new CodingcontestNavigatorGroup(
-						Messages.NavigatorGroupName_EntryLocation_4002_source,
+						Messages.NavigatorGroupName_TeamLocation_4003_source,
 						"icons/linkSourceNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
 				Collection<View> connectedViews;
 				connectedViews = getLinksTargetByType(Collections.singleton(sv),
 						CodingcontestVisualIDRegistry.getType(LocationEditPart.VISUAL_ID));
 				target.addChildren(createNavigatorItems(connectedViews, target, true));
 				connectedViews = getLinksSourceByType(Collections.singleton(sv),
-						CodingcontestVisualIDRegistry.getType(EntryEditPart.VISUAL_ID));
+						CodingcontestVisualIDRegistry.getType(TeamEditPart.VISUAL_ID));
 				source.addChildren(createNavigatorItems(connectedViews, source, true));
 				if(!target.isEmpty()) {
 					result.add(target);

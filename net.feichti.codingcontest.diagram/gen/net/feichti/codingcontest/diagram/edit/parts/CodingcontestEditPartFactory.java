@@ -44,11 +44,11 @@ public class CodingcontestEditPartFactory implements EditPartFactory
 				case LocationNameEditPart.VISUAL_ID:
 					return new LocationNameEditPart(view);
 				
-				case EntryEditPart.VISUAL_ID:
-					return new EntryEditPart(view);
+				case TeamEditPart.VISUAL_ID:
+					return new TeamEditPart(view);
 				
-				case EntryTeamNameEditPart.VISUAL_ID:
-					return new EntryTeamNameEditPart(view);
+				case TeamNameEditPart.VISUAL_ID:
+					return new TeamNameEditPart(view);
 				
 				case ProblemEditPart.VISUAL_ID:
 					return new ProblemEditPart(view);
@@ -68,8 +68,8 @@ public class CodingcontestEditPartFactory implements EditPartFactory
 				case LanguageToProblemMapKeyEditPart.VISUAL_ID:
 					return new LanguageToProblemMapKeyEditPart(view);
 				
-				case EntryLocationEditPart.VISUAL_ID:
-					return new EntryLocationEditPart(view);
+				case TeamLocationEditPart.VISUAL_ID:
+					return new TeamLocationEditPart(view);
 				
 			}
 		}

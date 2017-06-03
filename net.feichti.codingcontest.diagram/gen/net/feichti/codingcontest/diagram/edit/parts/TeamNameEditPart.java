@@ -52,13 +52,13 @@ import net.feichti.codingcontest.diagram.providers.CodingcontestParserProvider;
 /**
  * @generated
  */
-public class EntryTeamNameEditPart extends CompartmentEditPart implements ITextAwareEditPart
+public class TeamNameEditPart extends CompartmentEditPart implements ITextAwareEditPart
 {
 	
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5005;
+	public static final int VISUAL_ID = 5008;
 	
 	/**
 	* @generated
@@ -88,7 +88,7 @@ public class EntryTeamNameEditPart extends CompartmentEditPart implements ITextA
 	/**
 	* @generated
 	*/
-	public EntryTeamNameEditPart(View view) {
+	public TeamNameEditPart(View view) {
 		super(view);
 	}
 	
@@ -298,9 +298,9 @@ public class EntryTeamNameEditPart extends CompartmentEditPart implements ITextA
 	*/
 	public IParser getParser() {
 		if(parser == null) {
-			parser = CodingcontestParserProvider.getParser(CodingcontestElementTypes.Entry_2004, getParserElement(),
+			parser = CodingcontestParserProvider.getParser(CodingcontestElementTypes.Team_2006, getParserElement(),
 					CodingcontestVisualIDRegistry
-							.getType(net.feichti.codingcontest.diagram.edit.parts.EntryTeamNameEditPart.VISUAL_ID));
+							.getType(net.feichti.codingcontest.diagram.edit.parts.TeamNameEditPart.VISUAL_ID));
 		}
 		return parser;
 	}

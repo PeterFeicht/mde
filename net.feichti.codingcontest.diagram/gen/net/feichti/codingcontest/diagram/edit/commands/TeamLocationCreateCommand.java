@@ -8,14 +8,14 @@ import org.eclipse.gmf.runtime.common.core.command.CommandResult;
 import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest;
 
-import net.feichti.codingcontest.Entry;
 import net.feichti.codingcontest.Location;
+import net.feichti.codingcontest.Team;
 import net.feichti.codingcontest.diagram.edit.policies.CodingcontestBaseItemSemanticEditPolicy;
 
 /**
  * @generated
  */
-public class EntryLocationCreateCommand extends EditElementCommand
+public class TeamLocationCreateCommand extends EditElementCommand
 {
 	
 	/**
@@ -31,7 +31,7 @@ public class EntryLocationCreateCommand extends EditElementCommand
 	/**
 	* @generated
 	*/
-	public EntryLocationCreateCommand(CreateRelationshipRequest request, EObject source, EObject target) {
+	public TeamLocationCreateCommand(CreateRelationshipRequest request, EObject source, EObject target) {
 		super(request.getLabel(), null, request);
 		this.source = source;
 		this.target = target;
@@ -44,7 +44,7 @@ public class EntryLocationCreateCommand extends EditElementCommand
 		if(source == null && target == null) {
 			return false;
 		}
-		if(source != null && false == source instanceof Entry) {
+		if(source != null && false == source instanceof Team) {
 			return false;
 		}
 		if(target != null && false == target instanceof Location) {
@@ -54,7 +54,7 @@ public class EntryLocationCreateCommand extends EditElementCommand
 			return true; // link creation is in progress; source is not defined yet
 		}
 		// target may be null here but it's possible to check constraint
-		return CodingcontestBaseItemSemanticEditPolicy.getLinkConstraints().canCreateEntryLocation_4002(getSource(),
+		return CodingcontestBaseItemSemanticEditPolicy.getLinkConstraints().canCreateTeamLocation_4003(getSource(),
 				getTarget());
 	}
 	
@@ -83,8 +83,8 @@ public class EntryLocationCreateCommand extends EditElementCommand
 	/**
 	* @generated
 	*/
-	protected Entry getSource() {
-		return (Entry) source;
+	protected Team getSource() {
+		return (Team) source;
 	}
 	
 	/**

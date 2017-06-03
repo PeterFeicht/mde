@@ -9,14 +9,14 @@ import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelationshipRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest;
 
-import net.feichti.codingcontest.Entry;
 import net.feichti.codingcontest.Location;
+import net.feichti.codingcontest.Team;
 import net.feichti.codingcontest.diagram.edit.policies.CodingcontestBaseItemSemanticEditPolicy;
 
 /**
  * @generated
  */
-public class EntryLocationReorientCommand extends EditElementCommand
+public class TeamLocationReorientCommand extends EditElementCommand
 {
 	
 	/**
@@ -42,7 +42,7 @@ public class EntryLocationReorientCommand extends EditElementCommand
 	/**
 	* @generated
 	*/
-	public EntryLocationReorientCommand(ReorientReferenceRelationshipRequest request) {
+	public TeamLocationReorientCommand(ReorientReferenceRelationshipRequest request) {
 		super(request.getLabel(), null, request);
 		reorientDirection = request.getDirection();
 		referenceOwner = request.getReferenceOwner();
@@ -54,7 +54,7 @@ public class EntryLocationReorientCommand extends EditElementCommand
 	* @generated
 	*/
 	public boolean canExecute() {
-		if(false == referenceOwner instanceof Entry) {
+		if(false == referenceOwner instanceof Team) {
 			return false;
 		}
 		if(reorientDirection == ReorientRelationshipRequest.REORIENT_SOURCE) {
@@ -70,10 +70,10 @@ public class EntryLocationReorientCommand extends EditElementCommand
 	* @generated
 	*/
 	protected boolean canReorientSource() {
-		if(!(oldEnd instanceof Location && newEnd instanceof Entry)) {
+		if(!(oldEnd instanceof Location && newEnd instanceof Team)) {
 			return false;
 		}
-		return CodingcontestBaseItemSemanticEditPolicy.getLinkConstraints().canExistEntryLocation_4002(getNewSource(),
+		return CodingcontestBaseItemSemanticEditPolicy.getLinkConstraints().canExistTeamLocation_4003(getNewSource(),
 				getOldTarget());
 	}
 	
@@ -84,7 +84,7 @@ public class EntryLocationReorientCommand extends EditElementCommand
 		if(!(oldEnd instanceof Location && newEnd instanceof Location)) {
 			return false;
 		}
-		return CodingcontestBaseItemSemanticEditPolicy.getLinkConstraints().canExistEntryLocation_4002(getOldSource(),
+		return CodingcontestBaseItemSemanticEditPolicy.getLinkConstraints().canExistTeamLocation_4003(getOldSource(),
 				getNewTarget());
 	}
 	
@@ -126,15 +126,15 @@ public class EntryLocationReorientCommand extends EditElementCommand
 	/**
 	* @generated
 	*/
-	protected Entry getOldSource() {
-		return (Entry) referenceOwner;
+	protected Team getOldSource() {
+		return (Team) referenceOwner;
 	}
 	
 	/**
 	* @generated
 	*/
-	protected Entry getNewSource() {
-		return (Entry) newEnd;
+	protected Team getNewSource() {
+		return (Team) newEnd;
 	}
 	
 	/**

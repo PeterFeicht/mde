@@ -58,7 +58,7 @@ public class CoderNameEditPart extends CompartmentEditPart implements ITextAware
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5004;
+	public static final int VISUAL_ID = 5007;
 	
 	/**
 	* @generated
@@ -298,7 +298,7 @@ public class CoderNameEditPart extends CompartmentEditPart implements ITextAware
 	*/
 	public IParser getParser() {
 		if(parser == null) {
-			parser = CodingcontestParserProvider.getParser(CodingcontestElementTypes.Coder_3001, getParserElement(),
+			parser = CodingcontestParserProvider.getParser(CodingcontestElementTypes.Coder_3002, getParserElement(),
 					CodingcontestVisualIDRegistry
 							.getType(net.feichti.codingcontest.diagram.edit.parts.CoderNameEditPart.VISUAL_ID));
 		}

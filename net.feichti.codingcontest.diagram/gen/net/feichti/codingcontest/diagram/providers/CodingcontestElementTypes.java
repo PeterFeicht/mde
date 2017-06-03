@@ -17,13 +17,13 @@ import org.eclipse.swt.graphics.Image;
 import net.feichti.codingcontest.CodingcontestPackage;
 import net.feichti.codingcontest.diagram.edit.parts.CoderEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.ContestEditPart;
-import net.feichti.codingcontest.diagram.edit.parts.EntryEditPart;
-import net.feichti.codingcontest.diagram.edit.parts.EntryLocationEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.LanguageToProblemMapEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.LevelEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.LocationEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.OrganizerEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.ProblemEditPart;
+import net.feichti.codingcontest.diagram.edit.parts.TeamEditPart;
+import net.feichti.codingcontest.diagram.edit.parts.TeamLocationEditPart;
 import net.feichti.codingcontest.diagram.part.CodingcontestDiagramEditorPlugin;
 
 /**
@@ -74,7 +74,8 @@ public class CodingcontestElementTypes
 	/**
 	* @generated
 	*/
-	public static final IElementType Entry_2004 = getElementType("net.feichti.codingcontest.diagram.Entry_2004");  //$NON-NLS-1$
+	public static final IElementType Team_2006 = getElementType("net.feichti.codingcontest.diagram.Team_2006");  //$NON-NLS-1$
+	
 	/**
 	* @generated
 	*/
@@ -82,7 +83,8 @@ public class CodingcontestElementTypes
 	/**
 	* @generated
 	*/
-	public static final IElementType Coder_3001 = getElementType("net.feichti.codingcontest.diagram.Coder_3001");  //$NON-NLS-1$
+	public static final IElementType Coder_3002 = getElementType("net.feichti.codingcontest.diagram.Coder_3002");  //$NON-NLS-1$
+	
 	/**
 	* @generated
 	*/
@@ -91,8 +93,8 @@ public class CodingcontestElementTypes
 	/**
 	* @generated
 	*/
-	public static final IElementType EntryLocation_4002 =
-			getElementType("net.feichti.codingcontest.diagram.EntryLocation_4002");  //$NON-NLS-1$
+	public static final IElementType TeamLocation_4003 =
+			getElementType("net.feichti.codingcontest.diagram.TeamLocation_4003");  //$NON-NLS-1$
 	
 	/**
 	* @generated
@@ -140,15 +142,15 @@ public class CodingcontestElementTypes
 			
 			elements.put(Location_2003, CodingcontestPackage.eINSTANCE.getLocation());
 			
-			elements.put(Entry_2004, CodingcontestPackage.eINSTANCE.getEntry());
+			elements.put(Team_2006, CodingcontestPackage.eINSTANCE.getTeam());
 			
 			elements.put(Problem_2005, CodingcontestPackage.eINSTANCE.getProblem());
 			
-			elements.put(Coder_3001, CodingcontestPackage.eINSTANCE.getCoder());
+			elements.put(Coder_3002, CodingcontestPackage.eINSTANCE.getCoder());
 			
 			elements.put(LanguageToProblemMap_4001, CodingcontestPackage.eINSTANCE.getLanguageToProblemMap());
 			
-			elements.put(EntryLocation_4002, CodingcontestPackage.eINSTANCE.getEntry_Location());
+			elements.put(TeamLocation_4003, CodingcontestPackage.eINSTANCE.getTeam_Location());
 		}
 		return (ENamedElement) elements.get(type);
 	}
@@ -170,11 +172,11 @@ public class CodingcontestElementTypes
 			KNOWN_ELEMENT_TYPES.add(Level_2001);
 			KNOWN_ELEMENT_TYPES.add(Organizer_2002);
 			KNOWN_ELEMENT_TYPES.add(Location_2003);
-			KNOWN_ELEMENT_TYPES.add(Entry_2004);
+			KNOWN_ELEMENT_TYPES.add(Team_2006);
 			KNOWN_ELEMENT_TYPES.add(Problem_2005);
-			KNOWN_ELEMENT_TYPES.add(Coder_3001);
+			KNOWN_ELEMENT_TYPES.add(Coder_3002);
 			KNOWN_ELEMENT_TYPES.add(LanguageToProblemMap_4001);
-			KNOWN_ELEMENT_TYPES.add(EntryLocation_4002);
+			KNOWN_ELEMENT_TYPES.add(TeamLocation_4003);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -192,16 +194,16 @@ public class CodingcontestElementTypes
 				return Organizer_2002;
 			case LocationEditPart.VISUAL_ID:
 				return Location_2003;
-			case EntryEditPart.VISUAL_ID:
-				return Entry_2004;
+			case TeamEditPart.VISUAL_ID:
+				return Team_2006;
 			case ProblemEditPart.VISUAL_ID:
 				return Problem_2005;
 			case CoderEditPart.VISUAL_ID:
-				return Coder_3001;
+				return Coder_3002;
 			case LanguageToProblemMapEditPart.VISUAL_ID:
 				return LanguageToProblemMap_4001;
-			case EntryLocationEditPart.VISUAL_ID:
-				return EntryLocation_4002;
+			case TeamLocationEditPart.VISUAL_ID:
+				return TeamLocation_4003;
 		}
 		return null;
 	}

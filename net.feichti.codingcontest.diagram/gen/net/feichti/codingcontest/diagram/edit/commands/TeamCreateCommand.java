@@ -14,18 +14,18 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import net.feichti.codingcontest.CodingcontestFactory;
 import net.feichti.codingcontest.Contest;
-import net.feichti.codingcontest.Entry;
+import net.feichti.codingcontest.Team;
 
 /**
  * @generated
  */
-public class EntryCreateCommand extends EditElementCommand
+public class TeamCreateCommand extends EditElementCommand
 {
 	
 	/**
 	* @generated
 	*/
-	public EntryCreateCommand(CreateElementRequest req) {
+	public TeamCreateCommand(CreateElementRequest req) {
 		super(req.getLabel(), null, req);
 	}
 	
@@ -53,7 +53,7 @@ public class EntryCreateCommand extends EditElementCommand
 	* @generated
 	*/
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
-		Entry newElement = CodingcontestFactory.eINSTANCE.createEntry();
+		Team newElement = CodingcontestFactory.eINSTANCE.createTeam();
 		
 		Contest owner = (Contest) getElementToEdit();
 		owner.getEntries().add(newElement);
@@ -67,7 +67,7 @@ public class EntryCreateCommand extends EditElementCommand
 	/**
 	* @generated
 	*/
-	protected void doConfigure(Entry newElement, IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
+	protected void doConfigure(Team newElement, IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		IElementType elementType = ((CreateElementRequest) getRequest()).getElementType();
 		ConfigureRequest configureRequest = new ConfigureRequest(getEditingDomain(), newElement, elementType);
 		configureRequest.setClientContext(((CreateElementRequest) getRequest()).getClientContext());

@@ -6,17 +6,10 @@ package net.feichti.codingcontest.provider;
 import java.util.Collection;
 import java.util.List;
 
-import net.feichti.codingcontest.CodingcontestFactory;
-import net.feichti.codingcontest.CodingcontestPackage;
-import net.feichti.codingcontest.Entry;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -28,13 +21,17 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import net.feichti.codingcontest.CodingcontestFactory;
+import net.feichti.codingcontest.CodingcontestPackage;
+import net.feichti.codingcontest.Team;
+
 /**
- * This is the item provider adapter for a {@link net.feichti.codingcontest.Entry} object.
+ * This is the item provider adapter for a {@link net.feichti.codingcontest.Team} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class EntryItemProvider 
+public class TeamItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -49,7 +46,7 @@ public class EntryItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EntryItemProvider(AdapterFactory adapterFactory)
+	public TeamItemProvider(AdapterFactory adapterFactory)
 	{
 		super(adapterFactory);
 	}
@@ -69,7 +66,7 @@ public class EntryItemProvider
 
 			addCodersPropertyDescriptor(object);
 			addLocationPropertyDescriptor(object);
-			addTeamNamePropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 			addLanguagePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -87,9 +84,9 @@ public class EntryItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Entry_coders_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Entry_coders_feature", "_UI_Entry_type"),
-				 CodingcontestPackage.Literals.ENTRY__CODERS,
+				 getString("_UI_Team_coders_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Team_coders_feature", "_UI_Team_type"),
+				 CodingcontestPackage.Literals.TEAM__CODERS,
 				 true,
 				 false,
 				 true,
@@ -110,9 +107,9 @@ public class EntryItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Entry_location_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Entry_location_feature", "_UI_Entry_type"),
-				 CodingcontestPackage.Literals.ENTRY__LOCATION,
+				 getString("_UI_Team_location_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Team_location_feature", "_UI_Team_type"),
+				 CodingcontestPackage.Literals.TEAM__LOCATION,
 				 true,
 				 false,
 				 true,
@@ -122,20 +119,20 @@ public class EntryItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Team Name feature.
+	 * This adds a property descriptor for the Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addTeamNamePropertyDescriptor(Object object)
+	protected void addNamePropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Entry_teamName_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Entry_teamName_feature", "_UI_Entry_type"),
-				 CodingcontestPackage.Literals.ENTRY__TEAM_NAME,
+				 getString("_UI_Team_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Team_name_feature", "_UI_Team_type"),
+				 CodingcontestPackage.Literals.TEAM__NAME,
 				 true,
 				 false,
 				 false,
@@ -156,9 +153,9 @@ public class EntryItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Entry_language_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Entry_language_feature", "_UI_Entry_type"),
-				 CodingcontestPackage.Literals.ENTRY__LANGUAGE,
+				 getString("_UI_Team_language_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Team_language_feature", "_UI_Team_type"),
+				 CodingcontestPackage.Literals.TEAM__LANGUAGE,
 				 true,
 				 false,
 				 false,
@@ -181,7 +178,7 @@ public class EntryItemProvider
 		if (childrenFeatures == null)
 		{
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(CodingcontestPackage.Literals.ENTRY__CODERS);
+			childrenFeatures.add(CodingcontestPackage.Literals.TEAM__CODERS);
 		}
 		return childrenFeatures;
 	}
@@ -201,7 +198,7 @@ public class EntryItemProvider
 	}
 
 	/**
-	 * This returns Entry.gif.
+	 * This returns Team.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -209,7 +206,7 @@ public class EntryItemProvider
 	@Override
 	public Object getImage(Object object)
 	{
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Entry"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Team"));
 	}
 
 	/**
@@ -221,10 +218,10 @@ public class EntryItemProvider
 	@Override
 	public String getText(Object object)
 	{
-		String label = ((Entry)object).getTeamName();
+		String label = ((Team)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Entry_type") :
-			getString("_UI_Entry_type") + " " + label;
+			getString("_UI_Team_type") :
+			getString("_UI_Team_type") + " " + label;
 	}
 	
 
@@ -240,13 +237,13 @@ public class EntryItemProvider
 	{
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Entry.class))
+		switch (notification.getFeatureID(Team.class))
 		{
-			case CodingcontestPackage.ENTRY__TEAM_NAME:
-			case CodingcontestPackage.ENTRY__LANGUAGE:
+			case CodingcontestPackage.TEAM__NAME:
+			case CodingcontestPackage.TEAM__LANGUAGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case CodingcontestPackage.ENTRY__CODERS:
+			case CodingcontestPackage.TEAM__CODERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -267,7 +264,7 @@ public class EntryItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CodingcontestPackage.Literals.ENTRY__CODERS,
+				(CodingcontestPackage.Literals.TEAM__CODERS,
 				 CodingcontestFactory.eINSTANCE.createCoder()));
 	}
 

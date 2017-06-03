@@ -14,7 +14,7 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import net.feichti.codingcontest.Coder;
 import net.feichti.codingcontest.CodingcontestFactory;
-import net.feichti.codingcontest.Entry;
+import net.feichti.codingcontest.Team;
 
 /**
  * @generated
@@ -45,7 +45,7 @@ public class CoderCreateCommand extends EditElementCommand
 	* @generated
 	*/
 	public boolean canExecute() {
-		Entry container = (Entry) getElementToEdit();
+		Team container = (Team) getElementToEdit();
 		if(container.getCoders().size() >= 3) {
 			return false;
 		}
@@ -59,7 +59,7 @@ public class CoderCreateCommand extends EditElementCommand
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Coder newElement = CodingcontestFactory.eINSTANCE.createCoder();
 		
-		Entry owner = (Entry) getElementToEdit();
+		Team owner = (Team) getElementToEdit();
 		owner.getCoders().add(newElement);
 		
 		doConfigure(newElement, monitor, info);

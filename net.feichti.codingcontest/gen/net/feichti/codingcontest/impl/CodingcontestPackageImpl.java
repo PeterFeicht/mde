@@ -9,11 +9,11 @@ import net.feichti.codingcontest.Coder;
 import net.feichti.codingcontest.CodingcontestFactory;
 import net.feichti.codingcontest.CodingcontestPackage;
 import net.feichti.codingcontest.Contest;
-import net.feichti.codingcontest.Entry;
 import net.feichti.codingcontest.Level;
 import net.feichti.codingcontest.Location;
 import net.feichti.codingcontest.Organizer;
 import net.feichti.codingcontest.Problem;
+import net.feichti.codingcontest.Team;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -59,7 +59,7 @@ public class CodingcontestPackageImpl extends EPackageImpl implements Codingcont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass entryEClass = null;
+	private EClass teamEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -337,9 +337,9 @@ public class CodingcontestPackageImpl extends EPackageImpl implements Codingcont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getEntry()
+	public EClass getTeam()
 	{
-		return entryEClass;
+		return teamEClass;
 	}
 
 	/**
@@ -347,9 +347,9 @@ public class CodingcontestPackageImpl extends EPackageImpl implements Codingcont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEntry_Coders()
+	public EReference getTeam_Coders()
 	{
-		return (EReference)entryEClass.getEStructuralFeatures().get(0);
+		return (EReference)teamEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -357,9 +357,9 @@ public class CodingcontestPackageImpl extends EPackageImpl implements Codingcont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEntry_Location()
+	public EReference getTeam_Location()
 	{
-		return (EReference)entryEClass.getEStructuralFeatures().get(1);
+		return (EReference)teamEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -367,9 +367,9 @@ public class CodingcontestPackageImpl extends EPackageImpl implements Codingcont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getEntry_TeamName()
+	public EAttribute getTeam_Name()
 	{
-		return (EAttribute)entryEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)teamEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -377,9 +377,9 @@ public class CodingcontestPackageImpl extends EPackageImpl implements Codingcont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getEntry_Language()
+	public EAttribute getTeam_Language()
 	{
-		return (EAttribute)entryEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)teamEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -582,11 +582,11 @@ public class CodingcontestPackageImpl extends EPackageImpl implements Codingcont
 		createEAttribute(locationEClass, LOCATION__ADDRESS);
 		createEAttribute(locationEClass, LOCATION__COUNTRY);
 
-		entryEClass = createEClass(ENTRY);
-		createEReference(entryEClass, ENTRY__CODERS);
-		createEReference(entryEClass, ENTRY__LOCATION);
-		createEAttribute(entryEClass, ENTRY__TEAM_NAME);
-		createEAttribute(entryEClass, ENTRY__LANGUAGE);
+		teamEClass = createEClass(TEAM);
+		createEReference(teamEClass, TEAM__CODERS);
+		createEReference(teamEClass, TEAM__LOCATION);
+		createEAttribute(teamEClass, TEAM__NAME);
+		createEAttribute(teamEClass, TEAM__LANGUAGE);
 
 		organizerEClass = createEClass(ORGANIZER);
 		createEAttribute(organizerEClass, ORGANIZER__NAME);
@@ -655,7 +655,7 @@ public class CodingcontestPackageImpl extends EPackageImpl implements Codingcont
 		initEAttribute(getContest_LocalDate(), ecorePackage.getEDate(), "localDate", null, 1, 1, Contest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContest_Locations(), this.getLocation(), null, "locations", null, 0, -1, Contest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getContest_Levels(), this.getLevel(), null, "levels", null, 3, 8, Contest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getContest_Entries(), this.getEntry(), null, "entries", null, 0, -1, Contest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getContest_Entries(), this.getTeam(), null, "entries", null, 0, -1, Contest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getContest_Organizer(), this.getOrganizer(), null, "organizer", null, 1, 1, Contest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getContest_Problems(), this.getProblem(), null, "problems", null, 0, -1, Contest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -664,11 +664,11 @@ public class CodingcontestPackageImpl extends EPackageImpl implements Codingcont
 		initEAttribute(getLocation_Address(), ecorePackage.getEString(), "address", null, 1, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLocation_Country(), ecorePackage.getEString(), "country", null, 1, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(entryEClass, Entry.class, "Entry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEntry_Coders(), this.getCoder(), null, "coders", null, 1, 3, Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getEntry_Location(), this.getLocation(), null, "location", null, 0, 1, Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getEntry_TeamName(), ecorePackage.getEString(), "teamName", null, 1, 1, Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getEntry_Language(), theXMLTypePackage.getLanguage(), "language", null, 0, 1, Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(teamEClass, Team.class, "Team", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTeam_Coders(), this.getCoder(), null, "coders", null, 1, 3, Team.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getTeam_Location(), this.getLocation(), null, "location", null, 0, 1, Team.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getTeam_Name(), ecorePackage.getEString(), "name", null, 1, 1, Team.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getTeam_Language(), theXMLTypePackage.getLanguage(), "language", null, 0, 1, Team.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(organizerEClass, Organizer.class, "Organizer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOrganizer_Name(), ecorePackage.getEString(), "name", null, 1, 1, Organizer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -719,7 +719,7 @@ public class CodingcontestPackageImpl extends EPackageImpl implements Codingcont
 		   {
 		   });	
 		addAnnotation
-		  (entryEClass, 
+		  (teamEClass, 
 		   source, 
 		   new String[] 
 		   {

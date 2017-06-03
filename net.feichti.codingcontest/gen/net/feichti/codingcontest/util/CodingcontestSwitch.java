@@ -95,10 +95,10 @@ public class CodingcontestSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CodingcontestPackage.ENTRY:
+			case CodingcontestPackage.TEAM:
 			{
-				Entry entry = (Entry)theEObject;
-				T result = caseEntry(entry);
+				Team team = (Team)theEObject;
+				T result = caseTeam(team);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -183,17 +183,17 @@ public class CodingcontestSwitch<T> extends Switch<T>
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Entry</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Team</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Entry</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Team</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEntry(Entry object)
+	public T caseTeam(Team object)
 	{
 		return null;
 	}

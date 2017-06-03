@@ -7,11 +7,11 @@ import org.eclipse.gmf.runtime.emf.commands.core.commands.DuplicateEObjectsComma
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest;
 
-import net.feichti.codingcontest.diagram.edit.commands.EntryCreateCommand;
 import net.feichti.codingcontest.diagram.edit.commands.LevelCreateCommand;
 import net.feichti.codingcontest.diagram.edit.commands.LocationCreateCommand;
 import net.feichti.codingcontest.diagram.edit.commands.OrganizerCreateCommand;
 import net.feichti.codingcontest.diagram.edit.commands.ProblemCreateCommand;
+import net.feichti.codingcontest.diagram.edit.commands.TeamCreateCommand;
 import net.feichti.codingcontest.diagram.providers.CodingcontestElementTypes;
 
 /**
@@ -40,8 +40,8 @@ public class ContestItemSemanticEditPolicy extends CodingcontestBaseItemSemantic
 		if(CodingcontestElementTypes.Location_2003 == req.getElementType()) {
 			return getGEFWrapper(new LocationCreateCommand(req));
 		}
-		if(CodingcontestElementTypes.Entry_2004 == req.getElementType()) {
-			return getGEFWrapper(new EntryCreateCommand(req));
+		if(CodingcontestElementTypes.Team_2006 == req.getElementType()) {
+			return getGEFWrapper(new TeamCreateCommand(req));
 		}
 		if(CodingcontestElementTypes.Problem_2005 == req.getElementType()) {
 			return getGEFWrapper(new ProblemCreateCommand(req));

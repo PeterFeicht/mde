@@ -7,11 +7,11 @@ import java.util.Date;
 
 import net.feichti.codingcontest.CodingcontestPackage;
 import net.feichti.codingcontest.Contest;
-import net.feichti.codingcontest.Entry;
 import net.feichti.codingcontest.Level;
 import net.feichti.codingcontest.Location;
 import net.feichti.codingcontest.Organizer;
 import net.feichti.codingcontest.Problem;
+import net.feichti.codingcontest.Team;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -137,7 +137,7 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Entry> entries;
+	protected EList<Team> entries;
 
 	/**
 	 * The cached value of the '{@link #getOrganizer() <em>Organizer</em>}' containment reference.
@@ -282,11 +282,11 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Entry> getEntries()
+	public EList<Team> getEntries()
 	{
 		if (entries == null)
 		{
-			entries = new EObjectContainmentEList<Entry>(Entry.class, this, CodingcontestPackage.CONTEST__ENTRIES);
+			entries = new EObjectContainmentEList<Team>(Team.class, this, CodingcontestPackage.CONTEST__ENTRIES);
 		}
 		return entries;
 	}
@@ -437,7 +437,7 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 				return;
 			case CodingcontestPackage.CONTEST__ENTRIES:
 				getEntries().clear();
-				getEntries().addAll((Collection<? extends Entry>)newValue);
+				getEntries().addAll((Collection<? extends Team>)newValue);
 				return;
 			case CodingcontestPackage.CONTEST__ORGANIZER:
 				setOrganizer((Organizer)newValue);

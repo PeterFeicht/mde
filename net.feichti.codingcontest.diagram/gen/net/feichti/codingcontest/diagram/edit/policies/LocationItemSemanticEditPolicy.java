@@ -15,9 +15,9 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelations
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.View;
 
-import net.feichti.codingcontest.diagram.edit.commands.EntryLocationCreateCommand;
-import net.feichti.codingcontest.diagram.edit.commands.EntryLocationReorientCommand;
-import net.feichti.codingcontest.diagram.edit.parts.EntryLocationEditPart;
+import net.feichti.codingcontest.diagram.edit.commands.TeamLocationCreateCommand;
+import net.feichti.codingcontest.diagram.edit.commands.TeamLocationReorientCommand;
+import net.feichti.codingcontest.diagram.edit.parts.TeamLocationEditPart;
 import net.feichti.codingcontest.diagram.part.CodingcontestVisualIDRegistry;
 import net.feichti.codingcontest.diagram.providers.CodingcontestElementTypes;
 
@@ -43,7 +43,7 @@ public class LocationItemSemanticEditPolicy extends CodingcontestBaseItemSemanti
 		cmd.setTransactionNestingEnabled(false);
 		for(Iterator<?> it = view.getTargetEdges().iterator(); it.hasNext();) {
 			Edge incomingLink = (Edge) it.next();
-			if(CodingcontestVisualIDRegistry.getVisualID(incomingLink) == EntryLocationEditPart.VISUAL_ID) {
+			if(CodingcontestVisualIDRegistry.getVisualID(incomingLink) == TeamLocationEditPart.VISUAL_ID) {
 				DestroyReferenceRequest r = new DestroyReferenceRequest(incomingLink.getSource().getElement(), null,
 						incomingLink.getTarget().getElement(), false);
 				cmd.add(new DestroyReferenceCommand(r));
@@ -78,7 +78,7 @@ public class LocationItemSemanticEditPolicy extends CodingcontestBaseItemSemanti
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if(CodingcontestElementTypes.EntryLocation_4002 == req.getElementType()) {
+		if(CodingcontestElementTypes.TeamLocation_4003 == req.getElementType()) {
 			return null;
 		}
 		return null;
@@ -89,8 +89,8 @@ public class LocationItemSemanticEditPolicy extends CodingcontestBaseItemSemanti
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if(CodingcontestElementTypes.EntryLocation_4002 == req.getElementType()) {
-			return getGEFWrapper(new EntryLocationCreateCommand(req,
+		if(CodingcontestElementTypes.TeamLocation_4003 == req.getElementType()) {
+			return getGEFWrapper(new TeamLocationCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
 		return null;
@@ -105,8 +105,8 @@ public class LocationItemSemanticEditPolicy extends CodingcontestBaseItemSemanti
 	protected Command getReorientReferenceRelationshipCommand(
 			ReorientReferenceRelationshipRequest req) {
 		switch(getVisualID(req)) {
-			case EntryLocationEditPart.VISUAL_ID:
-				return getGEFWrapper(new EntryLocationReorientCommand(req));
+			case TeamLocationEditPart.VISUAL_ID:
+				return getGEFWrapper(new TeamLocationReorientCommand(req));
 		}
 		return super.getReorientReferenceRelationshipCommand(req);
 	}

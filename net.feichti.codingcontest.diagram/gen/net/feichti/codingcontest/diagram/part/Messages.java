@@ -299,12 +299,12 @@ public class Messages extends NLS
 	/**
 	* @generated
 	*/
-	public static String Entry5CreationTool_title;
+	public static String Team5CreationTool_title;
 	
 	/**
 	* @generated
 	*/
-	public static String Entry5CreationTool_desc;
+	public static String Team5CreationTool_desc;
 	
 	/**
 	* @generated
@@ -329,12 +329,12 @@ public class Messages extends NLS
 	/**
 	* @generated
 	*/
-	public static String EntryLocation2CreationTool_title;
+	public static String TeamLocation2CreationTool_title;
 	
 	/**
 	* @generated
 	*/
-	public static String EntryLocation2CreationTool_desc;
+	public static String TeamLocation2CreationTool_desc;
 	
 	/**
 	* @generated
@@ -359,12 +359,12 @@ public class Messages extends NLS
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_Entry_2004_outgoinglinks;
+	public static String NavigatorGroupName_Problem_2005_incominglinks;
 	
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_Problem_2005_incominglinks;
+	public static String NavigatorGroupName_Team_2006_outgoinglinks;
 	
 	/**
 	* @generated
@@ -379,12 +379,12 @@ public class Messages extends NLS
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_EntryLocation_4002_target;
+	public static String NavigatorGroupName_TeamLocation_4003_target;
 	
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_EntryLocation_4002_source;
+	public static String NavigatorGroupName_TeamLocation_4003_source;
 	
 	/**
 	* @generated

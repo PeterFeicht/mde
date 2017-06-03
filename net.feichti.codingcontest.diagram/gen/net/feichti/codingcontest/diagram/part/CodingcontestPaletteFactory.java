@@ -38,7 +38,7 @@ public class CodingcontestPaletteFactory
 		paletteContainer.add(createLocation2CreationTool());
 		paletteContainer.add(createLevel3CreationTool());
 		paletteContainer.add(createProblem4CreationTool());
-		paletteContainer.add(createEntry5CreationTool());
+		paletteContainer.add(createTeam5CreationTool());
 		paletteContainer.add(createCoder6CreationTool());
 		return paletteContainer;
 	}
@@ -51,7 +51,7 @@ public class CodingcontestPaletteFactory
 		PaletteDrawer paletteContainer = new PaletteDrawer(Messages.Links2Group_title);
 		paletteContainer.setId("createLinks2Group"); //$NON-NLS-1$
 		paletteContainer.add(createLanguageToProblemMap1CreationTool());
-		paletteContainer.add(createEntryLocation2CreationTool());
+		paletteContainer.add(createTeamLocation2CreationTool());
 		return paletteContainer;
 	}
 	
@@ -108,11 +108,11 @@ public class CodingcontestPaletteFactory
 	/**
 	* @generated
 	*/
-	private ToolEntry createEntry5CreationTool() {
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Entry5CreationTool_title,
-				Messages.Entry5CreationTool_desc, Collections.singletonList(CodingcontestElementTypes.Entry_2004));
-		entry.setId("createEntry5CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(CodingcontestElementTypes.getImageDescriptor(CodingcontestElementTypes.Entry_2004));
+	private ToolEntry createTeam5CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Team5CreationTool_title,
+				Messages.Team5CreationTool_desc, Collections.singletonList(CodingcontestElementTypes.Team_2006));
+		entry.setId("createTeam5CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CodingcontestElementTypes.getImageDescriptor(CodingcontestElementTypes.Team_2006));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -122,9 +122,9 @@ public class CodingcontestPaletteFactory
 	*/
 	private ToolEntry createCoder6CreationTool() {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Coder6CreationTool_title,
-				Messages.Coder6CreationTool_desc, Collections.singletonList(CodingcontestElementTypes.Coder_3001));
+				Messages.Coder6CreationTool_desc, Collections.singletonList(CodingcontestElementTypes.Coder_3002));
 		entry.setId("createCoder6CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(CodingcontestElementTypes.getImageDescriptor(CodingcontestElementTypes.Coder_3001));
+		entry.setSmallIcon(CodingcontestElementTypes.getImageDescriptor(CodingcontestElementTypes.Coder_3002));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -146,12 +146,12 @@ public class CodingcontestPaletteFactory
 	/**
 	* @generated
 	*/
-	private ToolEntry createEntryLocation2CreationTool() {
-		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.EntryLocation2CreationTool_title,
-				Messages.EntryLocation2CreationTool_desc,
-				Collections.singletonList(CodingcontestElementTypes.EntryLocation_4002));
-		entry.setId("createEntryLocation2CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(CodingcontestElementTypes.getImageDescriptor(CodingcontestElementTypes.EntryLocation_4002));
+	private ToolEntry createTeamLocation2CreationTool() {
+		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.TeamLocation2CreationTool_title,
+				Messages.TeamLocation2CreationTool_desc,
+				Collections.singletonList(CodingcontestElementTypes.TeamLocation_4003));
+		entry.setId("createTeamLocation2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CodingcontestElementTypes.getImageDescriptor(CodingcontestElementTypes.TeamLocation_4003));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

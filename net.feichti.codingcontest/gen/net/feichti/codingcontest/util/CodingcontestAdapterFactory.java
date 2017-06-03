@@ -92,9 +92,9 @@ public class CodingcontestAdapterFactory extends AdapterFactoryImpl
 				return createLocationAdapter();
 			}
 			@Override
-			public Adapter caseEntry(Entry object)
+			public Adapter caseTeam(Team object)
 			{
-				return createEntryAdapter();
+				return createTeamAdapter();
 			}
 			@Override
 			public Adapter caseOrganizer(Organizer object)
@@ -184,16 +184,16 @@ public class CodingcontestAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link net.feichti.codingcontest.Entry <em>Entry</em>}'.
+	 * Creates a new adapter for an object of class '{@link net.feichti.codingcontest.Team <em>Team</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see net.feichti.codingcontest.Entry
+	 * @see net.feichti.codingcontest.Team
 	 * @generated
 	 */
-	public Adapter createEntryAdapter()
+	public Adapter createTeamAdapter()
 	{
 		return null;
 	}

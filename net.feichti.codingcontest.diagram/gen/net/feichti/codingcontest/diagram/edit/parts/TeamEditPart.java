@@ -23,20 +23,20 @@ import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.edit.policies.reparent.CreationEditPolicyWithCustomReparent;
 import org.eclipse.swt.graphics.Color;
 
-import net.feichti.codingcontest.diagram.edit.policies.EntryCanonicalEditPolicy;
-import net.feichti.codingcontest.diagram.edit.policies.EntryItemSemanticEditPolicy;
+import net.feichti.codingcontest.diagram.edit.policies.TeamCanonicalEditPolicy;
+import net.feichti.codingcontest.diagram.edit.policies.TeamItemSemanticEditPolicy;
 import net.feichti.codingcontest.diagram.part.CodingcontestVisualIDRegistry;
 
 /**
  * @generated
  */
-public class EntryEditPart extends ShapeNodeEditPart
+public class TeamEditPart extends ShapeNodeEditPart
 {
 	
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 2004;
+	public static final int VISUAL_ID = 2006;
 	
 	/**
 	* @generated
@@ -51,7 +51,7 @@ public class EntryEditPart extends ShapeNodeEditPart
 	/**
 	* @generated
 	*/
-	public EntryEditPart(View view) {
+	public TeamEditPart(View view) {
 		super(view);
 	}
 	
@@ -62,9 +62,9 @@ public class EntryEditPart extends ShapeNodeEditPart
 		installEditPolicy(EditPolicyRoles.CREATION_ROLE,
 				new CreationEditPolicyWithCustomReparent(CodingcontestVisualIDRegistry.TYPED_INSTANCE));
 		super.createDefaultEditPolicies();
-		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new EntryItemSemanticEditPolicy());
+		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new TeamItemSemanticEditPolicy());
 		installEditPolicy(EditPolicyRoles.DRAG_DROP_ROLE, new DragDropEditPolicy());
-		installEditPolicy(EditPolicyRoles.CANONICAL_ROLE, new EntryCanonicalEditPolicy());
+		installEditPolicy(EditPolicyRoles.CANONICAL_ROLE, new TeamCanonicalEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
 		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
@@ -96,22 +96,22 @@ public class EntryEditPart extends ShapeNodeEditPart
 	* @generated
 	*/
 	protected IFigure createNodeShape() {
-		return primaryShape = new EntryFigure();
+		return primaryShape = new TeamFigure();
 	}
 	
 	/**
 	* @generated
 	*/
-	public EntryFigure getPrimaryShape() {
-		return (EntryFigure) primaryShape;
+	public TeamFigure getPrimaryShape() {
+		return (TeamFigure) primaryShape;
 	}
 	
 	/**
 	* @generated
 	*/
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if(childEditPart instanceof EntryTeamNameEditPart) {
-			((EntryTeamNameEditPart) childEditPart).setLabel(getPrimaryShape().getFigureEntryTeamNameFigure());
+		if(childEditPart instanceof TeamNameEditPart) {
+			((TeamNameEditPart) childEditPart).setLabel(getPrimaryShape().getFigureTeamNameFigure());
 			return true;
 		}
 		return false;
@@ -121,7 +121,7 @@ public class EntryEditPart extends ShapeNodeEditPart
 	* @generated
 	*/
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if(childEditPart instanceof EntryTeamNameEditPart) {
+		if(childEditPart instanceof TeamNameEditPart) {
 			return true;
 		}
 		return false;
@@ -244,24 +244,24 @@ public class EntryEditPart extends ShapeNodeEditPart
 	* @generated
 	*/
 	public EditPart getPrimaryChildEditPart() {
-		return getChildBySemanticHint(CodingcontestVisualIDRegistry.getType(EntryTeamNameEditPart.VISUAL_ID));
+		return getChildBySemanticHint(CodingcontestVisualIDRegistry.getType(TeamNameEditPart.VISUAL_ID));
 	}
 	
 	/**
 	 * @generated
 	 */
-	public class EntryFigure extends RectangleFigure
+	public class TeamFigure extends RectangleFigure
 	{
 		
 		/**
 		 * @generated
 		 */
-		private WrappingLabel fFigureEntryTeamNameFigure;
+		private WrappingLabel fFigureTeamNameFigure;
 		
 		/**
 		 * @generated
 		 */
-		public EntryFigure() {
+		public TeamFigure() {
 			
 			FlowLayout layoutThis = new FlowLayout();
 			layoutThis.setStretchMinorAxis(false);
@@ -282,19 +282,19 @@ public class EntryEditPart extends ShapeNodeEditPart
 		 */
 		private void createContents() {
 			
-			fFigureEntryTeamNameFigure = new WrappingLabel();
+			fFigureTeamNameFigure = new WrappingLabel();
 			
-			fFigureEntryTeamNameFigure.setText("<...>");
+			fFigureTeamNameFigure.setText("<...>");
 			
-			this.add(fFigureEntryTeamNameFigure);
+			this.add(fFigureTeamNameFigure);
 			
 		}
 		
 		/**
 		 * @generated
 		 */
-		public WrappingLabel getFigureEntryTeamNameFigure() {
-			return fFigureEntryTeamNameFigure;
+		public WrappingLabel getFigureTeamNameFigure() {
+			return fFigureTeamNameFigure;
 		}
 		
 	}

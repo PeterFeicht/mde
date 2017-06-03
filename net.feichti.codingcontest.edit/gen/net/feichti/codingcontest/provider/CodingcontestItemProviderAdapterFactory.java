@@ -149,28 +149,28 @@ public class CodingcontestItemProviderAdapterFactory extends CodingcontestAdapte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link net.feichti.codingcontest.Entry} instances.
+	 * This keeps track of the one adapter used for all {@link net.feichti.codingcontest.Team} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EntryItemProvider entryItemProvider;
+	protected TeamItemProvider teamItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link net.feichti.codingcontest.Entry}.
+	 * This creates an adapter for a {@link net.feichti.codingcontest.Team}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createEntryAdapter()
+	public Adapter createTeamAdapter()
 	{
-		if (entryItemProvider == null)
+		if (teamItemProvider == null)
 		{
-			entryItemProvider = new EntryItemProvider(this);
+			teamItemProvider = new TeamItemProvider(this);
 		}
 
-		return entryItemProvider;
+		return teamItemProvider;
 	}
 
 	/**
@@ -387,7 +387,7 @@ public class CodingcontestItemProviderAdapterFactory extends CodingcontestAdapte
 		if (coderItemProvider != null) coderItemProvider.dispose();
 		if (contestItemProvider != null) contestItemProvider.dispose();
 		if (locationItemProvider != null) locationItemProvider.dispose();
-		if (entryItemProvider != null) entryItemProvider.dispose();
+		if (teamItemProvider != null) teamItemProvider.dispose();
 		if (organizerItemProvider != null) organizerItemProvider.dispose();
 		if (levelItemProvider != null) levelItemProvider.dispose();
 		if (problemItemProvider != null) problemItemProvider.dispose();

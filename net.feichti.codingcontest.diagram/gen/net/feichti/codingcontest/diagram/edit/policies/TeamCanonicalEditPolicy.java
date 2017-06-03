@@ -30,7 +30,7 @@ import net.feichti.codingcontest.diagram.part.CodingcontestVisualIDRegistry;
 /**
  * @generated
  */
-public class EntryCanonicalEditPolicy extends CanonicalEditPolicy
+public class TeamCanonicalEditPolicy extends CanonicalEditPolicy
 {
 	
 	/**
@@ -49,7 +49,7 @@ public class EntryCanonicalEditPolicy extends CanonicalEditPolicy
 	* @generated
 	*/
 	protected EStructuralFeature getFeatureToSynchronize() {
-		return CodingcontestPackage.eINSTANCE.getEntry_Coders();
+		return CodingcontestPackage.eINSTANCE.getTeam_Coders();
 	}
 	
 	/**
@@ -61,7 +61,7 @@ public class EntryCanonicalEditPolicy extends CanonicalEditPolicy
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<CodingcontestNodeDescriptor> childDescriptors =
-				CodingcontestDiagramUpdater.getEntry_2004SemanticChildren(viewObject);
+				CodingcontestDiagramUpdater.getTeam_2006SemanticChildren(viewObject);
 		for(CodingcontestNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -91,7 +91,7 @@ public class EntryCanonicalEditPolicy extends CanonicalEditPolicy
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<CodingcontestNodeDescriptor> childDescriptors =
-				CodingcontestDiagramUpdater.getEntry_2004SemanticChildren((View) getHost().getModel());
+				CodingcontestDiagramUpdater.getTeam_2006SemanticChildren((View) getHost().getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours
 		LinkedList<View> knownViewChildren = new LinkedList<View>();

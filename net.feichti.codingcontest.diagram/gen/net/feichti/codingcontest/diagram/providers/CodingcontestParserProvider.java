@@ -15,12 +15,12 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import net.feichti.codingcontest.CodingcontestPackage;
 import net.feichti.codingcontest.diagram.edit.parts.CoderNameEditPart;
-import net.feichti.codingcontest.diagram.edit.parts.EntryTeamNameEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.LanguageToProblemMapKeyEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.LevelNumberEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.LocationNameEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.OrganizerNameEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.ProblemTitleEditPart;
+import net.feichti.codingcontest.diagram.edit.parts.TeamNameEditPart;
 import net.feichti.codingcontest.diagram.parsers.MessageFormatParser;
 import net.feichti.codingcontest.diagram.part.CodingcontestVisualIDRegistry;
 
@@ -93,20 +93,20 @@ public class CodingcontestParserProvider extends AbstractProvider implements IPa
 	/**
 	* @generated
 	*/
-	private IParser entryTeamName_5005Parser;
+	private IParser teamName_5008Parser;
 	
 	/**
 	* @generated
 	*/
-	private IParser getEntryTeamName_5005Parser() {
-		if(entryTeamName_5005Parser == null) {
+	private IParser getTeamName_5008Parser() {
+		if(teamName_5008Parser == null) {
 			EAttribute[] features = new EAttribute[] {
-					CodingcontestPackage.eINSTANCE.getEntry_TeamName()
+					CodingcontestPackage.eINSTANCE.getTeam_Name()
 			};
 			MessageFormatParser parser = new MessageFormatParser(features);
-			entryTeamName_5005Parser = parser;
+			teamName_5008Parser = parser;
 		}
-		return entryTeamName_5005Parser;
+		return teamName_5008Parser;
 	}
 	
 	/**
@@ -131,20 +131,20 @@ public class CodingcontestParserProvider extends AbstractProvider implements IPa
 	/**
 	* @generated
 	*/
-	private IParser coderName_5004Parser;
+	private IParser coderName_5007Parser;
 	
 	/**
 	* @generated
 	*/
-	private IParser getCoderName_5004Parser() {
-		if(coderName_5004Parser == null) {
+	private IParser getCoderName_5007Parser() {
+		if(coderName_5007Parser == null) {
 			EAttribute[] features = new EAttribute[] {
 					CodingcontestPackage.eINSTANCE.getCoder_Name()
 			};
 			MessageFormatParser parser = new MessageFormatParser(features);
-			coderName_5004Parser = parser;
+			coderName_5007Parser = parser;
 		}
-		return coderName_5004Parser;
+		return coderName_5007Parser;
 	}
 	
 	/**
@@ -177,12 +177,12 @@ public class CodingcontestParserProvider extends AbstractProvider implements IPa
 				return getOrganizerName_5002Parser();
 			case LocationNameEditPart.VISUAL_ID:
 				return getLocationName_5003Parser();
-			case EntryTeamNameEditPart.VISUAL_ID:
-				return getEntryTeamName_5005Parser();
+			case TeamNameEditPart.VISUAL_ID:
+				return getTeamName_5008Parser();
 			case ProblemTitleEditPart.VISUAL_ID:
 				return getProblemTitle_5006Parser();
 			case CoderNameEditPart.VISUAL_ID:
-				return getCoderName_5004Parser();
+				return getCoderName_5007Parser();
 			case LanguageToProblemMapKeyEditPart.VISUAL_ID:
 				return getLanguageToProblemMapKey_6001Parser();
 		}

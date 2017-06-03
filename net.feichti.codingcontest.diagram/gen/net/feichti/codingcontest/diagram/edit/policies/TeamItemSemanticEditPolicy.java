@@ -19,31 +19,31 @@ import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 
 import net.feichti.codingcontest.diagram.edit.commands.CoderCreateCommand;
-import net.feichti.codingcontest.diagram.edit.commands.EntryLocationCreateCommand;
-import net.feichti.codingcontest.diagram.edit.commands.EntryLocationReorientCommand;
+import net.feichti.codingcontest.diagram.edit.commands.TeamLocationCreateCommand;
+import net.feichti.codingcontest.diagram.edit.commands.TeamLocationReorientCommand;
 import net.feichti.codingcontest.diagram.edit.parts.CoderEditPart;
-import net.feichti.codingcontest.diagram.edit.parts.EntryLocationEditPart;
+import net.feichti.codingcontest.diagram.edit.parts.TeamLocationEditPart;
 import net.feichti.codingcontest.diagram.part.CodingcontestVisualIDRegistry;
 import net.feichti.codingcontest.diagram.providers.CodingcontestElementTypes;
 
 /**
  * @generated
  */
-public class EntryItemSemanticEditPolicy extends CodingcontestBaseItemSemanticEditPolicy
+public class TeamItemSemanticEditPolicy extends CodingcontestBaseItemSemanticEditPolicy
 {
 	
 	/**
 	* @generated
 	*/
-	public EntryItemSemanticEditPolicy() {
-		super(CodingcontestElementTypes.Entry_2004);
+	public TeamItemSemanticEditPolicy() {
+		super(CodingcontestElementTypes.Team_2006);
 	}
 	
 	/**
 	* @generated
 	*/
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if(CodingcontestElementTypes.Coder_3001 == req.getElementType()) {
+		if(CodingcontestElementTypes.Coder_3002 == req.getElementType()) {
 			return getGEFWrapper(new CoderCreateCommand(req));
 		}
 		return super.getCreateCommand(req);
@@ -58,7 +58,7 @@ public class EntryItemSemanticEditPolicy extends CodingcontestBaseItemSemanticEd
 		cmd.setTransactionNestingEnabled(false);
 		for(Iterator<?> it = view.getSourceEdges().iterator(); it.hasNext();) {
 			Edge outgoingLink = (Edge) it.next();
-			if(CodingcontestVisualIDRegistry.getVisualID(outgoingLink) == EntryLocationEditPart.VISUAL_ID) {
+			if(CodingcontestVisualIDRegistry.getVisualID(outgoingLink) == TeamLocationEditPart.VISUAL_ID) {
 				DestroyReferenceRequest r = new DestroyReferenceRequest(outgoingLink.getSource().getElement(), null,
 						outgoingLink.getTarget().getElement(), false);
 				cmd.add(new DestroyReferenceCommand(r));
@@ -112,8 +112,8 @@ public class EntryItemSemanticEditPolicy extends CodingcontestBaseItemSemanticEd
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if(CodingcontestElementTypes.EntryLocation_4002 == req.getElementType()) {
-			return getGEFWrapper(new EntryLocationCreateCommand(req,
+		if(CodingcontestElementTypes.TeamLocation_4003 == req.getElementType()) {
+			return getGEFWrapper(new TeamLocationCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
 		return null;
@@ -124,7 +124,7 @@ public class EntryItemSemanticEditPolicy extends CodingcontestBaseItemSemanticEd
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if(CodingcontestElementTypes.EntryLocation_4002 == req.getElementType()) {
+		if(CodingcontestElementTypes.TeamLocation_4003 == req.getElementType()) {
 			return null;
 		}
 		return null;
@@ -139,8 +139,8 @@ public class EntryItemSemanticEditPolicy extends CodingcontestBaseItemSemanticEd
 	protected Command getReorientReferenceRelationshipCommand(
 			ReorientReferenceRelationshipRequest req) {
 		switch(getVisualID(req)) {
-			case EntryLocationEditPart.VISUAL_ID:
-				return getGEFWrapper(new EntryLocationReorientCommand(req));
+			case TeamLocationEditPart.VISUAL_ID:
+				return getGEFWrapper(new TeamLocationReorientCommand(req));
 		}
 		return super.getReorientReferenceRelationshipCommand(req);
 	}

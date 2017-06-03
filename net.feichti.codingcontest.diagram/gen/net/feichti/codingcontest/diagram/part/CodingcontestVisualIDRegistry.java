@@ -12,8 +12,6 @@ import net.feichti.codingcontest.Contest;
 import net.feichti.codingcontest.diagram.edit.parts.CoderEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.CoderNameEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.ContestEditPart;
-import net.feichti.codingcontest.diagram.edit.parts.EntryEditPart;
-import net.feichti.codingcontest.diagram.edit.parts.EntryTeamNameEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.LanguageToProblemMapEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.LanguageToProblemMapKeyEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.LevelEditPart;
@@ -24,6 +22,8 @@ import net.feichti.codingcontest.diagram.edit.parts.OrganizerEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.OrganizerNameEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.ProblemEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.ProblemTitleEditPart;
+import net.feichti.codingcontest.diagram.edit.parts.TeamEditPart;
+import net.feichti.codingcontest.diagram.edit.parts.TeamNameEditPart;
 
 /**
  * This registry is used to determine which type of visual object should be
@@ -139,14 +139,14 @@ public class CodingcontestVisualIDRegistry
 				if(CodingcontestPackage.eINSTANCE.getLocation().isSuperTypeOf(domainElement.eClass())) {
 					return LocationEditPart.VISUAL_ID;
 				}
-				if(CodingcontestPackage.eINSTANCE.getEntry().isSuperTypeOf(domainElement.eClass())) {
-					return EntryEditPart.VISUAL_ID;
+				if(CodingcontestPackage.eINSTANCE.getTeam().isSuperTypeOf(domainElement.eClass())) {
+					return TeamEditPart.VISUAL_ID;
 				}
 				if(CodingcontestPackage.eINSTANCE.getProblem().isSuperTypeOf(domainElement.eClass())) {
 					return ProblemEditPart.VISUAL_ID;
 				}
 				break;
-			case EntryEditPart.VISUAL_ID:
+			case TeamEditPart.VISUAL_ID:
 				if(CodingcontestPackage.eINSTANCE.getCoder().isSuperTypeOf(domainElement.eClass())) {
 					return CoderEditPart.VISUAL_ID;
 				}
@@ -186,7 +186,7 @@ public class CodingcontestVisualIDRegistry
 				if(LocationEditPart.VISUAL_ID == nodeVisualID) {
 					return true;
 				}
-				if(EntryEditPart.VISUAL_ID == nodeVisualID) {
+				if(TeamEditPart.VISUAL_ID == nodeVisualID) {
 					return true;
 				}
 				if(ProblemEditPart.VISUAL_ID == nodeVisualID) {
@@ -208,8 +208,8 @@ public class CodingcontestVisualIDRegistry
 					return true;
 				}
 				break;
-			case EntryEditPart.VISUAL_ID:
-				if(EntryTeamNameEditPart.VISUAL_ID == nodeVisualID) {
+			case TeamEditPart.VISUAL_ID:
+				if(TeamNameEditPart.VISUAL_ID == nodeVisualID) {
 					return true;
 				}
 				if(CoderEditPart.VISUAL_ID == nodeVisualID) {

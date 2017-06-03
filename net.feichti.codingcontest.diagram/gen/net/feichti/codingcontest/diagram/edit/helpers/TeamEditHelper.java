@@ -3,6 +3,6 @@ package net.feichti.codingcontest.diagram.edit.helpers;
 /**
  * @generated
  */
-public class EntryEditHelper extends CodingcontestBaseEditHelper
+public class TeamEditHelper extends CodingcontestBaseEditHelper
 {
 }

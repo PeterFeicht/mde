@@ -8,15 +8,15 @@ import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 
-import net.feichti.codingcontest.diagram.edit.parts.EntryEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.LocationEditPart;
+import net.feichti.codingcontest.diagram.edit.parts.TeamEditPart;
 import net.feichti.codingcontest.diagram.providers.CodingcontestElementTypes;
 import net.feichti.codingcontest.diagram.providers.CodingcontestModelingAssistantProvider;
 
 /**
  * @generated
  */
-public class CodingcontestModelingAssistantProviderOfEntryEditPart extends CodingcontestModelingAssistantProvider
+public class CodingcontestModelingAssistantProviderOfTeamEditPart extends CodingcontestModelingAssistantProvider
 {
 	
 	/**
@@ -26,7 +26,7 @@ public class CodingcontestModelingAssistantProviderOfEntryEditPart extends Codin
 	
 	public List<IElementType> getTypesForPopupBar(IAdaptable host) {
 		List<IElementType> types = new ArrayList<IElementType>(1);
-		types.add(CodingcontestElementTypes.Coder_3001);
+		types.add(CodingcontestElementTypes.Coder_3002);
 		return types;
 	}
 	
@@ -39,15 +39,15 @@ public class CodingcontestModelingAssistantProviderOfEntryEditPart extends Codin
 		IGraphicalEditPart sourceEditPart =
 				(IGraphicalEditPart) source.getAdapter(
 						IGraphicalEditPart.class);
-		return doGetRelTypesOnSource((EntryEditPart) sourceEditPart);
+		return doGetRelTypesOnSource((TeamEditPart) sourceEditPart);
 	}
 	
 	/**
 	* @generated
 	*/
-	public List<IElementType> doGetRelTypesOnSource(EntryEditPart source) {
+	public List<IElementType> doGetRelTypesOnSource(TeamEditPart source) {
 		List<IElementType> types = new ArrayList<IElementType>(1);
-		types.add(CodingcontestElementTypes.EntryLocation_4002);
+		types.add(CodingcontestElementTypes.TeamLocation_4003);
 		return types;
 	}
 	
@@ -64,16 +64,16 @@ public class CodingcontestModelingAssistantProviderOfEntryEditPart extends Codin
 		IGraphicalEditPart targetEditPart =
 				(IGraphicalEditPart) target.getAdapter(
 						IGraphicalEditPart.class);
-		return doGetRelTypesOnSourceAndTarget((EntryEditPart) sourceEditPart, targetEditPart);
+		return doGetRelTypesOnSourceAndTarget((TeamEditPart) sourceEditPart, targetEditPart);
 	}
 	
 	/**
 	* @generated
 	*/
-	public List<IElementType> doGetRelTypesOnSourceAndTarget(EntryEditPart source, IGraphicalEditPart targetEditPart) {
+	public List<IElementType> doGetRelTypesOnSourceAndTarget(TeamEditPart source, IGraphicalEditPart targetEditPart) {
 		List<IElementType> types = new LinkedList<IElementType>();
 		if(targetEditPart instanceof LocationEditPart) {
-			types.add(CodingcontestElementTypes.EntryLocation_4002);
+			types.add(CodingcontestElementTypes.TeamLocation_4003);
 		}
 		return types;
 	}
@@ -88,15 +88,15 @@ public class CodingcontestModelingAssistantProviderOfEntryEditPart extends Codin
 		IGraphicalEditPart sourceEditPart =
 				(IGraphicalEditPart) source.getAdapter(
 						IGraphicalEditPart.class);
-		return doGetTypesForTarget((EntryEditPart) sourceEditPart, relationshipType);
+		return doGetTypesForTarget((TeamEditPart) sourceEditPart, relationshipType);
 	}
 	
 	/**
 	* @generated
 	*/
-	public List<IElementType> doGetTypesForTarget(EntryEditPart source, IElementType relationshipType) {
+	public List<IElementType> doGetTypesForTarget(TeamEditPart source, IElementType relationshipType) {
 		List<IElementType> types = new ArrayList<IElementType>();
-		if(relationshipType == CodingcontestElementTypes.EntryLocation_4002) {
+		if(relationshipType == CodingcontestElementTypes.TeamLocation_4003) {
 			types.add(CodingcontestElementTypes.Location_2003);
 		}
 		return types;

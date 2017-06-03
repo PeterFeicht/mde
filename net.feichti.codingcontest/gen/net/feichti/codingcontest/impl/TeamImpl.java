@@ -4,42 +4,38 @@ package net.feichti.codingcontest.impl;
 
 import java.util.Collection;
 
-import net.feichti.codingcontest.Coder;
-import net.feichti.codingcontest.CodingcontestPackage;
-import net.feichti.codingcontest.Entry;
-import net.feichti.codingcontest.Location;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import net.feichti.codingcontest.Coder;
+import net.feichti.codingcontest.CodingcontestPackage;
+import net.feichti.codingcontest.Location;
+import net.feichti.codingcontest.Team;
+
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Entry</b></em>'.
+ * An implementation of the model object '<em><b>Team</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link net.feichti.codingcontest.impl.EntryImpl#getCoders <em>Coders</em>}</li>
- *   <li>{@link net.feichti.codingcontest.impl.EntryImpl#getLocation <em>Location</em>}</li>
- *   <li>{@link net.feichti.codingcontest.impl.EntryImpl#getTeamName <em>Team Name</em>}</li>
- *   <li>{@link net.feichti.codingcontest.impl.EntryImpl#getLanguage <em>Language</em>}</li>
+ *   <li>{@link net.feichti.codingcontest.impl.TeamImpl#getCoders <em>Coders</em>}</li>
+ *   <li>{@link net.feichti.codingcontest.impl.TeamImpl#getLocation <em>Location</em>}</li>
+ *   <li>{@link net.feichti.codingcontest.impl.TeamImpl#getName <em>Name</em>}</li>
+ *   <li>{@link net.feichti.codingcontest.impl.TeamImpl#getLanguage <em>Language</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class EntryImpl extends MinimalEObjectImpl.Container implements Entry
+public class TeamImpl extends MinimalEObjectImpl.Container implements Team
 {
 	/**
 	 * The cached value of the '{@link #getCoders() <em>Coders</em>}' containment reference list.
@@ -62,24 +58,24 @@ public class EntryImpl extends MinimalEObjectImpl.Container implements Entry
 	protected Location location;
 
 	/**
-	 * The default value of the '{@link #getTeamName() <em>Team Name</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTeamName()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TEAM_NAME_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getTeamName() <em>Team Name</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTeamName()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String teamName = TEAM_NAME_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getLanguage() <em>Language</em>}' attribute.
@@ -106,7 +102,7 @@ public class EntryImpl extends MinimalEObjectImpl.Container implements Entry
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EntryImpl()
+	protected TeamImpl()
 	{
 		super();
 	}
@@ -119,7 +115,7 @@ public class EntryImpl extends MinimalEObjectImpl.Container implements Entry
 	@Override
 	protected EClass eStaticClass()
 	{
-		return CodingcontestPackage.Literals.ENTRY;
+		return CodingcontestPackage.Literals.TEAM;
 	}
 
 	/**
@@ -131,7 +127,7 @@ public class EntryImpl extends MinimalEObjectImpl.Container implements Entry
 	{
 		if (coders == null)
 		{
-			coders = new EObjectContainmentEList<Coder>(Coder.class, this, CodingcontestPackage.ENTRY__CODERS);
+			coders = new EObjectContainmentEList<Coder>(Coder.class, this, CodingcontestPackage.TEAM__CODERS);
 		}
 		return coders;
 	}
@@ -156,7 +152,7 @@ public class EntryImpl extends MinimalEObjectImpl.Container implements Entry
 		Location oldLocation = location;
 		location = newLocation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CodingcontestPackage.ENTRY__LOCATION, oldLocation, location));
+			eNotify(new ENotificationImpl(this, Notification.SET, CodingcontestPackage.TEAM__LOCATION, oldLocation, location));
 	}
 
 	/**
@@ -164,9 +160,9 @@ public class EntryImpl extends MinimalEObjectImpl.Container implements Entry
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTeamName()
+	public String getName()
 	{
-		return teamName;
+		return name;
 	}
 
 	/**
@@ -174,12 +170,12 @@ public class EntryImpl extends MinimalEObjectImpl.Container implements Entry
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTeamName(String newTeamName)
+	public void setName(String newName)
 	{
-		String oldTeamName = teamName;
-		teamName = newTeamName;
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CodingcontestPackage.ENTRY__TEAM_NAME, oldTeamName, teamName));
+			eNotify(new ENotificationImpl(this, Notification.SET, CodingcontestPackage.TEAM__NAME, oldName, name));
 	}
 
 	/**
@@ -202,7 +198,7 @@ public class EntryImpl extends MinimalEObjectImpl.Container implements Entry
 		String oldLanguage = language;
 		language = newLanguage;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CodingcontestPackage.ENTRY__LANGUAGE, oldLanguage, language));
+			eNotify(new ENotificationImpl(this, Notification.SET, CodingcontestPackage.TEAM__LANGUAGE, oldLanguage, language));
 	}
 
 	/**
@@ -215,7 +211,7 @@ public class EntryImpl extends MinimalEObjectImpl.Container implements Entry
 	{
 		switch (featureID)
 		{
-			case CodingcontestPackage.ENTRY__CODERS:
+			case CodingcontestPackage.TEAM__CODERS:
 				return ((InternalEList<?>)getCoders()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -231,13 +227,13 @@ public class EntryImpl extends MinimalEObjectImpl.Container implements Entry
 	{
 		switch (featureID)
 		{
-			case CodingcontestPackage.ENTRY__CODERS:
+			case CodingcontestPackage.TEAM__CODERS:
 				return getCoders();
-			case CodingcontestPackage.ENTRY__LOCATION:
+			case CodingcontestPackage.TEAM__LOCATION:
 				return getLocation();
-			case CodingcontestPackage.ENTRY__TEAM_NAME:
-				return getTeamName();
-			case CodingcontestPackage.ENTRY__LANGUAGE:
+			case CodingcontestPackage.TEAM__NAME:
+				return getName();
+			case CodingcontestPackage.TEAM__LANGUAGE:
 				return getLanguage();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -254,17 +250,17 @@ public class EntryImpl extends MinimalEObjectImpl.Container implements Entry
 	{
 		switch (featureID)
 		{
-			case CodingcontestPackage.ENTRY__CODERS:
+			case CodingcontestPackage.TEAM__CODERS:
 				getCoders().clear();
 				getCoders().addAll((Collection<? extends Coder>)newValue);
 				return;
-			case CodingcontestPackage.ENTRY__LOCATION:
+			case CodingcontestPackage.TEAM__LOCATION:
 				setLocation((Location)newValue);
 				return;
-			case CodingcontestPackage.ENTRY__TEAM_NAME:
-				setTeamName((String)newValue);
+			case CodingcontestPackage.TEAM__NAME:
+				setName((String)newValue);
 				return;
-			case CodingcontestPackage.ENTRY__LANGUAGE:
+			case CodingcontestPackage.TEAM__LANGUAGE:
 				setLanguage((String)newValue);
 				return;
 		}
@@ -281,16 +277,16 @@ public class EntryImpl extends MinimalEObjectImpl.Container implements Entry
 	{
 		switch (featureID)
 		{
-			case CodingcontestPackage.ENTRY__CODERS:
+			case CodingcontestPackage.TEAM__CODERS:
 				getCoders().clear();
 				return;
-			case CodingcontestPackage.ENTRY__LOCATION:
+			case CodingcontestPackage.TEAM__LOCATION:
 				setLocation((Location)null);
 				return;
-			case CodingcontestPackage.ENTRY__TEAM_NAME:
-				setTeamName(TEAM_NAME_EDEFAULT);
+			case CodingcontestPackage.TEAM__NAME:
+				setName(NAME_EDEFAULT);
 				return;
-			case CodingcontestPackage.ENTRY__LANGUAGE:
+			case CodingcontestPackage.TEAM__LANGUAGE:
 				setLanguage(LANGUAGE_EDEFAULT);
 				return;
 		}
@@ -307,13 +303,13 @@ public class EntryImpl extends MinimalEObjectImpl.Container implements Entry
 	{
 		switch (featureID)
 		{
-			case CodingcontestPackage.ENTRY__CODERS:
+			case CodingcontestPackage.TEAM__CODERS:
 				return coders != null && !coders.isEmpty();
-			case CodingcontestPackage.ENTRY__LOCATION:
+			case CodingcontestPackage.TEAM__LOCATION:
 				return location != null;
-			case CodingcontestPackage.ENTRY__TEAM_NAME:
-				return TEAM_NAME_EDEFAULT == null ? teamName != null : !TEAM_NAME_EDEFAULT.equals(teamName);
-			case CodingcontestPackage.ENTRY__LANGUAGE:
+			case CodingcontestPackage.TEAM__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case CodingcontestPackage.TEAM__LANGUAGE:
 				return LANGUAGE_EDEFAULT == null ? language != null : !LANGUAGE_EDEFAULT.equals(language);
 		}
 		return super.eIsSet(featureID);
@@ -330,12 +326,12 @@ public class EntryImpl extends MinimalEObjectImpl.Container implements Entry
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (teamName: ");
-		result.append(teamName);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(", language: ");
 		result.append(language);
 		result.append(')');
 		return result.toString();
 	}
 
-} //EntryImpl
+} //TeamImpl

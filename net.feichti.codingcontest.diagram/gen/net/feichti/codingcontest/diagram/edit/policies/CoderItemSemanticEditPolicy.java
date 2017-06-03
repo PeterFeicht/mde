@@ -20,7 +20,7 @@ public class CoderItemSemanticEditPolicy extends CodingcontestBaseItemSemanticEd
 	* @generated
 	*/
 	public CoderItemSemanticEditPolicy() {
-		super(CodingcontestElementTypes.Coder_3001);
+		super(CodingcontestElementTypes.Coder_3002);
 	}
 	
 	/**

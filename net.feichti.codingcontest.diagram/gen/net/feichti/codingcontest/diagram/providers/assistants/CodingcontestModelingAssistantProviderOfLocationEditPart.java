@@ -34,7 +34,7 @@ public class CodingcontestModelingAssistantProviderOfLocationEditPart extends Co
 	*/
 	public List<IElementType> doGetRelTypesOnTarget(LocationEditPart target) {
 		List<IElementType> types = new ArrayList<IElementType>(1);
-		types.add(CodingcontestElementTypes.EntryLocation_4002);
+		types.add(CodingcontestElementTypes.TeamLocation_4003);
 		return types;
 	}
 	
@@ -56,8 +56,8 @@ public class CodingcontestModelingAssistantProviderOfLocationEditPart extends Co
 	*/
 	public List<IElementType> doGetTypesForSource(LocationEditPart target, IElementType relationshipType) {
 		List<IElementType> types = new ArrayList<IElementType>();
-		if(relationshipType == CodingcontestElementTypes.EntryLocation_4002) {
-			types.add(CodingcontestElementTypes.Entry_2004);
+		if(relationshipType == CodingcontestElementTypes.TeamLocation_4003) {
+			types.add(CodingcontestElementTypes.Team_2006);
 		}
 		return types;
 	}

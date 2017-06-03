@@ -45,9 +45,6 @@ import org.eclipse.swt.graphics.FontData;
 import net.feichti.codingcontest.diagram.edit.parts.CoderEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.CoderNameEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.ContestEditPart;
-import net.feichti.codingcontest.diagram.edit.parts.EntryEditPart;
-import net.feichti.codingcontest.diagram.edit.parts.EntryLocationEditPart;
-import net.feichti.codingcontest.diagram.edit.parts.EntryTeamNameEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.LanguageToProblemMapEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.LanguageToProblemMapKeyEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.LevelEditPart;
@@ -58,6 +55,9 @@ import net.feichti.codingcontest.diagram.edit.parts.OrganizerEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.OrganizerNameEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.ProblemEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.ProblemTitleEditPart;
+import net.feichti.codingcontest.diagram.edit.parts.TeamEditPart;
+import net.feichti.codingcontest.diagram.edit.parts.TeamLocationEditPart;
+import net.feichti.codingcontest.diagram.edit.parts.TeamNameEditPart;
 import net.feichti.codingcontest.diagram.part.CodingcontestVisualIDRegistry;
 
 /**
@@ -146,7 +146,7 @@ public class CodingcontestViewProvider extends AbstractProvider implements IView
 					case LevelEditPart.VISUAL_ID:
 					case OrganizerEditPart.VISUAL_ID:
 					case LocationEditPart.VISUAL_ID:
-					case EntryEditPart.VISUAL_ID:
+					case TeamEditPart.VISUAL_ID:
 					case ProblemEditPart.VISUAL_ID:
 					case CoderEditPart.VISUAL_ID:
 						if(domainElement == null || visualID != CodingcontestVisualIDRegistry
@@ -160,7 +160,7 @@ public class CodingcontestViewProvider extends AbstractProvider implements IView
 			}
 		}
 		return LevelEditPart.VISUAL_ID == visualID || OrganizerEditPart.VISUAL_ID == visualID ||
-				LocationEditPart.VISUAL_ID == visualID || EntryEditPart.VISUAL_ID == visualID ||
+				LocationEditPart.VISUAL_ID == visualID || TeamEditPart.VISUAL_ID == visualID ||
 				ProblemEditPart.VISUAL_ID == visualID || CoderEditPart.VISUAL_ID == visualID;
 	}
 	
@@ -215,12 +215,12 @@ public class CodingcontestViewProvider extends AbstractProvider implements IView
 				return createOrganizer_2002(domainElement, containerView, index, persisted, preferencesHint);
 			case LocationEditPart.VISUAL_ID:
 				return createLocation_2003(domainElement, containerView, index, persisted, preferencesHint);
-			case EntryEditPart.VISUAL_ID:
-				return createEntry_2004(domainElement, containerView, index, persisted, preferencesHint);
+			case TeamEditPart.VISUAL_ID:
+				return createTeam_2006(domainElement, containerView, index, persisted, preferencesHint);
 			case ProblemEditPart.VISUAL_ID:
 				return createProblem_2005(domainElement, containerView, index, persisted, preferencesHint);
 			case CoderEditPart.VISUAL_ID:
-				return createCoder_3001(domainElement, containerView, index, persisted, preferencesHint);
+				return createCoder_3002(domainElement, containerView, index, persisted, preferencesHint);
 		}
 		// can't happen, provided #provides(CreateNodeViewOperation) is correct
 		return null;
@@ -237,8 +237,8 @@ public class CodingcontestViewProvider extends AbstractProvider implements IView
 			case LanguageToProblemMapEditPart.VISUAL_ID:
 				return createLanguageToProblemMap_4001(getSemanticElement(semanticAdapter), containerView, index,
 						persisted, preferencesHint);
-			case EntryLocationEditPart.VISUAL_ID:
-				return createEntryLocation_4002(containerView, index, persisted, preferencesHint);
+			case TeamLocationEditPart.VISUAL_ID:
+				return createTeamLocation_4003(containerView, index, persisted, preferencesHint);
 		}
 		// can never happen, provided #provides(CreateEdgeViewOperation) is correct
 		return null;
@@ -358,11 +358,11 @@ public class CodingcontestViewProvider extends AbstractProvider implements IView
 	/**
 	* @generated
 	*/
-	public Node createEntry_2004(EObject domainElement, View containerView, int index, boolean persisted,
+	public Node createTeam_2006(EObject domainElement, View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(CodingcontestVisualIDRegistry.getType(EntryEditPart.VISUAL_ID));
+		node.setType(CodingcontestVisualIDRegistry.getType(TeamEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		stampShortcut(containerView, node);
@@ -388,7 +388,7 @@ public class CodingcontestViewProvider extends AbstractProvider implements IView
 				PreferenceConverter.getColor(prefStore, IPreferenceConstants.PREF_FILL_COLOR);
 		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5005 = createLabel(node, CodingcontestVisualIDRegistry.getType(EntryTeamNameEditPart.VISUAL_ID));
+		Node label5008 = createLabel(node, CodingcontestVisualIDRegistry.getType(TeamNameEditPart.VISUAL_ID));
 		return node;
 	}
 	
@@ -432,7 +432,7 @@ public class CodingcontestViewProvider extends AbstractProvider implements IView
 	/**
 	* @generated
 	*/
-	public Node createCoder_3001(EObject domainElement, View containerView, int index, boolean persisted,
+	public Node createCoder_3002(EObject domainElement, View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
@@ -461,7 +461,7 @@ public class CodingcontestViewProvider extends AbstractProvider implements IView
 				PreferenceConverter.getColor(prefStore, IPreferenceConstants.PREF_FILL_COLOR);
 		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5004 = createLabel(node, CodingcontestVisualIDRegistry.getType(CoderNameEditPart.VISUAL_ID));
+		Node label5007 = createLabel(node, CodingcontestVisualIDRegistry.getType(CoderNameEditPart.VISUAL_ID));
 		return node;
 	}
 	
@@ -515,7 +515,7 @@ public class CodingcontestViewProvider extends AbstractProvider implements IView
 	/**
 	* @generated
 	*/
-	public Edge createEntryLocation_4002(View containerView, int index, boolean persisted,
+	public Edge createTeamLocation_4003(View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Connector edge = NotationFactory.eINSTANCE.createConnector();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
@@ -526,7 +526,7 @@ public class CodingcontestViewProvider extends AbstractProvider implements IView
 		bendpoints.setPoints(points);
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(CodingcontestVisualIDRegistry.getType(EntryLocationEditPart.VISUAL_ID));
+		edge.setType(CodingcontestVisualIDRegistry.getType(TeamLocationEditPart.VISUAL_ID));
 		edge.setElement(null);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint.getPreferenceStore();

@@ -34,12 +34,12 @@ import org.eclipse.gmf.tooling.runtime.update.UpdaterLinkDescriptor;
 import net.feichti.codingcontest.CodingcontestPackage;
 import net.feichti.codingcontest.diagram.edit.parts.CoderEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.ContestEditPart;
-import net.feichti.codingcontest.diagram.edit.parts.EntryEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.LanguageToProblemMapEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.LevelEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.LocationEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.OrganizerEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.ProblemEditPart;
+import net.feichti.codingcontest.diagram.edit.parts.TeamEditPart;
 import net.feichti.codingcontest.diagram.part.CodingcontestDiagramUpdater;
 import net.feichti.codingcontest.diagram.part.CodingcontestLinkDescriptor;
 import net.feichti.codingcontest.diagram.part.CodingcontestNodeDescriptor;
@@ -115,7 +115,7 @@ public class ContestCanonicalEditPolicy extends CanonicalEditPolicy
 			case LevelEditPart.VISUAL_ID:
 			case OrganizerEditPart.VISUAL_ID:
 			case LocationEditPart.VISUAL_ID:
-			case EntryEditPart.VISUAL_ID:
+			case TeamEditPart.VISUAL_ID:
 			case ProblemEditPart.VISUAL_ID:
 				return true;
 		}
@@ -284,9 +284,9 @@ public class ContestCanonicalEditPolicy extends CanonicalEditPolicy
 				domain2NotationMap.putView(view.getElement(), view);
 				break;
 			}
-			case EntryEditPart.VISUAL_ID: {
+			case TeamEditPart.VISUAL_ID: {
 				if(!domain2NotationMap.containsKey(view.getElement())) {
-					result.addAll(CodingcontestDiagramUpdater.getEntry_2004ContainedLinks(view));
+					result.addAll(CodingcontestDiagramUpdater.getTeam_2006ContainedLinks(view));
 				}
 				domain2NotationMap.putView(view.getElement(), view);
 				break;
@@ -300,7 +300,7 @@ public class ContestCanonicalEditPolicy extends CanonicalEditPolicy
 			}
 			case CoderEditPart.VISUAL_ID: {
 				if(!domain2NotationMap.containsKey(view.getElement())) {
-					result.addAll(CodingcontestDiagramUpdater.getCoder_3001ContainedLinks(view));
+					result.addAll(CodingcontestDiagramUpdater.getCoder_3002ContainedLinks(view));
 				}
 				domain2NotationMap.putView(view.getElement(), view);
 				break;

@@ -144,7 +144,7 @@ public interface Contest extends EObject
 
 	/**
 	 * Returns the value of the '<em><b>Entries</b></em>' containment reference list.
-	 * The list contents are of type {@link net.feichti.codingcontest.Entry}.
+	 * The list contents are of type {@link net.feichti.codingcontest.Team}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Entries</em>' containment reference list isn't clear,
@@ -159,7 +159,7 @@ public interface Contest extends EObject
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
-	EList<Entry> getEntries();
+	EList<Team> getEntries();
 
 	/**
 	 * Returns the value of the '<em><b>Organizer</b></em>' containment reference.

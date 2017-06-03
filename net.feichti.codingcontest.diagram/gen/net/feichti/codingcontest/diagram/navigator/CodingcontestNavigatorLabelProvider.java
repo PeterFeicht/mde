@@ -20,9 +20,6 @@ import net.feichti.codingcontest.Contest;
 import net.feichti.codingcontest.diagram.edit.parts.CoderEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.CoderNameEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.ContestEditPart;
-import net.feichti.codingcontest.diagram.edit.parts.EntryEditPart;
-import net.feichti.codingcontest.diagram.edit.parts.EntryLocationEditPart;
-import net.feichti.codingcontest.diagram.edit.parts.EntryTeamNameEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.LanguageToProblemMapEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.LanguageToProblemMapKeyEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.LevelEditPart;
@@ -33,6 +30,9 @@ import net.feichti.codingcontest.diagram.edit.parts.OrganizerEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.OrganizerNameEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.ProblemEditPart;
 import net.feichti.codingcontest.diagram.edit.parts.ProblemTitleEditPart;
+import net.feichti.codingcontest.diagram.edit.parts.TeamEditPart;
+import net.feichti.codingcontest.diagram.edit.parts.TeamLocationEditPart;
+import net.feichti.codingcontest.diagram.edit.parts.TeamNameEditPart;
 import net.feichti.codingcontest.diagram.part.CodingcontestDiagramEditorPlugin;
 import net.feichti.codingcontest.diagram.part.CodingcontestVisualIDRegistry;
 import net.feichti.codingcontest.diagram.providers.CodingcontestElementTypes;
@@ -105,21 +105,21 @@ public class CodingcontestNavigatorLabelProvider extends LabelProvider
 			case LocationEditPart.VISUAL_ID:
 				return getImage("Navigator?TopLevelNode?http://www.feichti.net/codingcontest?Location", //$NON-NLS-1$
 						CodingcontestElementTypes.Location_2003); 
-			case EntryEditPart.VISUAL_ID:
-				return getImage("Navigator?TopLevelNode?http://www.feichti.net/codingcontest?Entry", //$NON-NLS-1$
-						CodingcontestElementTypes.Entry_2004); 
 			case ProblemEditPart.VISUAL_ID:
 				return getImage("Navigator?TopLevelNode?http://www.feichti.net/codingcontest?Problem", //$NON-NLS-1$
 						CodingcontestElementTypes.Problem_2005); 
+			case TeamEditPart.VISUAL_ID:
+				return getImage("Navigator?TopLevelNode?http://www.feichti.net/codingcontest?Team", //$NON-NLS-1$
+						CodingcontestElementTypes.Team_2006); 
 			case CoderEditPart.VISUAL_ID:
 				return getImage("Navigator?Node?http://www.feichti.net/codingcontest?Coder", //$NON-NLS-1$
-						CodingcontestElementTypes.Coder_3001); 
+						CodingcontestElementTypes.Coder_3002); 
 			case LanguageToProblemMapEditPart.VISUAL_ID:
 				return getImage("Navigator?Link?http://www.feichti.net/codingcontest?LanguageToProblemMap", //$NON-NLS-1$
 						CodingcontestElementTypes.LanguageToProblemMap_4001); 
-			case EntryLocationEditPart.VISUAL_ID:
-				return getImage("Navigator?Link?http://www.feichti.net/codingcontest?Entry?location", //$NON-NLS-1$
-						CodingcontestElementTypes.EntryLocation_4002); 
+			case TeamLocationEditPart.VISUAL_ID:
+				return getImage("Navigator?Link?http://www.feichti.net/codingcontest?Team?location", //$NON-NLS-1$
+						CodingcontestElementTypes.TeamLocation_4003); 
 		}
 		return getImage("Navigator?UnknownElement", null);  //$NON-NLS-1$
 	}
@@ -178,16 +178,16 @@ public class CodingcontestNavigatorLabelProvider extends LabelProvider
 				return getOrganizer_2002Text(view);
 			case LocationEditPart.VISUAL_ID:
 				return getLocation_2003Text(view);
-			case EntryEditPart.VISUAL_ID:
-				return getEntry_2004Text(view);
 			case ProblemEditPart.VISUAL_ID:
 				return getProblem_2005Text(view);
+			case TeamEditPart.VISUAL_ID:
+				return getTeam_2006Text(view);
 			case CoderEditPart.VISUAL_ID:
-				return getCoder_3001Text(view);
+				return getCoder_3002Text(view);
 			case LanguageToProblemMapEditPart.VISUAL_ID:
 				return getLanguageToProblemMap_4001Text(view);
-			case EntryLocationEditPart.VISUAL_ID:
-				return getEntryLocation_4002Text(view);
+			case TeamLocationEditPart.VISUAL_ID:
+				return getTeamLocation_4003Text(view);
 		}
 		return getUnknownElementText(view);
 	}
@@ -257,22 +257,6 @@ public class CodingcontestNavigatorLabelProvider extends LabelProvider
 	/**
 	* @generated
 	*/
-	private String getEntry_2004Text(View view) {
-		IParser parser = CodingcontestParserProvider.getParser(CodingcontestElementTypes.Entry_2004,
-				view.getElement() != null ? view.getElement() : view,
-				CodingcontestVisualIDRegistry.getType(EntryTeamNameEditPart.VISUAL_ID));
-		if(parser != null) {
-			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			CodingcontestDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5005); //$NON-NLS-1$
-			return "";  //$NON-NLS-1$
-		}
-	}
-	
-	/**
-	* @generated
-	*/
 	private String getProblem_2005Text(View view) {
 		IParser parser = CodingcontestParserProvider.getParser(CodingcontestElementTypes.Problem_2005,
 				view.getElement() != null ? view.getElement() : view,
@@ -289,15 +273,31 @@ public class CodingcontestNavigatorLabelProvider extends LabelProvider
 	/**
 	* @generated
 	*/
-	private String getCoder_3001Text(View view) {
-		IParser parser = CodingcontestParserProvider.getParser(CodingcontestElementTypes.Coder_3001,
+	private String getTeam_2006Text(View view) {
+		IParser parser = CodingcontestParserProvider.getParser(CodingcontestElementTypes.Team_2006,
+				view.getElement() != null ? view.getElement() : view,
+				CodingcontestVisualIDRegistry.getType(TeamNameEditPart.VISUAL_ID));
+		if(parser != null) {
+			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			CodingcontestDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5008); //$NON-NLS-1$
+			return "";  //$NON-NLS-1$
+		}
+	}
+	
+	/**
+	* @generated
+	*/
+	private String getCoder_3002Text(View view) {
+		IParser parser = CodingcontestParserProvider.getParser(CodingcontestElementTypes.Coder_3002,
 				view.getElement() != null ? view.getElement() : view,
 				CodingcontestVisualIDRegistry.getType(CoderNameEditPart.VISUAL_ID));
 		if(parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
 		} else {
-			CodingcontestDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5004); //$NON-NLS-1$
+			CodingcontestDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5007); //$NON-NLS-1$
 			return "";  //$NON-NLS-1$
 		}
 	}
@@ -321,7 +321,7 @@ public class CodingcontestNavigatorLabelProvider extends LabelProvider
 	/**
 	* @generated
 	*/
-	private String getEntryLocation_4002Text(View view) {
+	private String getTeamLocation_4003Text(View view) {
 		return "";  //$NON-NLS-1$
 	}
 	

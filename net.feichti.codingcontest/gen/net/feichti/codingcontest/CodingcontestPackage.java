@@ -241,14 +241,14 @@ public interface CodingcontestPackage extends EPackage
 	int LOCATION_FEATURE_COUNT = 3;
 
 	/**
-	 * The meta object id for the '{@link net.feichti.codingcontest.impl.EntryImpl <em>Entry</em>}' class.
+	 * The meta object id for the '{@link net.feichti.codingcontest.impl.TeamImpl <em>Team</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see net.feichti.codingcontest.impl.EntryImpl
-	 * @see net.feichti.codingcontest.impl.CodingcontestPackageImpl#getEntry()
+	 * @see net.feichti.codingcontest.impl.TeamImpl
+	 * @see net.feichti.codingcontest.impl.CodingcontestPackageImpl#getTeam()
 	 * @generated
 	 */
-	int ENTRY = 3;
+	int TEAM = 3;
 
 	/**
 	 * The feature id for the '<em><b>Coders</b></em>' containment reference list.
@@ -257,7 +257,7 @@ public interface CodingcontestPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ENTRY__CODERS = 0;
+	int TEAM__CODERS = 0;
 
 	/**
 	 * The feature id for the '<em><b>Location</b></em>' reference.
@@ -266,16 +266,16 @@ public interface CodingcontestPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ENTRY__LOCATION = 1;
+	int TEAM__LOCATION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Team Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTRY__TEAM_NAME = 2;
+	int TEAM__NAME = 2;
 
 	/**
 	 * The feature id for the '<em><b>Language</b></em>' attribute.
@@ -284,16 +284,16 @@ public interface CodingcontestPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ENTRY__LANGUAGE = 3;
+	int TEAM__LANGUAGE = 3;
 
 	/**
-	 * The number of structural features of the '<em>Entry</em>' class.
+	 * The number of structural features of the '<em>Team</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTRY_FEATURE_COUNT = 4;
+	int TEAM_FEATURE_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link net.feichti.codingcontest.impl.OrganizerImpl <em>Organizer</em>}' class.
@@ -657,58 +657,58 @@ public interface CodingcontestPackage extends EPackage
 	EAttribute getLocation_Country();
 
 	/**
-	 * Returns the meta object for class '{@link net.feichti.codingcontest.Entry <em>Entry</em>}'.
+	 * Returns the meta object for class '{@link net.feichti.codingcontest.Team <em>Team</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Entry</em>'.
-	 * @see net.feichti.codingcontest.Entry
+	 * @return the meta object for class '<em>Team</em>'.
+	 * @see net.feichti.codingcontest.Team
 	 * @generated
 	 */
-	EClass getEntry();
+	EClass getTeam();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link net.feichti.codingcontest.Entry#getCoders <em>Coders</em>}'.
+	 * Returns the meta object for the containment reference list '{@link net.feichti.codingcontest.Team#getCoders <em>Coders</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Coders</em>'.
-	 * @see net.feichti.codingcontest.Entry#getCoders()
-	 * @see #getEntry()
+	 * @see net.feichti.codingcontest.Team#getCoders()
+	 * @see #getTeam()
 	 * @generated
 	 */
-	EReference getEntry_Coders();
+	EReference getTeam_Coders();
 
 	/**
-	 * Returns the meta object for the reference '{@link net.feichti.codingcontest.Entry#getLocation <em>Location</em>}'.
+	 * Returns the meta object for the reference '{@link net.feichti.codingcontest.Team#getLocation <em>Location</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Location</em>'.
-	 * @see net.feichti.codingcontest.Entry#getLocation()
-	 * @see #getEntry()
+	 * @see net.feichti.codingcontest.Team#getLocation()
+	 * @see #getTeam()
 	 * @generated
 	 */
-	EReference getEntry_Location();
+	EReference getTeam_Location();
 
 	/**
-	 * Returns the meta object for the attribute '{@link net.feichti.codingcontest.Entry#getTeamName <em>Team Name</em>}'.
+	 * Returns the meta object for the attribute '{@link net.feichti.codingcontest.Team#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Team Name</em>'.
-	 * @see net.feichti.codingcontest.Entry#getTeamName()
-	 * @see #getEntry()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see net.feichti.codingcontest.Team#getName()
+	 * @see #getTeam()
 	 * @generated
 	 */
-	EAttribute getEntry_TeamName();
+	EAttribute getTeam_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link net.feichti.codingcontest.Entry#getLanguage <em>Language</em>}'.
+	 * Returns the meta object for the attribute '{@link net.feichti.codingcontest.Team#getLanguage <em>Language</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Language</em>'.
-	 * @see net.feichti.codingcontest.Entry#getLanguage()
-	 * @see #getEntry()
+	 * @see net.feichti.codingcontest.Team#getLanguage()
+	 * @see #getTeam()
 	 * @generated
 	 */
-	EAttribute getEntry_Language();
+	EAttribute getTeam_Language();
 
 	/**
 	 * Returns the meta object for class '{@link net.feichti.codingcontest.Organizer <em>Organizer</em>}'.
@@ -1038,14 +1038,14 @@ public interface CodingcontestPackage extends EPackage
 		EAttribute LOCATION__COUNTRY = eINSTANCE.getLocation_Country();
 
 		/**
-		 * The meta object literal for the '{@link net.feichti.codingcontest.impl.EntryImpl <em>Entry</em>}' class.
+		 * The meta object literal for the '{@link net.feichti.codingcontest.impl.TeamImpl <em>Team</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see net.feichti.codingcontest.impl.EntryImpl
-		 * @see net.feichti.codingcontest.impl.CodingcontestPackageImpl#getEntry()
+		 * @see net.feichti.codingcontest.impl.TeamImpl
+		 * @see net.feichti.codingcontest.impl.CodingcontestPackageImpl#getTeam()
 		 * @generated
 		 */
-		EClass ENTRY = eINSTANCE.getEntry();
+		EClass TEAM = eINSTANCE.getTeam();
 
 		/**
 		 * The meta object literal for the '<em><b>Coders</b></em>' containment reference list feature.
@@ -1053,7 +1053,7 @@ public interface CodingcontestPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ENTRY__CODERS = eINSTANCE.getEntry_Coders();
+		EReference TEAM__CODERS = eINSTANCE.getTeam_Coders();
 
 		/**
 		 * The meta object literal for the '<em><b>Location</b></em>' reference feature.
@@ -1061,15 +1061,15 @@ public interface CodingcontestPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ENTRY__LOCATION = eINSTANCE.getEntry_Location();
+		EReference TEAM__LOCATION = eINSTANCE.getTeam_Location();
 
 		/**
-		 * The meta object literal for the '<em><b>Team Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ENTRY__TEAM_NAME = eINSTANCE.getEntry_TeamName();
+		EAttribute TEAM__NAME = eINSTANCE.getTeam_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Language</b></em>' attribute feature.
@@ -1077,7 +1077,7 @@ public interface CodingcontestPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ENTRY__LANGUAGE = eINSTANCE.getEntry_Language();
+		EAttribute TEAM__LANGUAGE = eINSTANCE.getTeam_Language();
 
 		/**
 		 * The meta object literal for the '{@link net.feichti.codingcontest.impl.OrganizerImpl <em>Organizer</em>}' class.

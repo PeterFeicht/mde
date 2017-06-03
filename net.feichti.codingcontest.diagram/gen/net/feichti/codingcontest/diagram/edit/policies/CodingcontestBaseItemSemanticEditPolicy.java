@@ -33,10 +33,10 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.SetRequest;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.edit.helpers.GeneratedEditHelperBase;
 
-import net.feichti.codingcontest.Entry;
 import net.feichti.codingcontest.Level;
 import net.feichti.codingcontest.Location;
 import net.feichti.codingcontest.Problem;
+import net.feichti.codingcontest.Team;
 import net.feichti.codingcontest.diagram.part.CodingcontestDiagramEditorPlugin;
 import net.feichti.codingcontest.diagram.part.CodingcontestVisualIDRegistry;
 import net.feichti.codingcontest.diagram.providers.CodingcontestElementTypes;
@@ -317,21 +317,21 @@ public class CodingcontestBaseItemSemanticEditPolicy extends SemanticEditPolicy
 		}
 		
 		/**
-		 * @generated
-		 */
-		public boolean canCreateEntryLocation_4002(Entry source, Location target) {
+		* @generated
+		*/
+		public boolean canCreateTeamLocation_4003(Team source, Location target) {
 			if(source != null) {
 				if(source.getLocation() != null) {
 					return false;
 				}
 			}
 			
-			return canExistEntryLocation_4002(source, target);
+			return canExistTeamLocation_4003(source, target);
 		}
 		
 		/**
-		* @generated
-		*/
+			* @generated
+			*/
 		public boolean canExistLanguageToProblemMap_4001(Map.Entry linkInstance, Level source, Problem target) {
 			return true;
 		}
@@ -339,7 +339,7 @@ public class CodingcontestBaseItemSemanticEditPolicy extends SemanticEditPolicy
 		/**
 		* @generated
 		*/
-		public boolean canExistEntryLocation_4002(Entry source, Location target) {
+		public boolean canExistTeamLocation_4003(Team source, Location target) {
 			return true;
 		}
 	}
