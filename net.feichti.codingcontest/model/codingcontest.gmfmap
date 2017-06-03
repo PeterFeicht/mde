@@ -75,22 +75,22 @@
         href="codingcontest.ecore#//Contest/entries"/>
     <ownedChild>
       <domainMetaElement
-          href="codingcontest.ecore#//Entry"/>
+          href="codingcontest.ecore#//Team"/>
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
-            href="codingcontest.gmfgraph#EntryTeamName"/>
+            href="codingcontest.gmfgraph#TeamName"/>
         <features
-            href="codingcontest.ecore#//Entry/teamName"/>
+            href="codingcontest.ecore#//Team/name"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
           href="codingcontest.gmftool#//@palette/@tools.0/@tools.4"/>
       <diagramNode
-          href="codingcontest.gmfgraph#Entry"/>
+          href="codingcontest.gmfgraph#Team"/>
       <children>
         <containmentFeature
-            href="codingcontest.ecore#//Entry/coders"/>
+            href="codingcontest.ecore#//Team/coders"/>
         <ownedChild>
           <domainMetaElement
               href="codingcontest.ecore#//Coder"/>
@@ -156,10 +156,10 @@
         xsi:type="gmftool:CreationTool"
         href="codingcontest.gmftool#//@palette/@tools.1/@tools.1"/>
     <diagramLink
-        href="codingcontest.gmfgraph#EntryLocation"/>
+        href="codingcontest.gmfgraph#TeamLocation"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
-        href="codingcontest.ecore#//Entry/location"/>
+        href="codingcontest.ecore#//Team/location"/>
   </links>
   <diagram>
     <diagramCanvas

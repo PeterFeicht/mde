@@ -26,9 +26,9 @@ context Location
 	inv HasAddress: address.size() > 0
 	inv HasCountry: country.size() > 0
 
-context Entry
+context Team
 	
-	inv HasTeamName: teamName.size() > 0
+	inv HasTeamName: name.size() > 0
 
 context Coder
 	

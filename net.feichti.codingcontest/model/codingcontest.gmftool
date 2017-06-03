@@ -49,8 +49,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Entry"
-          description="Create new Entry">
+          title="Team"
+          description="Create new Team">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -81,8 +81,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Entry Location"
-          description="Create new reference from an entry to its location">
+          title="Team Location"
+          description="Create new reference from a team to its location">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
