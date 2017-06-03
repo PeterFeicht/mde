@@ -50,7 +50,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="entries" ordered="false"
-        upperBound="-1" eType="#//Entry" containment="true" resolveProxies="false">
+        upperBound="-1" eType="#//Team" containment="true" resolveProxies="false">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Teams competing in this contest."/>
       </eAnnotations>
@@ -79,7 +79,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Entry">
+  <eClassifiers xsi:type="ecore:EClass" name="Team">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore"/>
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Represents a team competing in a coding contest."/>
@@ -92,8 +92,8 @@
         <details key="documentation" value="The location this team is competing at, {@code null} indicates an online entry."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="teamName" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="language" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Language">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The preferred language for problem descriptions."/>

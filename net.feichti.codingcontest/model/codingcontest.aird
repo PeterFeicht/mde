@@ -493,9 +493,9 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_BYwm4BbMEeetQ8ph5WUFjA" name="Entry" tooltipText="" outgoingEdges="_ElwHUBbMEeetQ8ph5WUFjA _KFuXABbMEeetQ8ph5WUFjA" incomingEdges="_G8RSwBbMEeetQ8ph5WUFjA" width="12" height="10">
-      <target xmi:type="ecore:EClass" href="codingcontest.ecore#//Entry"/>
-      <semanticElements xmi:type="ecore:EClass" href="codingcontest.ecore#//Entry"/>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_BYwm4BbMEeetQ8ph5WUFjA" name="Team" tooltipText="" outgoingEdges="_ElwHUBbMEeetQ8ph5WUFjA _KFuXABbMEeetQ8ph5WUFjA" incomingEdges="_G8RSwBbMEeetQ8ph5WUFjA" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="codingcontest.ecore#//Team"/>
+      <semanticElements xmi:type="ecore:EClass" href="codingcontest.ecore#//Team"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -503,17 +503,17 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_jjIJABbNEeetQ8ph5WUFjA" name="teamName : EString" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="codingcontest.ecore#//Entry/teamName"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="codingcontest.ecore#//Entry/teamName"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_jjIJABbNEeetQ8ph5WUFjA" name="name : EString" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="codingcontest.ecore#//Team/name"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="codingcontest.ecore#//Team/name"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_3_MzUBk4EeeSwdcluChfiQ" labelAlignment="LEFT" description="_yFRLgBk4EeeSwdcluChfiQ">
           <labelFormat>bold</labelFormat>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
       <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_8GZmUBbUEeetQ8ph5WUFjA" name="language : Language" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="codingcontest.ecore#//Entry/language"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="codingcontest.ecore#//Entry/language"/>
+        <target xmi:type="ecore:EAttribute" href="codingcontest.ecore#//Team/language"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="codingcontest.ecore#//Team/language"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_9SlsoBbUEeetQ8ph5WUFjA" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
@@ -521,8 +521,8 @@
       </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_ElwHUBbMEeetQ8ph5WUFjA" name="[1..3] coders" sourceNode="_BYwm4BbMEeetQ8ph5WUFjA" targetNode="_axkwoBbJEeetQ8ph5WUFjA">
-      <target xmi:type="ecore:EReference" href="codingcontest.ecore#//Entry/coders"/>
-      <semanticElements xmi:type="ecore:EReference" href="codingcontest.ecore#//Entry/coders"/>
+      <target xmi:type="ecore:EReference" href="codingcontest.ecore#//Team/coders"/>
+      <semanticElements xmi:type="ecore:EReference" href="codingcontest.ecore#//Team/coders"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_mTM_4Be9EeeJHLtO5MKs4A" description="_rkE18Bb0EeetQ8ph5WUFjA" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_mTM_4Re9EeeJHLtO5MKs4A" showIcon="false">
           <labelFormat>bold</labelFormat>
@@ -541,8 +541,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_KFuXABbMEeetQ8ph5WUFjA" name="[0..1] location" sourceNode="_BYwm4BbMEeetQ8ph5WUFjA" targetNode="_XXVMcBbLEeetQ8ph5WUFjA">
-      <target xmi:type="ecore:EReference" href="codingcontest.ecore#//Entry/location"/>
-      <semanticElements xmi:type="ecore:EReference" href="codingcontest.ecore#//Entry/location"/>
+      <target xmi:type="ecore:EReference" href="codingcontest.ecore#//Team/location"/>
+      <semanticElements xmi:type="ecore:EReference" href="codingcontest.ecore#//Team/location"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_rkGEFhb0EeetQ8ph5WUFjA" routingStyle="manhattan" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_rkGEFxb0EeetQ8ph5WUFjA" showIcon="false"/>
