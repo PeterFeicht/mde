@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link at.jku.isse.mde.betting.manager.impl.WinLooseResultImpl#getIsDraw <em>Is Draw</em>}</li>
+ *   <li>{@link at.jku.isse.mde.betting.manager.impl.WinLooseResultImpl#isIsDraw <em>Is Draw</em>}</li>
  *   <li>{@link at.jku.isse.mde.betting.manager.impl.WinLooseResultImpl#getWinner <em>Winner</em>}</li>
  * </ul>
  *
@@ -30,24 +30,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class WinLooseResultImpl extends ResultImpl implements WinLooseResult
 {
 	/**
-	 * The default value of the '{@link #getIsDraw() <em>Is Draw</em>}' attribute.
+	 * The default value of the '{@link #isIsDraw() <em>Is Draw</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIsDraw()
+	 * @see #isIsDraw()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Boolean IS_DRAW_EDEFAULT = null;
+	protected static final boolean IS_DRAW_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #getIsDraw() <em>Is Draw</em>}' attribute.
+	 * The cached value of the '{@link #isIsDraw() <em>Is Draw</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIsDraw()
+	 * @see #isIsDraw()
 	 * @generated
 	 * @ordered
 	 */
-	protected Boolean isDraw = IS_DRAW_EDEFAULT;
+	protected boolean isDraw = IS_DRAW_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getWinner() <em>Winner</em>}' reference.
@@ -85,7 +85,7 @@ public class WinLooseResultImpl extends ResultImpl implements WinLooseResult
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Boolean getIsDraw()
+	public boolean isIsDraw()
 	{
 		return isDraw;
 	}
@@ -95,9 +95,9 @@ public class WinLooseResultImpl extends ResultImpl implements WinLooseResult
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIsDraw(Boolean newIsDraw)
+	public void setIsDraw(boolean newIsDraw)
 	{
-		Boolean oldIsDraw = isDraw;
+		boolean oldIsDraw = isDraw;
 		isDraw = newIsDraw;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ManagerPackage.WIN_LOOSE_RESULT__IS_DRAW, oldIsDraw, isDraw));
@@ -157,7 +157,7 @@ public class WinLooseResultImpl extends ResultImpl implements WinLooseResult
 		switch (featureID)
 		{
 			case ManagerPackage.WIN_LOOSE_RESULT__IS_DRAW:
-				return getIsDraw();
+				return isIsDraw();
 			case ManagerPackage.WIN_LOOSE_RESULT__WINNER:
 				if (resolve) return getWinner();
 				return basicGetWinner();
@@ -216,7 +216,7 @@ public class WinLooseResultImpl extends ResultImpl implements WinLooseResult
 		switch (featureID)
 		{
 			case ManagerPackage.WIN_LOOSE_RESULT__IS_DRAW:
-				return IS_DRAW_EDEFAULT == null ? isDraw != null : !IS_DRAW_EDEFAULT.equals(isDraw);
+				return isDraw != IS_DRAW_EDEFAULT;
 			case ManagerPackage.WIN_LOOSE_RESULT__WINNER:
 				return winner != null;
 		}

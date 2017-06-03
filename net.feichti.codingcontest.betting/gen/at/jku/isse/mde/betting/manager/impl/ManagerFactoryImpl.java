@@ -65,8 +65,8 @@ public class ManagerFactoryImpl extends EFactoryImpl implements ManagerFactory
 	{
 		switch (eClass.getClassifierID())
 		{
-			case ManagerPackage.MANAGER: return createManager();
 			case ManagerPackage.ID_ELEMENT: return createIdElement();
+			case ManagerPackage.MANAGER: return createManager();
 			case ManagerPackage.CATEGORY: return createCategory();
 			case ManagerPackage.GROUP: return createGroup();
 			case ManagerPackage.MATCH: return createMatch();
@@ -92,6 +92,8 @@ public class ManagerFactoryImpl extends EFactoryImpl implements ManagerFactory
 		{
 			case ManagerPackage.RESULT_TYPE:
 				return createResultTypeFromString(eDataType, initialValue);
+			case ManagerPackage.POSITION_BET_TYPE:
+				return createPositionBetTypeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -109,6 +111,8 @@ public class ManagerFactoryImpl extends EFactoryImpl implements ManagerFactory
 		{
 			case ManagerPackage.RESULT_TYPE:
 				return convertResultTypeToString(eDataType, instanceValue);
+			case ManagerPackage.POSITION_BET_TYPE:
+				return convertPositionBetTypeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -242,6 +246,28 @@ public class ManagerFactoryImpl extends EFactoryImpl implements ManagerFactory
 	 * @generated
 	 */
 	public String convertResultTypeToString(EDataType eDataType, Object instanceValue)
+	{
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PositionBetType createPositionBetTypeFromString(EDataType eDataType, String initialValue)
+	{
+		PositionBetType result = PositionBetType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertPositionBetTypeToString(EDataType eDataType, Object instanceValue)
 	{
 		return instanceValue == null ? null : instanceValue.toString();
 	}

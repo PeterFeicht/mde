@@ -2,6 +2,8 @@
  */
 package at.jku.isse.mde.betting.manager;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -19,10 +21,11 @@ package at.jku.isse.mde.betting.manager;
  *   <li>{@link at.jku.isse.mde.betting.manager.User#getEmail <em>Email</em>}</li>
  *   <li>{@link at.jku.isse.mde.betting.manager.User#getPassword <em>Password</em>}</li>
  *   <li>{@link at.jku.isse.mde.betting.manager.User#getBalance <em>Balance</em>}</li>
+ *   <li>{@link at.jku.isse.mde.betting.manager.User#getBets <em>Bets</em>}</li>
  * </ul>
  *
  * @see at.jku.isse.mde.betting.manager.ManagerPackage#getUser()
- * @model annotation="http://oracle.com/javax/persistence/Table uniqueConstraints='@UniqueConstraint(columnNames = \'email\')'"
+ * @model annotation="Table uniqueConstraints='@UniqueConstraint(columnNames = \'email\')'"
  * @generated
  */
 public interface User extends IdElement
@@ -86,12 +89,12 @@ public interface User extends IdElement
 	 *   has sufficient credit.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Balance</em>' attribute.
-	 * @see #setBalance(int)
+	 * @see #setBalance(double)
 	 * @see at.jku.isse.mde.betting.manager.ManagerPackage#getUser_Balance()
 	 * @model
 	 * @generated
 	 */
-	int getBalance();
+	double getBalance();
 
 	/**
 	 * Sets the value of the '{@link at.jku.isse.mde.betting.manager.User#getBalance <em>Balance</em>}' attribute.
@@ -101,6 +104,23 @@ public interface User extends IdElement
 	 * @see #getBalance()
 	 * @generated
 	 */
-	void setBalance(int value);
+	void setBalance(double value);
+
+	/**
+	 * Returns the value of the '<em><b>Bets</b></em>' reference list.
+	 * The list contents are of type {@link at.jku.isse.mde.betting.manager.Bet}.
+	 * It is bidirectional and its opposite is '{@link at.jku.isse.mde.betting.manager.Bet#getUser <em>User</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The bets placed by the user.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Bets</em>' reference list.
+	 * @see at.jku.isse.mde.betting.manager.ManagerPackage#getUser_Bets()
+	 * @see at.jku.isse.mde.betting.manager.Bet#getUser
+	 * @model opposite="user"
+	 * @generated
+	 */
+	EList<Bet> getBets();
 
 } // User

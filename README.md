@@ -14,4 +14,14 @@ A diagram editor for creating coding contest models is maintained on branch `gmf
 Tag `ue1` is what I handed in.
 
 # Exercise 2
-In exercise 2 I will develop model-to-model and model-to-text transformations for the coding contest model.
+In exercise 2 I developed model-to-model and model-to-text transformations for the coding contest model.
+
+Tag `ue2` is what I handed in.
+
+# Exercise 3
+In exercise 3 I developed a model validation script for the betting manager model.
+
+Tag `ue3` is what I handed in.
+
+# Exercise 4
+In this exercise I will evolve the coding contest model.

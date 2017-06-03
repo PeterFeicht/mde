@@ -1,0 +1,298 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[american]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[babel]{csquotes}
+\usepackage{lmodern}
+
+% Some geometry customization
+\usepackage[margin=2cm]{geometry}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em plus 1.5pt minus 1.5pt}
+\setlength{\headheight}{15pt}
+\setlength{\tabcolsep}{8pt}
+
+% Make enumerations a little more compact
+\usepackage{enumitem}
+\setlist{topsep=0pt, itemsep=2pt}
+\setlist[1]{labelindent=6pt}
+
+\usepackage[
+  pdflang=en,
+  colorlinks=true,
+  unicode=true,
+  pdfstartview=,
+  linkcolor=black,
+  filecolor=black,
+  menucolor=black,
+  urlcolor=black
+]{hyperref}
+\hypersetup{
+  pdftitle={Coding Contest: Hyperloop - Global Metro},
+  pdfauthor={Organized by Catalysts}
+}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+
+\begin{document}
+
+\title{Hyperloop - Global Metro}
+\author{Organized by \href{https://contest.catalysts.cc/}{Catalysts}}
+\date{Local date: Fri Mar 31 13:00:00 CEST 2017}
+\maketitle
+\vspace{1em}
+
+
+\section{Locations}
+
+This is a list of all physical locations the contest will be held at. In addition to that, online entries will be
+accepted also.
+
+\begin{description}
+  \item[Cluj, RO] Babes-Bolyai-University, Str. Teodor Mihali NR 58-60, Cluj-Napoca
+  \item[Den Haag, NL] Leiden University Campus The Hague, Turfmarkt 99, 2511 DP The Hague
+  \item[Johannesburg, ZA] Honours Laboratory E-Ring 212, APK Campus University of Johannesburg, Cnr. Kingsway and University Road Auckland Park
+  \item[Linz, AT] Johannes Kepler Universität, Altenberger Straße 69, 4040 Linz
+  \item[Wien, AT] Stadthalle, Friedrich-Schmidt-Platz 1, 1010 Wien
+\end{description}
+
+
+\section{Levels}
+
+The following sections will describe each level in detail.
+
+\subsection{Level 1 - Connection Time}
+
+\begin{description} % TODO Parse lists in the description to generate LaTeX lists
+  \item[en] \emph{Connection Time} --- 
+    Your task in this level is to estimate the travel time for a direct hyperloop
+    connection.
+    
+    The input consists of a file containing locations and a direct hyperloop
+    connection:
+    
+     * A location is a named (x, y) position on a map. The coordinates are in
+       meters.
+     * The hyperloop connection directly connects exactly two locations. There are
+       no intermediate stops.
+    
+    Some locations may be unused; just ignore them.
+    The distance between two locations is the ordinary (Cartesian) distance. That
+    is, the world is flat and there are no obstacles.
+    In our model, the hyperloop travels at a constant speed of 250 m/s and waits for
+    200 seconds at each stop. The hyperloop travel time includes the wait time at
+    the start location of the journey. The trip is over at the end location - no
+    more waiting time there.
+    You should output the hyperloop connection travel time (in seconds), rounded to
+    the nearest integer.
+  
+  \item[de] \emph{Verbindungszeit} --- 
+    Deine Aufgabe in diesem Level ist, die Reisezeit für eine direkte Hyperloop
+    Verbindung zu schätzen.
+    
+    Die Eingabe besteht aus einer Datei mit Orten von Haltestellen und einer
+    direkten Verbindung:
+    
+     * Eine Haltestelle ist eine Position (x, y) mit Namen auf einer Karte. Die
+       Koordinaten sind in Meter.
+     * Die Hyperloop-Verbindung verbindet zwei Haltestellen ohne Zwischenstop.
+    
+    Einige Haltestellen sind möglicherweise unbenutzt, diese können ignoriert
+    werden.
+    Die Strecke zwischen zwei Haltestellen ist die einfache Karthesische Entfernung.
+    Die Welt ist also flach und es gibt keine Hindernisse.
+    In unserem Modell fährt der Hyperloop mit konstanten 250 m/s und bleibt an jeder
+    Haltestelle 200 Sekunden stehen. Die Reisezeit enthält die Wartezeit an der
+    Starthaltestelle, die Reise ist an der Endhaltestelle vorbei, dort gibt es keine
+    Wartezeit mehr.
+    Es soll die Reisezeit für die Verbindung in Sekunden ausgegeben werden, gerundet
+    auf die nächste ganze Sekunde.
+  
+\end{description}
+
+\subsection{Level 2 - Journey Time}
+
+\begin{description} % TODO Parse lists in the description to generate LaTeX lists
+  \item[en] \emph{Journey Time} --- 
+    Your task in this level is to estimate the total duration of a journey which
+    uses a direct hyperloop connection.
+    The input now also includes a journey for a traveller wanting to get from a
+    start location to an end location.
+    You should output the duration of the journey (in seconds), rounded to the
+    nearest integer.
+    
+    A journey using the hyperloop is made up of 3 parts:
+    
+     1. Driving from the journey start location to the closest stop of the two
+        locations that make up the hyperloop connection
+     2. Travelling with the hyperloop in whichever direction is necessary
+     3. Driving from the other stop of the hyperloop connection to the journey end
+        location
+    
+    In our model, travellers drive at a constant 15 m/s. They are always able to
+    drive directly in a straight line to and from hyperloop locations.
+    It will never be faster to drive directly from the start to the end location
+    than to use the hyperloop.
+  
+  \item[de] \emph{Reisezeit} --- 
+    Deine Aufgabe in disem Level ist, die gesamte Reisezeit zu schätzen, wenn eine
+    direkte Verbindung mit dem Hyperloop benutzt wird.
+    Die Eingabe enthält jetzt auch eine gewünschte Reisestrecke vor der Hyperloop-
+    Verbindung.
+    Es soll die gesamte Reisezeit in Sekunden ausgegeben werden, gerundet auf die
+    nächste ganze Sekunde.
+    
+    Eine Reise mit dem Hyperloop besteht nun aus drei Teilen:
+    
+     1. Fahrt vom Startort zur nächsten Hyperloop Haltestelle
+     2. Fahr mit dem Hyperloop zur anderen Haltestelle
+     3. Fahrt von der Endhaltestelle zum Reiseziel
+    
+    In unserem Modell fahren die Reisenden mit konstanten 15 m/s, immer in einer
+    geraden Linie von einem Ort zu einer Haltestelle. Es ist nie schneller, direkt
+    ohne Hyperloop vom Start- zum Zielort zu fahren.
+  
+\end{description}
+
+\subsection{Level 3 - Connection Evaluation}
+
+\begin{description} % TODO Parse lists in the description to generate LaTeX lists
+  \item[en] \emph{Connection Evaluation} --- 
+    A hyperloop connection has been proposed. Your task is to help work out whether
+    this connection is worthwhile.
+    The input is similar to Level 2, except that many journeys are provided. In
+    addition, the time in seconds required to complete each journey using existing
+    transport options (the current time) is provided. The current time is always
+    shorter than the direct driving time, using our driving model.
+    Drivers are expected to switch to using the hyperloop line if it makes their
+    journey faster.
+    You should output the number of journeys for which the hyperloop journey is
+    faster than the current time.
+  
+  \item[de] \emph{Verbindung Bewerten} --- 
+    Es ist nun eine bestimmte Hyperloop-Verbindung vorgeschlagen worden. Deine
+    Aufgabe ist es festzustellen, ob sich diese Verbindung rentieren würde.
+    Die Eingabe ist ähnlich zum Level 2, mit dem Unterschied, dass jetzt eine
+    Vielzahl von Reisestrecken vorgegeben ist. Zusätzlich ist die Zeit abgegeben,
+    die ohne Hyperloop mit vorhandenen Transportmitteln für eine Reise benötigt
+    wird. Die aktuelle Zeit ist immer kürzer als eine direkte Fahrverbindung.
+    Fahrer werden natürlich den Hyperloop verwenden, falls das die Reisezeit
+    verkürzt.
+    Es soll jetzt die Anzahl der Reisestrecken ausgegeben werden, für die die
+    Reisezeit mit dem Hyperloop kürzer wird.
+  
+\end{description}
+
+\subsection{Level 4 - Connection Proposal}
+
+\begin{description} % TODO Parse lists in the description to generate LaTeX lists
+  \item[en] \emph{Connection Proposal} --- 
+    Now it is your turn to propose a direct hyperloop connection.
+    The input is similar to Level 3, but you won’t be given a hyperloop connection.
+    Instead you will be given a target number, N, of journeys to benefit from the
+    hyperloop.
+    You should output a hyperloop connection. Of the input journeys, at least N
+    must be faster using your hyperloop connection than currently. The hyperloop
+    journey time is given by the rules from Levels 1 and 2. There may be multiple
+    valid solutions, but you only need to find one.
+  
+  \item[de] \emph{Verbindung Vorschlagen} --- 
+    Nun ist es an dir, eine neue Hyperloop-Verbindung vorzuschlagen.
+    Die Eingabe ist ähnlich wie im Level 3, aber es ist keine Hyperloop-Verbindung
+    vorgegeben. Stattdessen ist eine Mindestanzahl N von Reisestrecken vorgegeben,
+    die mit der neuen Hyperloop-Verbindung schneller sein sollen als vorher.
+    Es soll jetzt die Hyperloop-Verbindung ausgegeben werden. Mit dieser Verbindung
+    müssen mindestens N Reisestrecken in kürzerer Zeit zu bewältigen sein. Es gibt
+    möglicherweise mehrere mögliche Verbindungen, es muss nur eine gefunden werden.
+  
+\end{description}
+
+
+\section{Teams}
+
+The following section lists all registered teams and their participants, grouped by their entry location.
+
+\subsection{Online Entries}
+
+\begin{description}
+  \item[Alessio]
+    Single entry (30 years old)
+  \item[Markus Zancolo]
+    Single entry (23 years old)
+  \item[DataVenture]
+    Team:
+    \begin{itemize}
+      \item \textbf{jjerphan} 
+      \item \textbf{Mathis Chenuet} 
+    \end{itemize}
+\end{description}
+
+\subsection{Linz}
+
+\begin{description}
+  \item[Trust us! We are engineers!]
+    Team:
+    \begin{itemize}
+      \item \textbf{Simon Lehner-Dittenberger} (27 years old)
+      \item \textbf{AwesomeDragon} (26 years old)
+    \end{itemize}
+  \item[Christian Bartsch]
+    Single entry (22 years old)
+\end{description}
+
+\subsection{Wien}
+
+\begin{description}
+  \item[die\_drei\_beiden]
+    Team:
+    \begin{itemize}
+      \item \textbf{anonym1} (18 years old)
+      \item \textbf{anonym2} (19 years old)
+      \item \textbf{anonym3} (20 years old)
+    \end{itemize}
+\end{description}
+
+\subsection{Johannesburg}
+
+\begin{description}
+  \item[mob\_justice]
+    Team:
+    \begin{itemize}
+      \item \textbf{dube} (18 years old)
+      \item \textbf{Thaps} (21 years old)
+    \end{itemize}
+\end{description}
+
+\subsection{Cluj}
+
+\begin{description}
+  \item[UBB\_Random]
+    Team:
+    \begin{itemize}
+      \item \textbf{Mihai Zsisku} (22 years old)
+      \item \textbf{Muntea Andrei-Marius} (21 years old)
+      \item \textbf{Sergiu-Catalin Maries} (22 years old)
+    \end{itemize}
+  \item[FastAndFourier]
+    Team:
+    \begin{itemize}
+      \item \textbf{Emanuel Truta} (19 years old)
+      \item \textbf{Lup Vasile} (21 years old)
+    \end{itemize}
+\end{description}
+
+\subsection{Den Haag}
+
+\begin{description}
+  \item[We're having a field day]
+    Team:
+    \begin{itemize}
+      \item \textbf{Daan van Gent} (24 years old)
+    \end{itemize}
+\end{description}
+
+
+\end{document}

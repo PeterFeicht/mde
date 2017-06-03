@@ -72,17 +72,18 @@ public class ManagerSwitch<T> extends Switch<T>
 	{
 		switch (classifierID)
 		{
-			case ManagerPackage.MANAGER:
-			{
-				Manager manager = (Manager)theEObject;
-				T result = caseManager(manager);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ManagerPackage.ID_ELEMENT:
 			{
 				IdElement idElement = (IdElement)theEObject;
 				T result = caseIdElement(idElement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ManagerPackage.MANAGER:
+			{
+				Manager manager = (Manager)theEObject;
+				T result = caseManager(manager);
+				if (result == null) result = caseIdElement(manager);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

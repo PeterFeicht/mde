@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ASCII"?>
+<mgr:Manager xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mgr="http://www.jku.at/isse/mde/betting/Manager.ecore" xsi:schemaLocation="http://www.jku.at/isse/mde/betting/Manager.ecore Manager.ecore">
+  <categories name="Coding Contests" sortRank="1">
+    <groups id="ccc20170331" title="Hyperloop - Global Metro" description="Organized by Catalysts" startDate="2017-03-31T13:00:00.000+0200" endDate="2017-03-31T13:00:00.000+0200">
+      <matches id="Online" title="Online Entries" resultType="Position" date="2017-03-31T13:00:00.000+0200">
+        <opponents reference="Markus Zancolo"/>
+        <opponents reference="Alessio"/>
+        <opponents reference="DataVenture"/>
+      </matches>
+      <matches id="Linz" title="Linz" resultType="Position" date="2017-03-31T13:00:00.000+0200">
+        <opponents reference="Christian Bartsch"/>
+        <opponents reference="Trust us! We are engineers!"/>
+      </matches>
+      <matches id="Wien" title="Wien" resultType="Position" date="2017-03-31T13:00:00.000+0200">
+        <opponents reference="die_drei_beiden"/>
+      </matches>
+      <matches id="Johannesburg" title="Johannesburg" resultType="Position" date="2017-03-31T13:00:00.000+0200">
+        <opponents reference="mob_justice"/>
+      </matches>
+      <matches id="Cluj" title="Cluj" resultType="Position" date="2017-03-31T13:00:00.000+0200">
+        <opponents reference="UBB_Random"/>
+        <opponents reference="FastAndFourier"/>
+      </matches>
+      <matches id="Den Haag" title="Den Haag" resultType="Position" date="2017-03-31T13:00:00.000+0200">
+        <opponents reference="We're having a field day"/>
+      </matches>
+    </groups>
+  </categories>
+</mgr:Manager>

@@ -27,7 +27,6 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-model-doc -->
  * @see at.jku.isse.mde.betting.manager.ManagerFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2004/EmfaticAnnotationMap table='http://oracle.com/javax/persistence/Table'"
  * @generated
  */
 public interface ManagerPackage extends EPackage
@@ -72,52 +71,7 @@ public interface ManagerPackage extends EPackage
 	 * @see at.jku.isse.mde.betting.manager.impl.ManagerPackageImpl#getManager()
 	 * @generated
 	 */
-	int MANAGER = 0;
-
-	/**
-	 * The feature id for the '<em><b>Categories</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MANAGER__CATEGORIES = 0;
-
-	/**
-	 * The feature id for the '<em><b>Bets</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MANAGER__BETS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Users</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MANAGER__USERS = 2;
-
-	/**
-	 * The number of structural features of the '<em>Manager</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MANAGER_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Manager</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MANAGER_OPERATION_COUNT = 0;
+	int MANAGER = 1;
 
 	/**
 	 * The meta object id for the '{@link at.jku.isse.mde.betting.manager.impl.IdElementImpl <em>Id Element</em>}' class.
@@ -127,7 +81,7 @@ public interface ManagerPackage extends EPackage
 	 * @see at.jku.isse.mde.betting.manager.impl.ManagerPackageImpl#getIdElement()
 	 * @generated
 	 */
-	int ID_ELEMENT = 1;
+	int ID_ELEMENT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -155,6 +109,60 @@ public interface ManagerPackage extends EPackage
 	 * @ordered
 	 */
 	int ID_ELEMENT_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANAGER__ID = ID_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Categories</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANAGER__CATEGORIES = ID_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Bets</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANAGER__BETS = ID_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Users</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANAGER__USERS = ID_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Manager</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANAGER_FEATURE_COUNT = ID_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Manager</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANAGER_OPERATION_COUNT = ID_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link at.jku.isse.mde.betting.manager.impl.CategoryImpl <em>Category</em>}' class.
@@ -606,13 +614,40 @@ public interface ManagerPackage extends EPackage
 	int BET__AMOUNT = ID_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BET__DATE = ID_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Payed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BET__PAYED = ID_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Position Bet Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BET__POSITION_BET_TYPE = ID_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
 	 * The feature id for the '<em><b>Bet On</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BET__BET_ON = ID_ELEMENT_FEATURE_COUNT + 1;
+	int BET__BET_ON = ID_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Expected Result</b></em>' containment reference.
@@ -621,7 +656,16 @@ public interface ManagerPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int BET__EXPECTED_RESULT = ID_ELEMENT_FEATURE_COUNT + 2;
+	int BET__EXPECTED_RESULT = ID_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>User</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BET__USER = ID_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Bet</em>' class.
@@ -630,7 +674,7 @@ public interface ManagerPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int BET_FEATURE_COUNT = ID_ELEMENT_FEATURE_COUNT + 3;
+	int BET_FEATURE_COUNT = ID_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Bet</em>' class.
@@ -688,13 +732,22 @@ public interface ManagerPackage extends EPackage
 	int USER__BALANCE = ID_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Bets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER__BETS = ID_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>User</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER_FEATURE_COUNT = ID_ELEMENT_FEATURE_COUNT + 3;
+	int USER_FEATURE_COUNT = ID_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>User</em>' class.
@@ -714,6 +767,17 @@ public interface ManagerPackage extends EPackage
 	 * @generated
 	 */
 	int RESULT_TYPE = 11;
+
+
+	/**
+	 * The meta object id for the '{@link at.jku.isse.mde.betting.manager.PositionBetType <em>Position Bet Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see at.jku.isse.mde.betting.manager.PositionBetType
+	 * @see at.jku.isse.mde.betting.manager.impl.ManagerPackageImpl#getPositionBetType()
+	 * @generated
+	 */
+	int POSITION_BET_TYPE = 12;
 
 
 	/**
@@ -1050,11 +1114,11 @@ public interface ManagerPackage extends EPackage
 	EClass getWinLooseResult();
 
 	/**
-	 * Returns the meta object for the attribute '{@link at.jku.isse.mde.betting.manager.WinLooseResult#getIsDraw <em>Is Draw</em>}'.
+	 * Returns the meta object for the attribute '{@link at.jku.isse.mde.betting.manager.WinLooseResult#isIsDraw <em>Is Draw</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Is Draw</em>'.
-	 * @see at.jku.isse.mde.betting.manager.WinLooseResult#getIsDraw()
+	 * @see at.jku.isse.mde.betting.manager.WinLooseResult#isIsDraw()
 	 * @see #getWinLooseResult()
 	 * @generated
 	 */
@@ -1114,6 +1178,39 @@ public interface ManagerPackage extends EPackage
 	EAttribute getBet_Amount();
 
 	/**
+	 * Returns the meta object for the attribute '{@link at.jku.isse.mde.betting.manager.Bet#getDate <em>Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Date</em>'.
+	 * @see at.jku.isse.mde.betting.manager.Bet#getDate()
+	 * @see #getBet()
+	 * @generated
+	 */
+	EAttribute getBet_Date();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.jku.isse.mde.betting.manager.Bet#isPayed <em>Payed</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Payed</em>'.
+	 * @see at.jku.isse.mde.betting.manager.Bet#isPayed()
+	 * @see #getBet()
+	 * @generated
+	 */
+	EAttribute getBet_Payed();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.jku.isse.mde.betting.manager.Bet#getPositionBetType <em>Position Bet Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Position Bet Type</em>'.
+	 * @see at.jku.isse.mde.betting.manager.Bet#getPositionBetType()
+	 * @see #getBet()
+	 * @generated
+	 */
+	EAttribute getBet_PositionBetType();
+
+	/**
 	 * Returns the meta object for the reference '{@link at.jku.isse.mde.betting.manager.Bet#getBetOn <em>Bet On</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1134,6 +1231,17 @@ public interface ManagerPackage extends EPackage
 	 * @generated
 	 */
 	EReference getBet_ExpectedResult();
+
+	/**
+	 * Returns the meta object for the reference '{@link at.jku.isse.mde.betting.manager.Bet#getUser <em>User</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>User</em>'.
+	 * @see at.jku.isse.mde.betting.manager.Bet#getUser()
+	 * @see #getBet()
+	 * @generated
+	 */
+	EReference getBet_User();
 
 	/**
 	 * Returns the meta object for class '{@link at.jku.isse.mde.betting.manager.User <em>User</em>}'.
@@ -1179,6 +1287,17 @@ public interface ManagerPackage extends EPackage
 	EAttribute getUser_Balance();
 
 	/**
+	 * Returns the meta object for the reference list '{@link at.jku.isse.mde.betting.manager.User#getBets <em>Bets</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Bets</em>'.
+	 * @see at.jku.isse.mde.betting.manager.User#getBets()
+	 * @see #getUser()
+	 * @generated
+	 */
+	EReference getUser_Bets();
+
+	/**
 	 * Returns the meta object for enum '{@link at.jku.isse.mde.betting.manager.ResultType <em>Result Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1187,6 +1306,16 @@ public interface ManagerPackage extends EPackage
 	 * @generated
 	 */
 	EEnum getResultType();
+
+	/**
+	 * Returns the meta object for enum '{@link at.jku.isse.mde.betting.manager.PositionBetType <em>Position Bet Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Position Bet Type</em>'.
+	 * @see at.jku.isse.mde.betting.manager.PositionBetType
+	 * @generated
+	 */
+	EEnum getPositionBetType();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1529,6 +1658,30 @@ public interface ManagerPackage extends EPackage
 		EAttribute BET__AMOUNT = eINSTANCE.getBet_Amount();
 
 		/**
+		 * The meta object literal for the '<em><b>Date</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BET__DATE = eINSTANCE.getBet_Date();
+
+		/**
+		 * The meta object literal for the '<em><b>Payed</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BET__PAYED = eINSTANCE.getBet_Payed();
+
+		/**
+		 * The meta object literal for the '<em><b>Position Bet Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BET__POSITION_BET_TYPE = eINSTANCE.getBet_PositionBetType();
+
+		/**
 		 * The meta object literal for the '<em><b>Bet On</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1543,6 +1696,14 @@ public interface ManagerPackage extends EPackage
 		 * @generated
 		 */
 		EReference BET__EXPECTED_RESULT = eINSTANCE.getBet_ExpectedResult();
+
+		/**
+		 * The meta object literal for the '<em><b>User</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BET__USER = eINSTANCE.getBet_User();
 
 		/**
 		 * The meta object literal for the '{@link at.jku.isse.mde.betting.manager.impl.UserImpl <em>User</em>}' class.
@@ -1579,6 +1740,14 @@ public interface ManagerPackage extends EPackage
 		EAttribute USER__BALANCE = eINSTANCE.getUser_Balance();
 
 		/**
+		 * The meta object literal for the '<em><b>Bets</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference USER__BETS = eINSTANCE.getUser_Bets();
+
+		/**
 		 * The meta object literal for the '{@link at.jku.isse.mde.betting.manager.ResultType <em>Result Type</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1587,6 +1756,16 @@ public interface ManagerPackage extends EPackage
 		 * @generated
 		 */
 		EEnum RESULT_TYPE = eINSTANCE.getResultType();
+
+		/**
+		 * The meta object literal for the '{@link at.jku.isse.mde.betting.manager.PositionBetType <em>Position Bet Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.jku.isse.mde.betting.manager.PositionBetType
+		 * @see at.jku.isse.mde.betting.manager.impl.ManagerPackageImpl#getPositionBetType()
+		 * @generated
+		 */
+		EEnum POSITION_BET_TYPE = eINSTANCE.getPositionBetType();
 
 	}
 
