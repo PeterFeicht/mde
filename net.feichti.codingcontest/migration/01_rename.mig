@@ -1,0 +1,18 @@
+/*
+ * Migrate models after Entry and teamName have been renamed to Team and name, respectively.
+ */
+
+retype Entry to Team
+
+migrate Entry {
+	migrated.name = original.teamName;
+}
+
+/**
+ * Save the new model manually with proper encoding.
+ */
+post Serialize {
+	var opts = new Map;
+	opts.put("ENCODING", "UTF-8");
+	migrated.resource.save(opts);
+}
