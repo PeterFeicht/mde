@@ -1,61 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<fcc:Contest xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fcc="http://www.feichti.net/codingcontest" id="ccc20170331" theme="Hyperloop - Global Metro" localDate="2017-03-31T13:00:00.000+0200">
+<fcc:Contest xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fcc="http://www.feichti.net/codingcontest" xmi:id="ccc20170331" id="ccc20170331" theme="Hyperloop - Global Metro" localDate="2017-03-31T13:00:00.000+0200">
   <locations name="Linz" address="Johannes Kepler Universität, Altenberger Straße 69, 4040 Linz" country="AT"/>
   <locations name="Wien" address="Stadthalle, Friedrich-Schmidt-Platz 1, 1010 Wien" country="AT"/>
   <locations name="Johannesburg" address="Honours Laboratory E-Ring 212, APK Campus University of Johannesburg, Cnr. Kingsway and University Road Auckland Park" country="ZA"/>
   <locations name="Cluj" address="Babes-Bolyai-University, Str. Teodor Mihali NR 58-60, Cluj-Napoca" country="RO"/>
   <locations name="Den Haag" address="Leiden University Campus The Hague, Turfmarkt 99, 2511 DP The Hague" country="NL"/>
-  <levels number="1" title="Connection Time">
+  <levels xmi:id="1" number="1" title="Connection Time">
     <problems key="en" value="//@problems.0"/>
     <problems key="de" value="//@problems.4"/>
   </levels>
-  <levels number="2" title="Journey Time">
+  <levels xmi:id="2" number="2" title="Journey Time">
     <problems key="en" value="//@problems.1"/>
     <problems key="de" value="//@problems.5"/>
   </levels>
-  <levels number="3" title="Connection Evaluation">
+  <levels xmi:id="3" number="3" title="Connection Evaluation">
     <problems key="en" value="//@problems.2"/>
     <problems key="de" value="//@problems.6"/>
   </levels>
-  <levels number="4" title="Connection Proposal">
+  <levels xmi:id="4" number="4" title="Connection Proposal">
     <problems key="en" value="//@problems.3"/>
     <problems key="de" value="//@problems.7"/>
   </levels>
-  <entries location="//@locations.0" teamName="Christian Bartsch" language="de">
+  <entries location="//@locations.0" name="Christian Bartsch" language="de">
     <coders name="Christian Bartsch" age="22" category="STUDENT"/>
   </entries>
-  <entries location="//@locations.0" teamName="Trust us! We are engineers!" language="en">
+  <entries location="//@locations.0" name="Trust us! We are engineers!" language="en">
     <coders name="Simon Lehner-Dittenberger" age="27" category="PROFESSIONAL"/>
     <coders name="AwesomeDragon" age="26" category="STUDENT"/>
   </entries>
-  <entries location="//@locations.1" teamName="die_drei_beiden" language="de">
+  <entries location="//@locations.1" name="die_drei_beiden" language="de">
     <coders name="anonym1" age="18"/>
     <coders name="anonym2" age="19"/>
     <coders name="anonym3" age="20"/>
   </entries>
-  <entries location="//@locations.2" teamName="mob_justice" language="en">
+  <entries location="//@locations.2" name="mob_justice" language="en">
     <coders name="dube" age="18" category="STUDENT"/>
     <coders name="Thaps" age="21" category="STUDENT"/>
   </entries>
-  <entries location="//@locations.4" teamName="We're having a field day" language="en">
+  <entries location="//@locations.4" name="We're having a field day" language="en">
     <coders name="Daan van Gent" age="24" category="PROFESSIONAL"/>
   </entries>
-  <entries location="//@locations.3" teamName="UBB_Random">
+  <entries location="//@locations.3" name="UBB_Random">
     <coders name="Mihai Zsisku" age="22" category="STUDENT"/>
     <coders name="Muntea Andrei-Marius" age="21" category="STUDENT"/>
     <coders name="Sergiu-Catalin Maries" age="22" category="STUDENT"/>
   </entries>
-  <entries location="//@locations.3" teamName="FastAndFourier">
+  <entries location="//@locations.3" name="FastAndFourier">
     <coders name="Emanuel Truta" age="19" category="STUDENT"/>
     <coders name="Lup Vasile" age="21" category="STUDENT"/>
   </entries>
-  <entries teamName="Markus Zancolo" language="de">
+  <entries name="Markus Zancolo" language="de">
     <coders name="Markus Zancolo" age="23" category="STUDENT"/>
   </entries>
-  <entries teamName="Alessio" language="en">
+  <entries name="Alessio" language="en">
     <coders name="Alessio" age="30"/>
   </entries>
-  <entries teamName="DataVenture">
+  <entries name="DataVenture">
     <coders name="jjerphan"/>
     <coders name="Mathis Chenuet"/>
   </entries>
