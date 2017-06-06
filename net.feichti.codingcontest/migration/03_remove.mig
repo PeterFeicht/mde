@@ -1,0 +1,12 @@
+/*
+ * Migrate models after removing attribute category and enum Category.
+ */
+
+/**
+ * Save the new model manually with proper encoding.
+ */
+post Serialize {
+	var opts = new Map;
+	opts.put("ENCODING", "UTF-8");
+	migrated.resource.save(opts);
+}

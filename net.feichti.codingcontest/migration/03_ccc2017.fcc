@@ -22,11 +22,11 @@
     <problems key="de" value="//@problems.7"/>
   </levels>
   <entries location="//@locations.0" name="Christian Bartsch" language="de">
-    <coders name="Christian Bartsch" age="22"/>
+    <coders name="Christian Bartsch" age="22" category="STUDENT"/>
   </entries>
   <entries location="//@locations.0" name="Trust us! We are engineers!" language="en">
-    <coders name="Simon Lehner-Dittenberger" age="27"/>
-    <coders name="AwesomeDragon" age="26"/>
+    <coders name="Simon Lehner-Dittenberger" age="27" category="PROFESSIONAL"/>
+    <coders name="AwesomeDragon" age="26" category="STUDENT"/>
   </entries>
   <entries location="//@locations.1" name="die_drei_beiden" language="de">
     <coders name="anonym1" age="18"/>
@@ -34,23 +34,23 @@
     <coders name="anonym3" age="20"/>
   </entries>
   <entries location="//@locations.2" name="mob_justice" language="en">
-    <coders name="dube" age="18"/>
-    <coders name="Thaps" age="21"/>
+    <coders name="dube" age="18" category="STUDENT"/>
+    <coders name="Thaps" age="21" category="STUDENT"/>
   </entries>
   <entries location="//@locations.4" name="We're having a field day" language="en">
-    <coders name="Daan van Gent" age="24"/>
+    <coders name="Daan van Gent" age="24" category="PROFESSIONAL"/>
   </entries>
   <entries location="//@locations.3" name="UBB_Random">
-    <coders name="Mihai Zsisku" age="22"/>
-    <coders name="Muntea Andrei-Marius" age="21"/>
-    <coders name="Sergiu-Catalin Maries" age="22"/>
+    <coders name="Mihai Zsisku" age="22" category="STUDENT"/>
+    <coders name="Muntea Andrei-Marius" age="21" category="STUDENT"/>
+    <coders name="Sergiu-Catalin Maries" age="22" category="STUDENT"/>
   </entries>
   <entries location="//@locations.3" name="FastAndFourier">
-    <coders name="Emanuel Truta" age="19"/>
-    <coders name="Lup Vasile" age="21"/>
+    <coders name="Emanuel Truta" age="19" category="STUDENT"/>
+    <coders name="Lup Vasile" age="21" category="STUDENT"/>
   </entries>
   <entries name="Markus Zancolo" language="de">
-    <coders name="Markus Zancolo" age="23"/>
+    <coders name="Markus Zancolo" age="23" category="STUDENT"/>
   </entries>
   <entries name="Alessio" language="en">
     <coders name="Alessio" age="30"/>
