@@ -68,11 +68,12 @@ public class CodingcontestDiagramUpdater
 				continue;
 			}
 		}
-		{
-			Organizer childElement = modelElement.getOrganizer();
+		for(Iterator<?> it = modelElement.getOrganizer().iterator(); it.hasNext();) {
+			Organizer childElement = (Organizer) it.next();
 			int visualID = CodingcontestVisualIDRegistry.getNodeVisualID(view, childElement);
 			if(visualID == OrganizerEditPart.VISUAL_ID) {
 				result.add(new CodingcontestNodeDescriptor(childElement, visualID));
+				continue;
 			}
 		}
 		for(Iterator<?> it = modelElement.getLocations().iterator(); it.hasNext();) {

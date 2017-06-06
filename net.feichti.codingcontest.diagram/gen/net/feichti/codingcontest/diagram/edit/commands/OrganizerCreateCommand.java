@@ -45,10 +45,6 @@ public class OrganizerCreateCommand extends EditElementCommand
 	* @generated
 	*/
 	public boolean canExecute() {
-		Contest container = (Contest) getElementToEdit();
-		if(container.getOrganizer() != null) {
-			return false;
-		}
 		return true;
 		
 	}
@@ -60,7 +56,7 @@ public class OrganizerCreateCommand extends EditElementCommand
 		Organizer newElement = CodingcontestFactory.eINSTANCE.createOrganizer();
 		
 		Contest owner = (Contest) getElementToEdit();
-		owner.setOrganizer(newElement);
+		owner.getOrganizer().add(newElement);
 		
 		doConfigure(newElement, monitor, info);
 		

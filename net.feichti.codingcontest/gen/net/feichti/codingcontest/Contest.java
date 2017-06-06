@@ -134,30 +134,20 @@ public interface Contest extends EObject
 	EList<Team> getEntries();
 
 	/**
-	 * Returns the value of the '<em><b>Organizer</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Organizer</b></em>' containment reference list.
+	 * The list contents are of type {@link net.feichti.codingcontest.Organizer}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Organizer</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Organizer</em>' containment reference.
-	 * @see #setOrganizer(Organizer)
+	 * @return the value of the '<em>Organizer</em>' containment reference list.
 	 * @see net.feichti.codingcontest.CodingcontestPackage#getContest_Organizer()
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
-	Organizer getOrganizer();
-
-	/**
-	 * Sets the value of the '{@link net.feichti.codingcontest.Contest#getOrganizer <em>Organizer</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Organizer</em>' containment reference.
-	 * @see #getOrganizer()
-	 * @generated
-	 */
-	void setOrganizer(Organizer value);
+	EList<Organizer> getOrganizer();
 
 	/**
 	 * Returns the value of the '<em><b>Problems</b></em>' containment reference list.

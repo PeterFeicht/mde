@@ -149,7 +149,7 @@ public interface CodingcontestPackage extends EPackage
 	int CONTEST__ENTRIES = 4;
 
 	/**
-	 * The feature id for the '<em><b>Organizer</b></em>' containment reference.
+	 * The feature id for the '<em><b>Organizer</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -549,10 +549,10 @@ public interface CodingcontestPackage extends EPackage
 	EReference getContest_Entries();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link net.feichti.codingcontest.Contest#getOrganizer <em>Organizer</em>}'.
+	 * Returns the meta object for the containment reference list '{@link net.feichti.codingcontest.Contest#getOrganizer <em>Organizer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Organizer</em>'.
+	 * @return the meta object for the containment reference list '<em>Organizer</em>'.
 	 * @see net.feichti.codingcontest.Contest#getOrganizer()
 	 * @see #getContest()
 	 * @generated
@@ -930,7 +930,7 @@ public interface CodingcontestPackage extends EPackage
 		EReference CONTEST__ENTRIES = eINSTANCE.getContest_Entries();
 
 		/**
-		 * The meta object literal for the '<em><b>Organizer</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Organizer</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

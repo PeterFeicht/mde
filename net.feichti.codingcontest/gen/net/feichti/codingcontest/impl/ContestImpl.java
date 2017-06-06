@@ -117,14 +117,14 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 	protected EList<Team> entries;
 
 	/**
-	 * The cached value of the '{@link #getOrganizer() <em>Organizer</em>}' containment reference.
+	 * The cached value of the '{@link #getOrganizer() <em>Organizer</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getOrganizer()
 	 * @generated
 	 * @ordered
 	 */
-	protected Organizer organizer;
+	protected EList<Organizer> organizer;
 
 	/**
 	 * The cached value of the '{@link #getProblems() <em>Problems</em>}' containment reference list.
@@ -250,47 +250,13 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Organizer getOrganizer()
+	public EList<Organizer> getOrganizer()
 	{
+		if (organizer == null)
+		{
+			organizer = new EObjectContainmentEList<Organizer>(Organizer.class, this, CodingcontestPackage.CONTEST__ORGANIZER);
+		}
 		return organizer;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetOrganizer(Organizer newOrganizer, NotificationChain msgs)
-	{
-		Organizer oldOrganizer = organizer;
-		organizer = newOrganizer;
-		if (eNotificationRequired())
-		{
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CodingcontestPackage.CONTEST__ORGANIZER, oldOrganizer, newOrganizer);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOrganizer(Organizer newOrganizer)
-	{
-		if (newOrganizer != organizer)
-		{
-			NotificationChain msgs = null;
-			if (organizer != null)
-				msgs = ((InternalEObject)organizer).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CodingcontestPackage.CONTEST__ORGANIZER, null, msgs);
-			if (newOrganizer != null)
-				msgs = ((InternalEObject)newOrganizer).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CodingcontestPackage.CONTEST__ORGANIZER, null, msgs);
-			msgs = basicSetOrganizer(newOrganizer, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CodingcontestPackage.CONTEST__ORGANIZER, newOrganizer, newOrganizer));
 	}
 
 	/**
@@ -324,7 +290,7 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 			case CodingcontestPackage.CONTEST__ENTRIES:
 				return ((InternalEList<?>)getEntries()).basicRemove(otherEnd, msgs);
 			case CodingcontestPackage.CONTEST__ORGANIZER:
-				return basicSetOrganizer(null, msgs);
+				return ((InternalEList<?>)getOrganizer()).basicRemove(otherEnd, msgs);
 			case CodingcontestPackage.CONTEST__PROBLEMS:
 				return ((InternalEList<?>)getProblems()).basicRemove(otherEnd, msgs);
 		}
@@ -389,7 +355,8 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 				getEntries().addAll((Collection<? extends Team>)newValue);
 				return;
 			case CodingcontestPackage.CONTEST__ORGANIZER:
-				setOrganizer((Organizer)newValue);
+				getOrganizer().clear();
+				getOrganizer().addAll((Collection<? extends Organizer>)newValue);
 				return;
 			case CodingcontestPackage.CONTEST__PROBLEMS:
 				getProblems().clear();
@@ -425,7 +392,7 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 				getEntries().clear();
 				return;
 			case CodingcontestPackage.CONTEST__ORGANIZER:
-				setOrganizer((Organizer)null);
+				getOrganizer().clear();
 				return;
 			case CodingcontestPackage.CONTEST__PROBLEMS:
 				getProblems().clear();
@@ -455,7 +422,7 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 			case CodingcontestPackage.CONTEST__ENTRIES:
 				return entries != null && !entries.isEmpty();
 			case CodingcontestPackage.CONTEST__ORGANIZER:
-				return organizer != null;
+				return organizer != null && !organizer.isEmpty();
 			case CodingcontestPackage.CONTEST__PROBLEMS:
 				return problems != null && !problems.isEmpty();
 		}
