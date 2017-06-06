@@ -136,9 +136,9 @@ The following section lists all registered teams and their participants, grouped
 	}
 %]
 [% @template
-operation Entry toItem() { %]
-\item[[%=self.teamName.escape()%]]
-[% if(self.coders.size() > 1 or self.coders.first.name <> self.teamName) { %]
+operation Team toItem() { %]
+\item[[%=self.name.escape()%]]
+[% if(self.coders.size() > 1 or self.coders.first.name <> self.name) { %]
   Team:
   \begin{itemize}
   [% for(coder in self.coders) { %]

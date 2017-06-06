@@ -42,10 +42,10 @@ rule LocationToMatch
 		match.group ::= loc.eContainer();
 	}
 
-rule EntryToOpponent
-	transform team : codingcontest!Entry
+rule TeamToOpponent
+	transform team : codingcontest!Team
 	to opp : manager!Opponent {
-		opp.reference = team.teamName;
+		opp.reference = team.name;
 		if(team.location.isUndefined()) {
 			team.eContainer().equivalent().matches.first().opponents.add(opp);
 		} else {
