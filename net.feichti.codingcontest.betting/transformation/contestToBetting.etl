@@ -18,8 +18,6 @@ rule ContestToGroup
 		}
 		grp.title = cc.theme;
 		grp.description = "Organized by " + cc.organizer.name;
-		grp.startDate = cc.localDate;
-		grp.endDate = cc.localDate;
 		
 		grp.category = cat;
 		
@@ -27,7 +25,8 @@ rule ContestToGroup
 		online.id = "Online";
 		online.title = "Online Entries";
 		online.resultType = manager!ResultType#Position;
-		online.date = cc.localDate;
+		// TODO Determine date for inline entries
+		//online.date = cc.localDate;
 		grp.matches.add(online);
 	}
 
@@ -38,7 +37,7 @@ rule LocationToMatch
 		match.title = loc.name;
 		match.resultType = manager!ResultType#Position;
 		
-		match.date = loc.eContainer().localDate;
+		match.date = loc.localDate;
 		match.group ::= loc.eContainer();
 	}
 

@@ -49,7 +49,6 @@
 
 \title{[%=cc.theme%]}
 \author{Organized by \href{[%=cc.organizer.website%]}{[%=cc.organizer.name%]}}
-\date{Local date: [%=cc.localDate%]}
 \maketitle
 \vspace{1em}
 
@@ -61,7 +60,7 @@ accepted also.
 
 \begin{description}
 [% for(loc in cc.locations.asSequence().sortBy(it | it.name)) { %]
-  \item[[%=loc.name%], [%=loc.country%]] [%=loc.address%]
+  \item[[%=loc.name%], [%=loc.country%]] [%=loc.address%] ([%=loc.localDate%] local time)
 [% } %]
 \end{description}
 
