@@ -100,10 +100,6 @@
               <styles xmi:type="notation:FontStyle" xmi:id="_o25y8RbREeetQ8ph5WUFjA" fontColor="2697711" fontName="Sans" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_o25y8hbREeetQ8ph5WUFjA"/>
             </children>
-            <children xmi:type="notation:Node" xmi:id="_2eo4IBbKEeetQ8ph5WUFjA" type="3010" element="_2eixgBbKEeetQ8ph5WUFjA">
-              <styles xmi:type="notation:FontStyle" xmi:id="_2eo4IRbKEeetQ8ph5WUFjA" fontColor="2697711" fontName="Sans" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_2eo4IhbKEeetQ8ph5WUFjA"/>
-            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_0mJsghbKEeetQ8ph5WUFjA"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_0mJsgxbKEeetQ8ph5WUFjA"/>
           </children>
@@ -124,6 +120,10 @@
             <children xmi:type="notation:Node" xmi:id="_eEPwYBbLEeetQ8ph5WUFjA" type="3010" element="_eEKQ0BbLEeetQ8ph5WUFjA">
               <styles xmi:type="notation:FontStyle" xmi:id="_eEPwYRbLEeetQ8ph5WUFjA" fontColor="2697711" fontName="Sans" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_eEPwYhbLEeetQ8ph5WUFjA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_x1rZcEqSEeeqU8RYObkFIw" type="3010" element="_2eixgBbKEeetQ8ph5WUFjA">
+              <styles xmi:type="notation:FontStyle" xmi:id="_x1rZcUqSEeeqU8RYObkFIw" fontName="Sans" fontHeight="8" bold="true"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_x1rZckqSEeeqU8RYObkFIw"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_XXchMRbLEeetQ8ph5WUFjA"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_XXchMhbLEeetQ8ph5WUFjA"/>
@@ -449,14 +449,6 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_2eixgBbKEeetQ8ph5WUFjA" name="localDate : EDate" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="codingcontest.ecore#//Contest/localDate"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="codingcontest.ecore#//Contest/localDate"/>
-        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_6IgpMBk4EeeSwdcluChfiQ" labelAlignment="LEFT" description="_yFRLgBk4EeeSwdcluChfiQ">
-          <labelFormat>bold</labelFormat>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
-      </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_XXVMcBbLEeetQ8ph5WUFjA" name="Location" tooltipText="" incomingEdges="_KFuXABbMEeetQ8ph5WUFjA _ujhyABbmEeetQ8ph5WUFjA" width="12" height="10">
       <target xmi:type="ecore:EClass" href="codingcontest.ecore#//Location"/>
@@ -488,6 +480,14 @@
         <target xmi:type="ecore:EAttribute" href="codingcontest.ecore#//Location/country"/>
         <semanticElements xmi:type="ecore:EAttribute" href="codingcontest.ecore#//Location/country"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_7wZ0EBk4EeeSwdcluChfiQ" labelAlignment="LEFT" description="_yFRLgBk4EeeSwdcluChfiQ">
+          <labelFormat>bold</labelFormat>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_2eixgBbKEeetQ8ph5WUFjA" name="localDate : EDate" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="codingcontest.ecore#//Location/localDate"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="codingcontest.ecore#//Location/localDate"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_6IgpMBk4EeeSwdcluChfiQ" labelAlignment="LEFT" description="_yFRLgBk4EeeSwdcluChfiQ">
           <labelFormat>bold</labelFormat>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>

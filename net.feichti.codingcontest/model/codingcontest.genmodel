@@ -23,7 +23,6 @@
     <genClasses ecoreClass="codingcontest.ecore#//Contest">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute codingcontest.ecore#//Contest/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute codingcontest.ecore#//Contest/theme"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute codingcontest.ecore#//Contest/localDate"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference codingcontest.ecore#//Contest/locations"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference codingcontest.ecore#//Contest/levels"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference codingcontest.ecore#//Contest/entries"/>
@@ -34,6 +33,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute codingcontest.ecore#//Location/name"/>
       <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute codingcontest.ecore#//Location/address"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute codingcontest.ecore#//Location/country"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute codingcontest.ecore#//Location/localDate"/>
     </genClasses>
     <genClasses ecoreClass="codingcontest.ecore#//Team">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference codingcontest.ecore#//Team/coders"/>
