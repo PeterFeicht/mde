@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fcc:Contest xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fcc="http://www.feichti.net/codingcontest" xmi:id="ccc20170331" id="ccc20170331" theme="Hyperloop - Global Metro" localDate="2017-03-31T13:00:00.000+0200">
+  <locations name="Linz" address="Johannes Kepler Universität, Altenberger Straße 69, 4040 Linz" country="AT"/>
+  <locations name="Wien" address="Stadthalle, Friedrich-Schmidt-Platz 1, 1010 Wien" country="AT"/>
+  <locations name="Johannesburg" address="Honours Laboratory E-Ring 212, APK Campus University of Johannesburg, Cnr. Kingsway and University Road Auckland Park" country="ZA"/>
+  <locations name="Cluj" address="Babes-Bolyai-University, Str. Teodor Mihali NR 58-60, Cluj-Napoca" country="RO"/>
+  <locations name="Den Haag" address="Leiden University Campus The Hague, Turfmarkt 99, 2511 DP The Hague" country="NL"/>
+  <levels xmi:id="1" number="1" title="Connection Time">
+    <problems key="en" value="//@problems.0"/>
+    <problems key="de" value="//@problems.4"/>
+  </levels>
+  <levels xmi:id="2" number="2" title="Journey Time">
+    <problems key="en" value="//@problems.1"/>
+    <problems key="de" value="//@problems.5"/>
+  </levels>
+  <levels xmi:id="3" number="3" title="Connection Evaluation">
+    <problems key="en" value="//@problems.2"/>
+    <problems key="de" value="//@problems.6"/>
+  </levels>
+  <levels xmi:id="4" number="4" title="Connection Proposal">
+    <problems key="en" value="//@problems.3"/>
+    <problems key="de" value="//@problems.7"/>
+  </levels>
+  <entries location="//@locations.0" name="Christian Bartsch" language="de">
+    <coders name="Christian Bartsch" age="22" category="STUDENT"/>
+  </entries>
+  <entries location="//@locations.0" name="Trust us! We are engineers!" language="en">
+    <coders name="Simon Lehner-Dittenberger" age="27" category="PROFESSIONAL"/>
+    <coders name="AwesomeDragon" age="26" category="STUDENT"/>
+  </entries>
+  <entries location="//@locations.1" name="die_drei_beiden" language="de">
+    <coders name="anonym1" age="18"/>
+    <coders name="anonym2" age="19"/>
+    <coders name="anonym3" age="20"/>
+  </entries>
+  <entries location="//@locations.2" name="mob_justice" language="en">
+    <coders name="dube" age="18" category="STUDENT"/>
+    <coders name="Thaps" age="21" category="STUDENT"/>
+  </entries>
+  <entries location="//@locations.4" name="We're having a field day" language="en">
+    <coders name="Daan van Gent" age="24" category="PROFESSIONAL"/>
+  </entries>
+  <entries location="//@locations.3" name="UBB_Random">
+    <coders name="Mihai Zsisku" age="22" category="STUDENT"/>
+    <coders name="Muntea Andrei-Marius" age="21" category="STUDENT"/>
+    <coders name="Sergiu-Catalin Maries" age="22" category="STUDENT"/>
+  </entries>
+  <entries location="//@locations.3" name="FastAndFourier">
+    <coders name="Emanuel Truta" age="19" category="STUDENT"/>
+    <coders name="Lup Vasile" age="21" category="STUDENT"/>
+  </entries>
+  <entries name="Markus Zancolo" language="de">
+    <coders name="Markus Zancolo" age="23" category="STUDENT"/>
+  </entries>
+  <entries name="Alessio" language="en">
+    <coders name="Alessio" age="30"/>
+  </entries>
+  <entries name="DataVenture">
+    <coders name="jjerphan"/>
+    <coders name="Mathis Chenuet"/>
+  </entries>
+  <organizer name="Catalysts" website="https://contest.catalysts.cc/"/>
+  <problems title="Connection Time" description="Your task in this level is to estimate the travel time for a direct hyperloop&#xA;connection.&#xA;&#xA;The input consists of a file containing locations and a direct hyperloop&#xA;connection:&#xA;&#xA; * A location is a named (x, y) position on a map. The coordinates are in&#xA;   meters.&#xA; * The hyperloop connection directly connects exactly two locations. There are&#xA;   no intermediate stops.&#xA;&#xA;Some locations may be unused; just ignore them.&#xA;The distance between two locations is the ordinary (Cartesian) distance. That&#xA;is, the world is flat and there are no obstacles.&#xA;In our model, the hyperloop travels at a constant speed of 250 m/s and waits for&#xA;200 seconds at each stop. The hyperloop travel time includes the wait time at&#xA;the start location of the journey. The trip is over at the end location - no&#xA;more waiting time there.&#xA;You should output the hyperloop connection travel time (in seconds), rounded to&#xA;the nearest integer." result=""/>
+  <problems title="Journey Time" description="Your task in this level is to estimate the total duration of a journey which&#xA;uses a direct hyperloop connection.&#xA;The input now also includes a journey for a traveller wanting to get from a&#xA;start location to an end location.&#xA;You should output the duration of the journey (in seconds), rounded to the&#xA;nearest integer.&#xA;&#xA;A journey using the hyperloop is made up of 3 parts:&#xA;&#xA; 1. Driving from the journey start location to the closest stop of the two&#xA;    locations that make up the hyperloop connection&#xA; 2. Travelling with the hyperloop in whichever direction is necessary&#xA; 3. Driving from the other stop of the hyperloop connection to the journey end&#xA;    location&#xA;&#xA;In our model, travellers drive at a constant 15 m/s. They are always able to&#xA;drive directly in a straight line to and from hyperloop locations.&#xA;It will never be faster to drive directly from the start to the end location&#xA;than to use the hyperloop."/>
+  <problems title="Connection Evaluation" description="A hyperloop connection has been proposed. Your task is to help work out whether&#xA;this connection is worthwhile.&#xA;The input is similar to Level 2, except that many journeys are provided. In&#xA;addition, the time in seconds required to complete each journey using existing&#xA;transport options (the current time) is provided. The current time is always&#xA;shorter than the direct driving time, using our driving model.&#xA;Drivers are expected to switch to using the hyperloop line if it makes their&#xA;journey faster.&#xA;You should output the number of journeys for which the hyperloop journey is&#xA;faster than the current time."/>
+  <problems title="Connection Proposal" description="Now it is your turn to propose a direct hyperloop connection.&#xA;The input is similar to Level 3, but you won’t be given a hyperloop connection.&#xA;Instead you will be given a target number, N, of journeys to benefit from the&#xA;hyperloop.&#xA;You should output a hyperloop connection. Of the input journeys, at least N&#xA;must be faster using your hyperloop connection than currently. The hyperloop&#xA;journey time is given by the rules from Levels 1 and 2. There may be multiple&#xA;valid solutions, but you only need to find one."/>
+  <problems title="Verbindungszeit" description="Deine Aufgabe in diesem Level ist, die Reisezeit für eine direkte Hyperloop&#xA;Verbindung zu schätzen.&#xA;&#xA;Die Eingabe besteht aus einer Datei mit Orten von Haltestellen und einer&#xA;direkten Verbindung:&#xA;&#xA; * Eine Haltestelle ist eine Position (x, y) mit Namen auf einer Karte. Die&#xA;   Koordinaten sind in Meter.&#xA; * Die Hyperloop-Verbindung verbindet zwei Haltestellen ohne Zwischenstop.&#xA;&#xA;Einige Haltestellen sind möglicherweise unbenutzt, diese können ignoriert&#xA;werden.&#xA;Die Strecke zwischen zwei Haltestellen ist die einfache Karthesische Entfernung.&#xA;Die Welt ist also flach und es gibt keine Hindernisse.&#xA;In unserem Modell fährt der Hyperloop mit konstanten 250 m/s und bleibt an jeder&#xA;Haltestelle 200 Sekunden stehen. Die Reisezeit enthält die Wartezeit an der&#xA;Starthaltestelle, die Reise ist an der Endhaltestelle vorbei, dort gibt es keine&#xA;Wartezeit mehr.&#xA;Es soll die Reisezeit für die Verbindung in Sekunden ausgegeben werden, gerundet&#xA;auf die nächste ganze Sekunde."/>
+  <problems title="Reisezeit" description="Deine Aufgabe in disem Level ist, die gesamte Reisezeit zu schätzen, wenn eine&#xA;direkte Verbindung mit dem Hyperloop benutzt wird.&#xA;Die Eingabe enthält jetzt auch eine gewünschte Reisestrecke vor der Hyperloop-&#xA;Verbindung.&#xA;Es soll die gesamte Reisezeit in Sekunden ausgegeben werden, gerundet auf die&#xA;nächste ganze Sekunde.&#xA;&#xA;Eine Reise mit dem Hyperloop besteht nun aus drei Teilen:&#xA;&#xA; 1. Fahrt vom Startort zur nächsten Hyperloop Haltestelle&#xA; 2. Fahr mit dem Hyperloop zur anderen Haltestelle&#xA; 3. Fahrt von der Endhaltestelle zum Reiseziel&#xA;&#xA;In unserem Modell fahren die Reisenden mit konstanten 15 m/s, immer in einer&#xA;geraden Linie von einem Ort zu einer Haltestelle. Es ist nie schneller, direkt&#xA;ohne Hyperloop vom Start- zum Zielort zu fahren."/>
+  <problems title="Verbindung Bewerten" description="Es ist nun eine bestimmte Hyperloop-Verbindung vorgeschlagen worden. Deine&#xA;Aufgabe ist es festzustellen, ob sich diese Verbindung rentieren würde.&#xA;Die Eingabe ist ähnlich zum Level 2, mit dem Unterschied, dass jetzt eine&#xA;Vielzahl von Reisestrecken vorgegeben ist. Zusätzlich ist die Zeit abgegeben,&#xA;die ohne Hyperloop mit vorhandenen Transportmitteln für eine Reise benötigt&#xA;wird. Die aktuelle Zeit ist immer kürzer als eine direkte Fahrverbindung.&#xA;Fahrer werden natürlich den Hyperloop verwenden, falls das die Reisezeit&#xA;verkürzt.&#xA;Es soll jetzt die Anzahl der Reisestrecken ausgegeben werden, für die die&#xA;Reisezeit mit dem Hyperloop kürzer wird."/>
+  <problems title="Verbindung Vorschlagen" description="Nun ist es an dir, eine neue Hyperloop-Verbindung vorzuschlagen.&#xA;Die Eingabe ist ähnlich wie im Level 3, aber es ist keine Hyperloop-Verbindung&#xA;vorgegeben. Stattdessen ist eine Mindestanzahl N von Reisestrecken vorgegeben,&#xA;die mit der neuen Hyperloop-Verbindung schneller sein sollen als vorher.&#xA;Es soll jetzt die Hyperloop-Verbindung ausgegeben werden. Mit dieser Verbindung&#xA;müssen mindestens N Reisestrecken in kürzerer Zeit zu bewältigen sein. Es gibt&#xA;möglicherweise mehrere mögliche Verbindungen, es muss nur eine gefunden werden."/>
+</fcc:Contest>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.epsilon.migration.eclipse.dt.launching.MigrationLaunchConfigurationDelegate">
+<intAttribute key="migratedModel" value="1"/>
+<listAttribute key="models">
+<listEntry value="isMetamodelFileBased=true&#10;name=original&#10;readOnLoad=true&#10;storeOnDisposal=false&#10;aliases=&#10;cached=true&#10;fileBasedMetamodelUri=platform\:/resource/net.feichti.codingcontest/migration/02_move.ecore&#10;metamodelUri=&#10;modelUri=platform\:/resource/net.feichti.codingcontest/migration/02_ccc2017.fcc&#10;reuseUnmodifiedFileBasedMetamodels=true&#10;type=EMF&#10;modelFile=/net.feichti.codingcontest/migration/02_ccc2017.fcc&#10;expand=false&#10;metamodelFile=/net.feichti.codingcontest/migration/02_move.ecore"/>
+<listEntry value="isMetamodelFileBased=true&#10;name=migrated&#10;readOnLoad=false&#10;storeOnDisposal=false&#10;aliases=&#10;cached=true&#10;fileBasedMetamodelUri=platform\:/resource/net.feichti.codingcontest/model/codingcontest.ecore&#10;metamodelUri=&#10;modelUri=platform\:/resource/net.feichti.codingcontest/example/ccc2017.fcc&#10;reuseUnmodifiedFileBasedMetamodels=true&#10;type=EMF&#10;modelFile=/net.feichti.codingcontest/example/ccc2017.fcc&#10;expand=false&#10;metamodelFile=/net.feichti.codingcontest/model/codingcontest.ecore"/>
+</listAttribute>
+<intAttribute key="originalModel" value="0"/>
+<stringAttribute key="source" value="/net.feichti.codingcontest/migration/02_move.mig"/>
+</launchConfiguration>

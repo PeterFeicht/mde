@@ -1,0 +1,16 @@
+/*
+ * Migrate models after moving attribute localDate from Contest to Location.
+ */
+
+migrate Location {
+	migrated.localDate = original.eContainer.localDate;
+}
+
+/**
+ * Save the new model manually with proper encoding.
+ */
+post Serialize {
+	var opts = new Map;
+	opts.put("ENCODING", "UTF-8");
+	migrated.resource.save(opts);
+}
