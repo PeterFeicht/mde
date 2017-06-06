@@ -9,16 +9,9 @@
   <foreignModel>codingcontest.ecore</foreignModel>
   <genPackages prefix="Codingcontest" basePackage="net.feichti" disposableProviderFactory="true"
       multipleEditorPages="false" fileExtensions="fcc" ecorePackage="codingcontest.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="codingcontest.ecore#//Category">
-      <genEnumLiterals ecoreEnumLiteral="codingcontest.ecore#//Category/Other"/>
-      <genEnumLiterals ecoreEnumLiteral="codingcontest.ecore#//Category/Pupil"/>
-      <genEnumLiterals ecoreEnumLiteral="codingcontest.ecore#//Category/Student"/>
-      <genEnumLiterals ecoreEnumLiteral="codingcontest.ecore#//Category/Professional"/>
-    </genEnums>
     <genClasses ecoreClass="codingcontest.ecore#//Coder">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute codingcontest.ecore#//Coder/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute codingcontest.ecore#//Coder/age"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute codingcontest.ecore#//Coder/category"/>
     </genClasses>
     <genClasses ecoreClass="codingcontest.ecore#//Contest">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute codingcontest.ecore#//Contest/id"/>

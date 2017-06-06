@@ -9,12 +9,6 @@
         <details key="documentation" value="The age must be between 1 and 150."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="category" eType="#//Category"
-        defaultValueLiteral="OTHER">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="The category may be used for statistical purposes."/>
-      </eAnnotations>
-    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Contest">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -99,15 +93,6 @@
         <details key="documentation" value="The preferred language for problem descriptions."/>
       </eAnnotations>
     </eStructuralFeatures>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="Category">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="Categories of programmers, may be used for statistical purposes."/>
-    </eAnnotations>
-    <eLiterals name="Other" literal="OTHER"/>
-    <eLiterals name="Pupil" value="1" literal="PUPIL"/>
-    <eLiterals name="Student" value="2" literal="STUDENT"/>
-    <eLiterals name="Professional" value="3" literal="PROFESSIONAL"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Organizer">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
