@@ -24,4 +24,9 @@ In exercise 3 I developed a model validation script for the betting manager mode
 Tag `ue3` is what I handed in.
 
 # Exercise 4
-In this exercise I will evolve the coding contest model.
+In this exercise I evolved the coding contest model with the following changes.
+
+ * Rename type `Entry` to `Team` and its attribute `teamName` to `name`.
+ * Move attribute `localDate` from the `Contest` class to the `Location` class.
+ * Remove the `category` attribute from the `Coder` class, and also remove the `Category` enum.
+ * Change the multiplicity of the `organizer` containment reference to accept arbitrarily many organizers.
