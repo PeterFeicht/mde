@@ -3,8 +3,6 @@
 package net.feichti.codingcontest.impl;
 
 import java.util.Collection;
-import java.util.Date;
-
 import net.feichti.codingcontest.CodingcontestPackage;
 import net.feichti.codingcontest.Contest;
 import net.feichti.codingcontest.Level;
@@ -37,7 +35,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link net.feichti.codingcontest.impl.ContestImpl#getId <em>Id</em>}</li>
  *   <li>{@link net.feichti.codingcontest.impl.ContestImpl#getTheme <em>Theme</em>}</li>
- *   <li>{@link net.feichti.codingcontest.impl.ContestImpl#getLocalDate <em>Local Date</em>}</li>
  *   <li>{@link net.feichti.codingcontest.impl.ContestImpl#getLocations <em>Locations</em>}</li>
  *   <li>{@link net.feichti.codingcontest.impl.ContestImpl#getLevels <em>Levels</em>}</li>
  *   <li>{@link net.feichti.codingcontest.impl.ContestImpl#getEntries <em>Entries</em>}</li>
@@ -88,26 +85,6 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 	 * @ordered
 	 */
 	protected String theme = THEME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getLocalDate() <em>Local Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLocalDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Date LOCAL_DATE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getLocalDate() <em>Local Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLocalDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected Date localDate = LOCAL_DATE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getLocations() <em>Locations</em>}' containment reference list.
@@ -224,29 +201,6 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 		theme = newTheme;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CodingcontestPackage.CONTEST__THEME, oldTheme, theme));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Date getLocalDate()
-	{
-		return localDate;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLocalDate(Date newLocalDate)
-	{
-		Date oldLocalDate = localDate;
-		localDate = newLocalDate;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CodingcontestPackage.CONTEST__LOCAL_DATE, oldLocalDate, localDate));
 	}
 
 	/**
@@ -391,8 +345,6 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 				return getId();
 			case CodingcontestPackage.CONTEST__THEME:
 				return getTheme();
-			case CodingcontestPackage.CONTEST__LOCAL_DATE:
-				return getLocalDate();
 			case CodingcontestPackage.CONTEST__LOCATIONS:
 				return getLocations();
 			case CodingcontestPackage.CONTEST__LEVELS:
@@ -423,9 +375,6 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 				return;
 			case CodingcontestPackage.CONTEST__THEME:
 				setTheme((String)newValue);
-				return;
-			case CodingcontestPackage.CONTEST__LOCAL_DATE:
-				setLocalDate((Date)newValue);
 				return;
 			case CodingcontestPackage.CONTEST__LOCATIONS:
 				getLocations().clear();
@@ -466,9 +415,6 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 			case CodingcontestPackage.CONTEST__THEME:
 				setTheme(THEME_EDEFAULT);
 				return;
-			case CodingcontestPackage.CONTEST__LOCAL_DATE:
-				setLocalDate(LOCAL_DATE_EDEFAULT);
-				return;
 			case CodingcontestPackage.CONTEST__LOCATIONS:
 				getLocations().clear();
 				return;
@@ -502,8 +448,6 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case CodingcontestPackage.CONTEST__THEME:
 				return THEME_EDEFAULT == null ? theme != null : !THEME_EDEFAULT.equals(theme);
-			case CodingcontestPackage.CONTEST__LOCAL_DATE:
-				return LOCAL_DATE_EDEFAULT == null ? localDate != null : !LOCAL_DATE_EDEFAULT.equals(localDate);
 			case CodingcontestPackage.CONTEST__LOCATIONS:
 				return locations != null && !locations.isEmpty();
 			case CodingcontestPackage.CONTEST__LEVELS:
@@ -533,8 +477,6 @@ public class ContestImpl extends MinimalEObjectImpl.Container implements Contest
 		result.append(id);
 		result.append(", theme: ");
 		result.append(theme);
-		result.append(", localDate: ");
-		result.append(localDate);
 		result.append(')');
 		return result.toString();
 	}

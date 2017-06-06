@@ -2,6 +2,7 @@
  */
 package net.feichti.codingcontest.impl;
 
+import java.util.Date;
 import net.feichti.codingcontest.CodingcontestPackage;
 import net.feichti.codingcontest.Location;
 
@@ -23,6 +24,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link net.feichti.codingcontest.impl.LocationImpl#getName <em>Name</em>}</li>
  *   <li>{@link net.feichti.codingcontest.impl.LocationImpl#getAddress <em>Address</em>}</li>
  *   <li>{@link net.feichti.codingcontest.impl.LocationImpl#getCountry <em>Country</em>}</li>
+ *   <li>{@link net.feichti.codingcontest.impl.LocationImpl#getLocalDate <em>Local Date</em>}</li>
  * </ul>
  *
  * @generated
@@ -88,6 +90,26 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 	 * @ordered
 	 */
 	protected String country = COUNTRY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLocalDate() <em>Local Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocalDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date LOCAL_DATE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getLocalDate() <em>Local Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocalDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected Date localDate = LOCAL_DATE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -184,6 +206,29 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Date getLocalDate()
+	{
+		return localDate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLocalDate(Date newLocalDate)
+	{
+		Date oldLocalDate = localDate;
+		localDate = newLocalDate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CodingcontestPackage.LOCATION__LOCAL_DATE, oldLocalDate, localDate));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
@@ -195,6 +240,8 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 				return getAddress();
 			case CodingcontestPackage.LOCATION__COUNTRY:
 				return getCountry();
+			case CodingcontestPackage.LOCATION__LOCAL_DATE:
+				return getLocalDate();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -217,6 +264,9 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 				return;
 			case CodingcontestPackage.LOCATION__COUNTRY:
 				setCountry((String)newValue);
+				return;
+			case CodingcontestPackage.LOCATION__LOCAL_DATE:
+				setLocalDate((Date)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -241,6 +291,9 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 			case CodingcontestPackage.LOCATION__COUNTRY:
 				setCountry(COUNTRY_EDEFAULT);
 				return;
+			case CodingcontestPackage.LOCATION__LOCAL_DATE:
+				setLocalDate(LOCAL_DATE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -261,6 +314,8 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 				return ADDRESS_EDEFAULT == null ? address != null : !ADDRESS_EDEFAULT.equals(address);
 			case CodingcontestPackage.LOCATION__COUNTRY:
 				return COUNTRY_EDEFAULT == null ? country != null : !COUNTRY_EDEFAULT.equals(country);
+			case CodingcontestPackage.LOCATION__LOCAL_DATE:
+				return LOCAL_DATE_EDEFAULT == null ? localDate != null : !LOCAL_DATE_EDEFAULT.equals(localDate);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -282,6 +337,8 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 		result.append(address);
 		result.append(", country: ");
 		result.append(country);
+		result.append(", localDate: ");
+		result.append(localDate);
 		result.append(')');
 		return result.toString();
 	}

@@ -69,7 +69,6 @@ public class ContestItemProvider
 
 			addIdPropertyDescriptor(object);
 			addThemePropertyDescriptor(object);
-			addLocalDatePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -112,29 +111,6 @@ public class ContestItemProvider
 				 getString("_UI_Contest_theme_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Contest_theme_feature", "_UI_Contest_type"),
 				 CodingcontestPackage.Literals.CONTEST__THEME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Local Date feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addLocalDatePropertyDescriptor(Object object)
-	{
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Contest_localDate_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Contest_localDate_feature", "_UI_Contest_type"),
-				 CodingcontestPackage.Literals.CONTEST__LOCAL_DATE,
 				 true,
 				 false,
 				 false,
@@ -224,7 +200,6 @@ public class ContestItemProvider
 		{
 			case CodingcontestPackage.CONTEST__ID:
 			case CodingcontestPackage.CONTEST__THEME:
-			case CodingcontestPackage.CONTEST__LOCAL_DATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case CodingcontestPackage.CONTEST__LOCATIONS:

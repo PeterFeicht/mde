@@ -2,8 +2,6 @@
  */
 package net.feichti.codingcontest;
 
-import java.util.Date;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -23,7 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link net.feichti.codingcontest.Contest#getId <em>Id</em>}</li>
  *   <li>{@link net.feichti.codingcontest.Contest#getTheme <em>Theme</em>}</li>
- *   <li>{@link net.feichti.codingcontest.Contest#getLocalDate <em>Local Date</em>}</li>
  *   <li>{@link net.feichti.codingcontest.Contest#getLocations <em>Locations</em>}</li>
  *   <li>{@link net.feichti.codingcontest.Contest#getLevels <em>Levels</em>}</li>
  *   <li>{@link net.feichti.codingcontest.Contest#getEntries <em>Entries</em>}</li>
@@ -86,31 +83,6 @@ public interface Contest extends EObject
 	 * @generated
 	 */
 	void setTheme(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Local Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * The date and time at which the contest is held. For online entries, this is UTC.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Local Date</em>' attribute.
-	 * @see #setLocalDate(Date)
-	 * @see net.feichti.codingcontest.CodingcontestPackage#getContest_LocalDate()
-	 * @model required="true"
-	 * @generated
-	 */
-	Date getLocalDate();
-
-	/**
-	 * Sets the value of the '{@link net.feichti.codingcontest.Contest#getLocalDate <em>Local Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Local Date</em>' attribute.
-	 * @see #getLocalDate()
-	 * @generated
-	 */
-	void setLocalDate(Date value);
 
 	/**
 	 * Returns the value of the '<em><b>Locations</b></em>' containment reference list.

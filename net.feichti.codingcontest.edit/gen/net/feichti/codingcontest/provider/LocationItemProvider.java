@@ -67,6 +67,7 @@ public class LocationItemProvider
 			addNamePropertyDescriptor(object);
 			addAddressPropertyDescriptor(object);
 			addCountryPropertyDescriptor(object);
+			addLocalDatePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -141,6 +142,29 @@ public class LocationItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Local Date feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLocalDatePropertyDescriptor(Object object)
+	{
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Location_localDate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Location_localDate_feature", "_UI_Location_type"),
+				 CodingcontestPackage.Literals.LOCATION__LOCAL_DATE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Location.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -185,6 +209,7 @@ public class LocationItemProvider
 			case CodingcontestPackage.LOCATION__NAME:
 			case CodingcontestPackage.LOCATION__ADDRESS:
 			case CodingcontestPackage.LOCATION__COUNTRY:
+			case CodingcontestPackage.LOCATION__LOCAL_DATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

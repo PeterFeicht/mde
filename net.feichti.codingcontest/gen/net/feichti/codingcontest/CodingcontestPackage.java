@@ -132,22 +132,13 @@ public interface CodingcontestPackage extends EPackage
 	int CONTEST__THEME = 1;
 
 	/**
-	 * The feature id for the '<em><b>Local Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTEST__LOCAL_DATE = 2;
-
-	/**
 	 * The feature id for the '<em><b>Locations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTEST__LOCATIONS = 3;
+	int CONTEST__LOCATIONS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Levels</b></em>' containment reference list.
@@ -156,7 +147,7 @@ public interface CodingcontestPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CONTEST__LEVELS = 4;
+	int CONTEST__LEVELS = 3;
 
 	/**
 	 * The feature id for the '<em><b>Entries</b></em>' containment reference list.
@@ -165,7 +156,7 @@ public interface CodingcontestPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CONTEST__ENTRIES = 5;
+	int CONTEST__ENTRIES = 4;
 
 	/**
 	 * The feature id for the '<em><b>Organizer</b></em>' containment reference.
@@ -174,7 +165,7 @@ public interface CodingcontestPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CONTEST__ORGANIZER = 6;
+	int CONTEST__ORGANIZER = 5;
 
 	/**
 	 * The feature id for the '<em><b>Problems</b></em>' containment reference list.
@@ -183,7 +174,7 @@ public interface CodingcontestPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CONTEST__PROBLEMS = 7;
+	int CONTEST__PROBLEMS = 6;
 
 	/**
 	 * The number of structural features of the '<em>Contest</em>' class.
@@ -192,7 +183,7 @@ public interface CodingcontestPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CONTEST_FEATURE_COUNT = 8;
+	int CONTEST_FEATURE_COUNT = 7;
 
 	/**
 	 * The meta object id for the '{@link net.feichti.codingcontest.impl.LocationImpl <em>Location</em>}' class.
@@ -232,13 +223,22 @@ public interface CodingcontestPackage extends EPackage
 	int LOCATION__COUNTRY = 2;
 
 	/**
+	 * The feature id for the '<em><b>Local Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION__LOCAL_DATE = 3;
+
+	/**
 	 * The number of structural features of the '<em>Location</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_FEATURE_COUNT = 3;
+	int LOCATION_FEATURE_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link net.feichti.codingcontest.impl.TeamImpl <em>Team</em>}' class.
@@ -548,17 +548,6 @@ public interface CodingcontestPackage extends EPackage
 	EAttribute getContest_Theme();
 
 	/**
-	 * Returns the meta object for the attribute '{@link net.feichti.codingcontest.Contest#getLocalDate <em>Local Date</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Local Date</em>'.
-	 * @see net.feichti.codingcontest.Contest#getLocalDate()
-	 * @see #getContest()
-	 * @generated
-	 */
-	EAttribute getContest_LocalDate();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link net.feichti.codingcontest.Contest#getLocations <em>Locations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -655,6 +644,17 @@ public interface CodingcontestPackage extends EPackage
 	 * @generated
 	 */
 	EAttribute getLocation_Country();
+
+	/**
+	 * Returns the meta object for the attribute '{@link net.feichti.codingcontest.Location#getLocalDate <em>Local Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Local Date</em>'.
+	 * @see net.feichti.codingcontest.Location#getLocalDate()
+	 * @see #getLocation()
+	 * @generated
+	 */
+	EAttribute getLocation_LocalDate();
 
 	/**
 	 * Returns the meta object for class '{@link net.feichti.codingcontest.Team <em>Team</em>}'.
@@ -956,14 +956,6 @@ public interface CodingcontestPackage extends EPackage
 		EAttribute CONTEST__THEME = eINSTANCE.getContest_Theme();
 
 		/**
-		 * The meta object literal for the '<em><b>Local Date</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CONTEST__LOCAL_DATE = eINSTANCE.getContest_LocalDate();
-
-		/**
 		 * The meta object literal for the '<em><b>Locations</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1036,6 +1028,14 @@ public interface CodingcontestPackage extends EPackage
 		 * @generated
 		 */
 		EAttribute LOCATION__COUNTRY = eINSTANCE.getLocation_Country();
+
+		/**
+		 * The meta object literal for the '<em><b>Local Date</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LOCATION__LOCAL_DATE = eINSTANCE.getLocation_LocalDate();
 
 		/**
 		 * The meta object literal for the '{@link net.feichti.codingcontest.impl.TeamImpl <em>Team</em>}' class.
