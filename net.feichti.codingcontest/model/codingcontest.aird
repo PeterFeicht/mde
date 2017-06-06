@@ -392,7 +392,7 @@
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_rkCZsRb0EeetQ8ph5WUFjA" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_hhLtEErbEeeqU8RYObkFIw" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
@@ -663,14 +663,14 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_YPTgABb8EeetQ8ph5WUFjA" name="[1..1] organizer" sourceNode="_0mC-0BbKEeetQ8ph5WUFjA" targetNode="_KXnbcBbQEeetQ8ph5WUFjA">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_YPTgABb8EeetQ8ph5WUFjA" name="[1..*] organizer" sourceNode="_0mC-0BbKEeetQ8ph5WUFjA" targetNode="_KXnbcBbQEeetQ8ph5WUFjA">
       <target xmi:type="ecore:EReference" href="codingcontest.ecore#//Contest/organizer"/>
       <semanticElements xmi:type="ecore:EReference" href="codingcontest.ecore#//Contest/organizer"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Z5H9gBb8EeetQ8ph5WUFjA" description="_rkE18Bb0EeetQ8ph5WUFjA" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_Z5H9gRb8EeetQ8ph5WUFjA" showIcon="false">
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_hhU3AErbEeeqU8RYObkFIw" description="_rkE18Bb0EeetQ8ph5WUFjA" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_hhU3AUrbEeeqU8RYObkFIw" showIcon="false">
           <labelFormat>bold</labelFormat>
         </centerLabelStyle>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_Z5H9ghb8EeetQ8ph5WUFjA" labelSize="6" showIcon="false" labelColor="39,76,114"/>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_hhU3AkrbEeeqU8RYObkFIw" labelSize="6" showIcon="false" labelColor="39,76,114"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
