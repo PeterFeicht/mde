@@ -2,7 +2,6 @@
  */
 package net.feichti.codingcontest.impl;
 
-import net.feichti.codingcontest.Category;
 import net.feichti.codingcontest.Coder;
 import net.feichti.codingcontest.CodingcontestPackage;
 
@@ -23,7 +22,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link net.feichti.codingcontest.impl.CoderImpl#getName <em>Name</em>}</li>
  *   <li>{@link net.feichti.codingcontest.impl.CoderImpl#getAge <em>Age</em>}</li>
- *   <li>{@link net.feichti.codingcontest.impl.CoderImpl#getCategory <em>Category</em>}</li>
  * </ul>
  *
  * @generated
@@ -69,26 +67,6 @@ public class CoderImpl extends MinimalEObjectImpl.Container implements Coder
 	 * @ordered
 	 */
 	protected int age = AGE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getCategory() <em>Category</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCategory()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Category CATEGORY_EDEFAULT = Category.OTHER;
-
-	/**
-	 * The cached value of the '{@link #getCategory() <em>Category</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCategory()
-	 * @generated
-	 * @ordered
-	 */
-	protected Category category = CATEGORY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -162,29 +140,6 @@ public class CoderImpl extends MinimalEObjectImpl.Container implements Coder
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Category getCategory()
-	{
-		return category;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCategory(Category newCategory)
-	{
-		Category oldCategory = category;
-		category = newCategory == null ? CATEGORY_EDEFAULT : newCategory;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CodingcontestPackage.CODER__CATEGORY, oldCategory, category));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
@@ -194,8 +149,6 @@ public class CoderImpl extends MinimalEObjectImpl.Container implements Coder
 				return getName();
 			case CodingcontestPackage.CODER__AGE:
 				return getAge();
-			case CodingcontestPackage.CODER__CATEGORY:
-				return getCategory();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -215,9 +168,6 @@ public class CoderImpl extends MinimalEObjectImpl.Container implements Coder
 				return;
 			case CodingcontestPackage.CODER__AGE:
 				setAge((Integer)newValue);
-				return;
-			case CodingcontestPackage.CODER__CATEGORY:
-				setCategory((Category)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -239,9 +189,6 @@ public class CoderImpl extends MinimalEObjectImpl.Container implements Coder
 			case CodingcontestPackage.CODER__AGE:
 				setAge(AGE_EDEFAULT);
 				return;
-			case CodingcontestPackage.CODER__CATEGORY:
-				setCategory(CATEGORY_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -260,8 +207,6 @@ public class CoderImpl extends MinimalEObjectImpl.Container implements Coder
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case CodingcontestPackage.CODER__AGE:
 				return age != AGE_EDEFAULT;
-			case CodingcontestPackage.CODER__CATEGORY:
-				return category != CATEGORY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -281,8 +226,6 @@ public class CoderImpl extends MinimalEObjectImpl.Container implements Coder
 		result.append(name);
 		result.append(", age: ");
 		result.append(age);
-		result.append(", category: ");
-		result.append(category);
 		result.append(')');
 		return result.toString();
 	}

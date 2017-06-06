@@ -4,7 +4,6 @@ package net.feichti.codingcontest;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -86,22 +85,13 @@ public interface CodingcontestPackage extends EPackage
 	int CODER__AGE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CODER__CATEGORY = 2;
-
-	/**
 	 * The number of structural features of the '<em>Coder</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CODER_FEATURE_COUNT = 3;
+	int CODER_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link net.feichti.codingcontest.impl.ContestImpl <em>Contest</em>}' class.
@@ -462,17 +452,6 @@ public interface CodingcontestPackage extends EPackage
 	int LANGUAGE_TO_PROBLEM_MAP_FEATURE_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link net.feichti.codingcontest.Category <em>Category</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see net.feichti.codingcontest.Category
-	 * @see net.feichti.codingcontest.impl.CodingcontestPackageImpl#getCategory()
-	 * @generated
-	 */
-	int CATEGORY = 8;
-
-
-	/**
 	 * Returns the meta object for class '{@link net.feichti.codingcontest.Coder <em>Coder</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -503,17 +482,6 @@ public interface CodingcontestPackage extends EPackage
 	 * @generated
 	 */
 	EAttribute getCoder_Age();
-
-	/**
-	 * Returns the meta object for the attribute '{@link net.feichti.codingcontest.Coder#getCategory <em>Category</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Category</em>'.
-	 * @see net.feichti.codingcontest.Coder#getCategory()
-	 * @see #getCoder()
-	 * @generated
-	 */
-	EAttribute getCoder_Category();
 
 	/**
 	 * Returns the meta object for class '{@link net.feichti.codingcontest.Contest <em>Contest</em>}'.
@@ -863,16 +831,6 @@ public interface CodingcontestPackage extends EPackage
 	EReference getLanguageToProblemMap_Value();
 
 	/**
-	 * Returns the meta object for enum '{@link net.feichti.codingcontest.Category <em>Category</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Category</em>'.
-	 * @see net.feichti.codingcontest.Category
-	 * @generated
-	 */
-	EEnum getCategory();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -920,14 +878,6 @@ public interface CodingcontestPackage extends EPackage
 		 * @generated
 		 */
 		EAttribute CODER__AGE = eINSTANCE.getCoder_Age();
-
-		/**
-		 * The meta object literal for the '<em><b>Category</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CODER__CATEGORY = eINSTANCE.getCoder_Category();
 
 		/**
 		 * The meta object literal for the '{@link net.feichti.codingcontest.impl.ContestImpl <em>Contest</em>}' class.
@@ -1198,16 +1148,6 @@ public interface CodingcontestPackage extends EPackage
 		 * @generated
 		 */
 		EReference LANGUAGE_TO_PROBLEM_MAP__VALUE = eINSTANCE.getLanguageToProblemMap_Value();
-
-		/**
-		 * The meta object literal for the '{@link net.feichti.codingcontest.Category <em>Category</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see net.feichti.codingcontest.Category
-		 * @see net.feichti.codingcontest.impl.CodingcontestPackageImpl#getCategory()
-		 * @generated
-		 */
-		EEnum CATEGORY = eINSTANCE.getCategory();
 
 	}
 

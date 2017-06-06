@@ -66,7 +66,6 @@ public class CoderItemProvider
 
 			addNamePropertyDescriptor(object);
 			addAgePropertyDescriptor(object);
-			addCategoryPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -118,29 +117,6 @@ public class CoderItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Category feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addCategoryPropertyDescriptor(Object object)
-	{
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Coder_category_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Coder_category_feature", "_UI_Coder_type"),
-				 CodingcontestPackage.Literals.CODER__CATEGORY,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This returns Coder.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -184,7 +160,6 @@ public class CoderItemProvider
 		{
 			case CodingcontestPackage.CODER__NAME:
 			case CodingcontestPackage.CODER__AGE:
-			case CodingcontestPackage.CODER__CATEGORY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

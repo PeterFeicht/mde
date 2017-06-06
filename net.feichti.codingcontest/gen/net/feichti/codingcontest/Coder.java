@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link net.feichti.codingcontest.Coder#getName <em>Name</em>}</li>
  *   <li>{@link net.feichti.codingcontest.Coder#getAge <em>Age</em>}</li>
- *   <li>{@link net.feichti.codingcontest.Coder#getCategory <em>Category</em>}</li>
  * </ul>
  *
  * @see net.feichti.codingcontest.CodingcontestPackage#getCoder()
@@ -74,34 +73,5 @@ public interface Coder extends EObject
 	 * @generated
 	 */
 	void setAge(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Category</b></em>' attribute.
-	 * The default value is <code>"OTHER"</code>.
-	 * The literals are from the enumeration {@link net.feichti.codingcontest.Category}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * The category may be used for statistical purposes.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Category</em>' attribute.
-	 * @see net.feichti.codingcontest.Category
-	 * @see #setCategory(Category)
-	 * @see net.feichti.codingcontest.CodingcontestPackage#getCoder_Category()
-	 * @model default="OTHER"
-	 * @generated
-	 */
-	Category getCategory();
-
-	/**
-	 * Sets the value of the '{@link net.feichti.codingcontest.Coder#getCategory <em>Category</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Category</em>' attribute.
-	 * @see net.feichti.codingcontest.Category
-	 * @see #getCategory()
-	 * @generated
-	 */
-	void setCategory(Category value);
 
 } // Coder

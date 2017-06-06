@@ -3,8 +3,6 @@
 package net.feichti.codingcontest.impl;
 
 import java.util.Map;
-
-import net.feichti.codingcontest.Category;
 import net.feichti.codingcontest.Coder;
 import net.feichti.codingcontest.CodingcontestFactory;
 import net.feichti.codingcontest.CodingcontestPackage;
@@ -17,7 +15,6 @@ import net.feichti.codingcontest.Team;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -88,13 +85,6 @@ public class CodingcontestPackageImpl extends EPackageImpl implements Codingcont
 	 * @generated
 	 */
 	private EClass languageToProblemMapEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum categoryEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -190,16 +180,6 @@ public class CodingcontestPackageImpl extends EPackageImpl implements Codingcont
 	public EAttribute getCoder_Age()
 	{
 		return (EAttribute)coderEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCoder_Category()
-	{
-		return (EAttribute)coderEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -527,16 +507,6 @@ public class CodingcontestPackageImpl extends EPackageImpl implements Codingcont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getCategory()
-	{
-		return categoryEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public CodingcontestFactory getCodingcontestFactory()
 	{
 		return (CodingcontestFactory)getEFactoryInstance();
@@ -565,7 +535,6 @@ public class CodingcontestPackageImpl extends EPackageImpl implements Codingcont
 		coderEClass = createEClass(CODER);
 		createEAttribute(coderEClass, CODER__NAME);
 		createEAttribute(coderEClass, CODER__AGE);
-		createEAttribute(coderEClass, CODER__CATEGORY);
 
 		contestEClass = createEClass(CONTEST);
 		createEAttribute(contestEClass, CONTEST__ID);
@@ -605,9 +574,6 @@ public class CodingcontestPackageImpl extends EPackageImpl implements Codingcont
 		languageToProblemMapEClass = createEClass(LANGUAGE_TO_PROBLEM_MAP);
 		createEAttribute(languageToProblemMapEClass, LANGUAGE_TO_PROBLEM_MAP__KEY);
 		createEReference(languageToProblemMapEClass, LANGUAGE_TO_PROBLEM_MAP__VALUE);
-
-		// Create enums
-		categoryEEnum = createEEnum(CATEGORY);
 	}
 
 	/**
@@ -647,7 +613,6 @@ public class CodingcontestPackageImpl extends EPackageImpl implements Codingcont
 		initEClass(coderEClass, Coder.class, "Coder", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCoder_Name(), ecorePackage.getEString(), "name", null, 1, 1, Coder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCoder_Age(), ecorePackage.getEInt(), "age", null, 1, 1, Coder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCoder_Category(), this.getCategory(), "category", "OTHER", 0, 1, Coder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(contestEClass, Contest.class, "Contest", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getContest_Id(), ecorePackage.getEString(), "id", null, 0, 1, Contest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -687,13 +652,6 @@ public class CodingcontestPackageImpl extends EPackageImpl implements Codingcont
 		initEClass(languageToProblemMapEClass, Map.Entry.class, "LanguageToProblemMap", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLanguageToProblemMap_Key(), theXMLTypePackage.getLanguage(), "key", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLanguageToProblemMap_Value(), this.getProblem(), null, "value", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		// Initialize enums and add enum literals
-		initEEnum(categoryEEnum, Category.class, "Category");
-		addEEnumLiteral(categoryEEnum, Category.OTHER);
-		addEEnumLiteral(categoryEEnum, Category.PUPIL);
-		addEEnumLiteral(categoryEEnum, Category.STUDENT);
-		addEEnumLiteral(categoryEEnum, Category.PROFESSIONAL);
 
 		// Create resource
 		createResource(eNS_URI);
