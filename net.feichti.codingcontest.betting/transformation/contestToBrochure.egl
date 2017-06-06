@@ -38,7 +38,12 @@
 ]{hyperref}
 \hypersetup{
   pdftitle={Coding Contest: [%=cc.theme%]},
-  pdfauthor={Organized by [%=cc.organizer.name%]}
+  pdfauthor={[%
+if(cc.organizer.size() > 1) {
+	out.print("Jointly organized");
+} else {
+	out.print("Organized by " + cc.organizer.first.name);
+}%]}
 }
 
 \usepackage{fancyhdr}
@@ -48,7 +53,13 @@
 \begin{document}
 
 \title{[%=cc.theme%]}
-\author{Organized by \href{[%=cc.organizer.website%]}{[%=cc.organizer.name%]}}
+\author{[%
+if(cc.organizer.size() > 1) {
+	out.print("Jointly organized");
+} else {
+	var org = cc.organizer.first;
+	%]Organized by \href{[%=org.website%]}{[%=org.name%]}[%
+}%]}
 \maketitle
 \vspace{1em}
 

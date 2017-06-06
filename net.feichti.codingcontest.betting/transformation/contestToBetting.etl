@@ -17,7 +17,11 @@ rule ContestToGroup
 			grp.id = cc.id;
 		}
 		grp.title = cc.theme;
-		grp.description = "Organized by " + cc.organizer.name;
+		if(cc.organizer.size() > 1) {
+			grp.description = "Jointly organized";
+		} else {
+			grp.description = "Organized by " + cc.organizer.first.name;
+		}
 		
 		grp.category = cat;
 		
