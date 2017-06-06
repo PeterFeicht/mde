@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<fcc:Contest xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fcc="http://www.feichti.net/codingcontest" xmi:id="ccc20170331" id="ccc20170331" theme="Hyperloop - Global Metro" localDate="2017-03-31T13:00:00.000+0200">
-  <locations name="Linz" address="Johannes Kepler Universität, Altenberger Straße 69, 4040 Linz" country="AT"/>
-  <locations name="Wien" address="Stadthalle, Friedrich-Schmidt-Platz 1, 1010 Wien" country="AT"/>
-  <locations name="Johannesburg" address="Honours Laboratory E-Ring 212, APK Campus University of Johannesburg, Cnr. Kingsway and University Road Auckland Park" country="ZA"/>
-  <locations name="Cluj" address="Babes-Bolyai-University, Str. Teodor Mihali NR 58-60, Cluj-Napoca" country="RO"/>
-  <locations name="Den Haag" address="Leiden University Campus The Hague, Turfmarkt 99, 2511 DP The Hague" country="NL"/>
+<fcc:Contest xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fcc="http://www.feichti.net/codingcontest" xmi:id="ccc20170331" id="ccc20170331" theme="Hyperloop - Global Metro">
+  <locations name="Linz" address="Johannes Kepler Universität, Altenberger Straße 69, 4040 Linz" country="AT" localDate="2017-03-31T13:00:00.000+0200"/>
+  <locations name="Wien" address="Stadthalle, Friedrich-Schmidt-Platz 1, 1010 Wien" country="AT" localDate="2017-03-31T13:00:00.000+0200"/>
+  <locations name="Johannesburg" address="Honours Laboratory E-Ring 212, APK Campus University of Johannesburg, Cnr. Kingsway and University Road Auckland Park" country="ZA" localDate="2017-03-31T13:00:00.000+0200"/>
+  <locations name="Cluj" address="Babes-Bolyai-University, Str. Teodor Mihali NR 58-60, Cluj-Napoca" country="RO" localDate="2017-03-31T13:00:00.000+0200"/>
+  <locations name="Den Haag" address="Leiden University Campus The Hague, Turfmarkt 99, 2511 DP The Hague" country="NL" localDate="2017-03-31T13:00:00.000+0200"/>
   <levels xmi:id="1" number="1" title="Connection Time">
     <problems key="en" value="//@problems.0"/>
     <problems key="de" value="//@problems.4"/>
